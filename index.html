@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TechnoSporout</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/@tabler/icons@latest/icons-react/dist/index.umd.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <a href="tel:+1234567890" class="call-float">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="#">
+                    <img src="assets/logo-transparent.png" alt="logo">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Company</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Capabilities</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blogs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Careers</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                    <a class="btn btn-consult desktop-btn" href="#"><i class="fa-solid fa-phone me-1"></i> Get in
+                        Touch</a>
+
+                </div>
+
+
+                <!-- Mobile Offcanvas -->
+                <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu">
+
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand logo" href="#">
+                            <img src="assets/logo-transparent.png" alt="logo">
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="mobile-menu">
+
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Solutions</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+
+                        </ul>
+
+                        <!-- Contact Section -->
+
+                        <div class="mobile-contact">
+
+                            <p><strong>Address</strong><br>
+                                1009, Lodha Supremus, </br> Kolshet Road,</p>
+
+                            <p><strong>Email</strong><br>
+                                support@technosprout.in</p>
+
+                            <p><strong>Phone</strong><br>
+                                +1 234 567 890</p>
+
+                            <div class="mobile-social">
+
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <!-- <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a> -->
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="offcanvas offcanvas-end" id="mobileMenu">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+
+            <ul class="mobile-menu">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+            <!-- Contact Info -->
+
+            <div class="mobile-contact">
+
+                <p><strong>Address:</strong><br>
+                    123 Business Street,<br>
+                    New York, USA</p>
+
+                <p><strong>Email:</strong><br>
+                    info@company.com</p>
+
+                <p><strong>Phone:</strong><br>
+                    +1 234 567 890</p>
+
+                <div class="mobile-social">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- HERO -->
+    <section class="hero-section py-5">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-6 col-md-12 hero-left">
+
+                    <h1 class="hero-title">
+                        <b><i> Transform Your <br>
+                                Business</i> </b> Through<br>
+                        Technology Excellence</i>
+                    </h1>
+
+                    <p class="hero-desc">
+                        Our business technology consulting services helps
+                        organizations meet their business technology goals
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#" class="btn btn-consult">
+                            Book consultation
+                        </a>
+
+                        <a href="#" class="btn btn-consult">
+                            Let's Talk
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT IMAGE -->
+                <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
+
+                    <img src="assets/banner.png" class="img-fluid hero-image">
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPANY LOGO SLIDER -->
+
+            <div class="logo-slider mt-5">
+                <h4 class="approach-title text-center mb-4 fs-4">Our <span>Clientele</span></h4>
+                <div class="logo-track">
+
+                    <img src="assets/logo1.png">
+                    <img src="assets/logo2.png">
+                    <img src="assets/logo3.png">
+                    <img src="assets/logo4.png">
+                    <img src="assets/logo5.png">
+                    <img src="assets/logo6.png">
+
+                    <!-- duplicate for smooth loop -->
+
+                    <img src="assets/logo1.png">
+                    <img src="assets/logo2.png">
+                    <img src="assets/logo3.png">
+                    <img src="assets/logo4.png">
+                    <img src="assets/logo5.png">
+                    <img src="assets/logo6.png">
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Our Impact -->
+    <section class="impact-section">
+        <div class="container">
+
+            <h2 class="approach-title text-center">
+                Our <span>Impact</span>
+            </h2>
+
+            <div class="row text-center impact-row">
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="impact-box">
+                        <h3 class="counter" data-target="9">0</h3>
+                        <p>Years of<br>Experience</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="impact-box">
+                        <h3 class="counter" data-target="50">0</h3>
+                        <p>Projects<br>Delivered</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="impact-box">
+                        <h3 class="counter" data-target="9">0</h3>
+                        <p>Years of<br>Experience</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="impact-box">
+                        <h3 class="counter" data-target="50">0</h3>
+                        <p>Projects<br>Delivered</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="impact-text text-center">
+                <p>
+                    Growing businesses don’t fail because of lack of ambition.
+                    They struggle because their technology foundation was never designed for scale.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- business problems section -->
+    <section class="problems-section py-5">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="text-center mb-5">
+                <h2 class="approach-title">
+                    Business Problems <span>We Solve</span>
+                </h2>
+                <p class="problems-subtitle">
+                    Growing companies rarely struggle because of technology alone.<br>
+                    They struggle because technology begins to affect people, decisions, and control.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="row justify-content-center g-4">
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="problem-card">
+                        <h5>People & Skill<br>Dependency</h5>
+                        <img src="assets/user-1.png" class="problem-img img-fluid" alt="problem image">
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="problem-card">
+                        <h5>Founder<br>Bandwidth</h5>
+                        <img src="assets/user-1.png" class="problem-img img-fluid" alt="problem image">
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="problem-card">
+                        <h5>Reputational<br>Risk.</h5>
+                        <img src="assets/user-1.png" class="problem-img img-fluid" alt="problem image">
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="problem-card">
+                        <h5>Compliance &<br>Regulatory Risk</h5>
+                        <img src="assets/user-1.png" class="problem-img img-fluid" alt="problem image">
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="problem-card">
+                        <h5>Fragmented Technology<br>Environment</h5>
+                        <img src="assets/user-1.png" class="problem-img img-fluid" alt="problem image">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Our technology -->
+
+
+    <section class="approach-section py-5">
+        <div class="container">
+
+            <div class="row align-items-center gy-5">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-7">
+
+                    <h2 class="approach-title">
+                        Our <span>Technology </br>Excellence</span>
+                        Freamwork
+                    </h2>
+
+                    <p class="approach-desc">
+                        Our framework ensures technology decisions stay aligned with business goals while maintaining
+                        governance, security, and control.
+                    </p>
+                    <!-- <a href="#" class="btn btn-consult">
+                        Know More <i class="fa-solid fa-circle-arrow-right"></i>
+                    </a> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="benefits-section py-5">
+        <div class="container">
+
+            <div class="row benefits-row text-center">
+
+                <!-- Item 1 -->
+                <div class="col-lg col-md-4 col-6 benefit-item">
+                    <img src="images/icon1.png" alt="">
+                    <h6>Faster business operations</h6>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col-lg col-md-4 col-6 benefit-item">
+                    <img src="images/icon2.png" alt="">
+                    <h6>Reduced manual processes</h6>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col-lg col-md-4 col-6 benefit-item">
+                    <img src="images/icon3.png" alt="">
+                    <h6>Improved operational efficiency</h6>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col-lg col-md-6 col-6 benefit-item">
+                    <img src="images/icon4.png" alt="">
+                    <h6>Stronger security and compliance</h6>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="col-lg col-md-6 col-6 benefit-item">
+                    <img src="images/icon5.png" alt="">
+                    <h6>Better decision making through data</h6>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- our services section -->
+    <section class="services-section py-5">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="text-center mb-5">
+                <h2 class="approach-title">
+                    Our <span>Services</span>
+                </h2>
+                <p class="services-subtitle">
+                    We help businesses across the full lifecycle of technology transformation.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-box">
+
+                        <div class="service-card-default">
+                            <h5>Technology <br> Strategy & Advisory</h5>
+                            <img src="images/service1.png" alt="">
+                        </div>
+
+                        <div class="service-card-hover">
+                            <p>Designing and implementing modern technology platforms.</p>
+                            <a href="#" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-box">
+
+                        <div class="service-card-default">
+                            <h5>Platform <br> Implementation</h5>
+                            <img src="images/service2.png" alt="">
+                        </div>
+
+                        <div class="service-card-hover">
+                            <p>Deploy scalable platforms that power modern business.</p>
+                            <a href="#" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-box">
+
+                        <div class="service-card-default">
+                            <h5>Technology <br> Operations</h5>
+                            <img src="images/service3.png" alt="">
+                        </div>
+
+                        <div class="service-card-hover">
+                            <p>Operate and optimize systems for reliability and growth.</p>
+                            <a href="#" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-box">
+
+                        <div class="service-card-default">
+                            <h5>Automation & <br> Optimization</h5>
+                            <img src="images/service4.png" alt="">
+                        </div>
+
+                        <div class="service-card-hover">
+                            <p>Automate workflows and improve operational efficiency.</p>
+                            <a href="#" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Business We Work -->
+
+    <section class="business-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-6">
+
+                    <h2 class="approach-title">
+                        <span>Businesses</span>
+                        We </br> Work With
+                    </h2>
+                    <p class="approach-desc">
+                        Our framework ensures technology decisions stay aligned with business goals while maintaining
+                        governance, security, and control.
+                    </p>
+
+
+                </div>
+
+
+                <!-- RIGHT SLIDER -->
+                <div class="col-lg-6">
+
+                    <div class="slider-wrapper">
+
+                        <div class="card-stack">
+
+                            <div class="industry-card active">
+                                <img src="assets/1.jpg">
+                                <!-- <h3>Service Based<br>Businesses</h3> -->
+                            </div>
+
+                            <div class="industry-card next">
+                                <img src="assets/2.jpg">
+                                <!-- <h3>Logistics & Supply</h3> -->
+                            </div>
+
+                            <div class="industry-card prev">
+                                <img src="assets/3.jpg">
+                                <!-- <h3>Retail</h3> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="industry-title">Industries We Serve</p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- why business choose us section -->
+
+    <section class="choose-section py-5">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="text-center mb-5">
+                <h2 class="choose-title">
+                    Why Businesses <span>Choose Us?</span>
+                </h2>
+
+                <p class="choose-subtitle">
+                    We help businesses across the full lifecycle of technology transformation.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="choose-card">
+
+                        <img src="images/icon1.png" class="choose-icon" alt="">
+
+                        <h5>Business-First Approach</h5>
+
+                        <p>
+                            We start with business outcomes, not technology tools.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="choose-card">
+
+                        <img src="images/icon2.png" class="choose-icon" alt="">
+
+                        <h5>End-to-End Capabilities</h5>
+
+                        <p>
+                            From strategy to implementation to operations.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="choose-card">
+
+                        <img src="images/icon3.png" class="choose-icon" alt="">
+
+                        <h5>Platform Expertise</h5>
+
+                        <p>
+                            Deep expertise across modern technology platforms.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="choose-card">
+
+                        <img src="images/icon4.png" class="choose-icon" alt="">
+
+                        <h5>Long-Term Partnership</h5>
+
+                        <p>
+                            We support businesses through their entire technology journey.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Button -->
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-consult">Consult Now</a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+
+    <section class="faq-section py-5">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="text-center mb-4">
+                <h2 class="approach-title">
+                    Frequently Asked <span>Questions</span>
+                </h2>
+            </div>
+
+            <div class="row">
+
+                <!-- LEFT COLUMN -->
+                <div class="col-lg-6">
+                    <div class="accordion custom-faq" id="faqLeft">
+
+                        <!-- Q1 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How are you different from an IT services company?
+                                </button>
+                            </h2>
+
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    Traditional IT firms manage tools.<br>
+                                    We design the structure that governs how technology supports your business growth.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you sell software or specific products?
+                                </button>
+                            </h2>
+
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    No. We are completely vendor-agnostic.<br>
+                                    Our recommendations are driven only by business fit.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What size businesses do you work with?
+                                </button>
+                            </h2>
+
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    We work with startups, small businesses, and mid-sized companies.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Do you replace our IT team?
+                                </button>
+                            </h2>
+
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    No. We align and strengthen your existing teams within a structured framework.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-lg-6">
+                    <div class="accordion custom-faq" id="faqRight">
+
+                        <!-- Q5 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    When should we engage?
+                                </button>
+                            </h2>
+
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    <ul class="faq-points">
+                                        <li>Growth feels operationally heavy</li>
+                                        <li>Systems feel fragmented</li>
+                                        <li>Technology decisions feel reactive</li>
+                                        <li>You want clarity and structured scale</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    What outcomes can we expect?
+                                </button>
+                            </h2>
+
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    <ul class="faq-points">
+                                        <li>Complete technology visibility</li>
+                                        <li>Reduced operational friction</li>
+                                        <li>Structured governance</li>
+                                        <li>Scalable roadmap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q7 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    How long does implementation take?
+                                </button>
+                            </h2>
+
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    Typical engagement timelines range between 4-12 weeks depending on scope.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q8 -->
+                        <div class="accordion-item faq-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed faq-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq8">
+                                    Do you work with internal teams?
+                                </button>
+                            </h2>
+
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    Yes. We collaborate closely with leadership and internal teams to align technology
+                                    strategy.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section  -->
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left Content -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="contact-title">
+                        Ready to <br>
+                        Structure Your <br>
+                        Growth?
+                    </h2>
+
+                    <p class="contact-text">
+                        If your business is scaling but your systems feel fragmented,
+                        it's time to move from reactive technology to structured
+                        technology leadership.
+                    </p>
+                </div>
+
+                <!-- Right Form -->
+                <div class="col-lg-7">
+                    <form>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label>Name <span style="color: red;">*</span></label>
+                                <input type="text" class="form-control custom-input" placeholder="Enter Your Full Name">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>E-mail <span style="color: red;">*</span></label>
+                                <input type="email" class="form-control custom-input" placeholder="Enter Your E-mail">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Contact No. <span style="color: red;">*</span></label>
+                                <input type="text" class="form-control custom-input"
+                                    placeholder="Enter Your Contact Number">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Organisation Name <span style="color: red;">*</span></label>
+                                <input type="text" class="form-control custom-input"
+                                    placeholder="Enter Your Organisation Name">
+                            </div>
+
+                            <div class="col-12">
+                                <label>Add a Message</label>
+                                <textarea rows="4" class="form-control custom-input"
+                                    placeholder="Enter Your Message..."></textarea>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-overlay">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <!-- Logo + About -->
+                    <div class="col-lg-5 col-md-6">
+                        <a class="footer-logo d-inline-block mb-2" href="#">
+                            <img src="assets/footer-logo.png" alt="logo">
+                        </a>
+                        <p class="footer-text">
+                            Transform Your Business Through Technology Excellence
+                            Build structured, scalable growth through the right
+                            technology foundation.
+                        </p>
+                        <div class="social-icons">
+                            <span>Follow us :</span>
+                            </br>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="footer-title">Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Our Company</a></li>
+                            <li><a href="#">Our Solutions</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="footer-title">Support</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="footer-title">Contact</h6>
+                        <p><a href="tel:+91xxxxxxxxxx">+91 xxxxx xxxxx</a></p>
+                        <p> <a href="mailto:support@technosprout.in">support@technosprout.in</a> </p>
+                        <p>
+                            1009, Lodha Supremus,</br> Kolshet Road,<br>
+                            Thane - 400 607
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom"
+                    style="display:flex; justify-content:center; align-items:center; font-size: 22px;">
+                    <p style="margin:0;">Copyright © 2026 All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        const cards = document.querySelectorAll(".industry-card");
+
+        let index = 0;
+
+        setInterval(() => {
+
+            cards.forEach(card => {
+                card.classList.remove("active", "prev", "next");
+            });
+
+            index++;
+
+            if (index >= cards.length) {
+                index = 0;
+            }
+
+            let prev = (index - 1 + cards.length) % cards.length;
+            let next = (index + 1) % cards.length;
+
+            cards[index].classList.add("active");
+            cards[next].classList.add("next");
+            cards[prev].classList.add("prev");
+
+        }, 3000);
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="counters.js"></script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
