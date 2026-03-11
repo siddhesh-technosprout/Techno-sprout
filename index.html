@@ -14,9 +14,9 @@
     <script src="https://unpkg.com/@tabler/icons@latest/icons-react/dist/index.umd.js"></script>
     <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css">
 
 </head>
 
@@ -47,28 +47,26 @@
 
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
 
-                       <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
 
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-        Company
-    </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Company
+                            </a>
 
-    <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
 
-        <li><a class="dropdown-item" href="#">About Us</a></li>
-        <li><a class="dropdown-item" href="#">Careers</a></li>
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Careers</a></li>
 
-    </ul>
+                            </ul>
 
-</li>
+                        </li>
 
                         <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="#">Capabilities</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-
-                        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
 
@@ -214,11 +212,11 @@
                     <div class="hero-buttons">
 
                         <a href="#" class="btn btn-consult">
-                            Book consultation
+                            <i class="fa-solid fa-calendar-check me-2"></i> Book consultation
                         </a>
 
                         <a href="#" class="btn btn-consult">
-                            Let's Talk
+                            <i class="fa-solid fa-phone me-1"></i> Let's Talk
                         </a>
 
                     </div>
@@ -235,28 +233,30 @@
 
             </div>
 
+            <hr class="line">
+
 
             <!-- COMPANY LOGO SLIDER -->
 
-            <div class="logo-slider mt-5">
+            <div class="logo-slider">
                 <h4 class="approach-title text-center mb-4 fs-4">Our <span>Clientele</span></h4>
                 <div class="logo-track">
 
-                    <img src="assets/logo1.png">
-                    <img src="assets/logo2.png">
-                    <img src="assets/logo3.png">
-                    <img src="assets/logo4.png">
-                    <img src="assets/logo5.png">
-                    <img src="assets/logo6.png">
+                    <img src="assets/clients/asian-paints.jpg">
+                    <img src="assets/clients/au-small-finance.jpg">
+                    <img src="assets/clients/frractal-logo.jpg">
+                    <img src="assets/clients/jswlogo.png">
+                    <img src="assets/clients/nse_logo.png">
+                    <img src="assets/clients/one-assist.jpg">
 
                     <!-- duplicate for smooth loop -->
 
-                    <img src="assets/logo1.png">
-                    <img src="assets/logo2.png">
-                    <img src="assets/logo3.png">
-                    <img src="assets/logo4.png">
-                    <img src="assets/logo5.png">
-                    <img src="assets/logo6.png">
+                    <img src="assets/clients/asian-paints.jpg">
+                    <img src="assets/clients/au-small-finance.jpg">
+                    <img src="assets/clients/frractal-logo.jpg">
+                    <img src="assets/clients/jswlogo.png">
+                    <img src="assets/clients/nse_logo.png">
+                    <img src="assets/clients/one-assist.jpg">
 
                 </div>
 
@@ -308,8 +308,8 @@
 
             <div class="impact-text text-center">
                 <p>
-                    Growing businesses don’t fail because of lack of ambition.
-                    They struggle because their technology foundation was never designed for scale.
+                    Helping growth-stage, businesses move from </br>
+                fragmented systems to scalable operating models.
                 </p>
             </div>
 
@@ -527,8 +527,9 @@
                 </h2>
 
                 <p class="approach-desc">
-                    Our framework ensures technology decisions stay aligned with business goals while maintaining
-                    governance, security, and control.
+                  Our focus is not just technology implementation
+                    but measurable business impact.
+                    Organizations working with us achieve:
                 </p>
             </div>
 
@@ -591,11 +592,14 @@
                         We </br> Serve
                     </h2>
                     <p class="approach-desc">
-                        Our framework ensures technology decisions stay aligned with business goals while maintaining
-                        governance, security, and control.
+                       We empower small and mid-sized businesses to
+                            transform technology from a daily struggle into a
+                            structured engine for growth, control, and scalability.
+
+                            We work with businesses across various industries.
                     </p>
                     <a href="#" class="btn btn-consult">
-                        Know More <i class="fa-solid fa-circle-arrow-right"></i>
+                        Explore <i class="fa-solid fa-circle-arrow-right"></i>
                     </a>
                 </div>
 
@@ -716,7 +720,7 @@
 
             <!-- Button -->
             <div class="text-center mt-5">
-                <a href="#" class="btn btn-consult">Consult Now</a>
+                <a href="#" class="btn btn-consult">Consult Now <i class="fa-solid fa-circle-arrow-right"></i></a>
             </div>
 
         </div>
@@ -747,14 +751,16 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    How are you different from an IT services company?
+                                    What does Technosprout do?
                                 </button>
                             </h2>
 
                             <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
                                 <div class="accordion-body">
-                                    Traditional IT firms manage tools.<br>
-                                    We design the structure that governs how technology supports your business growth.
+                                    Technosprout helps organizations design, deploy, and manage structured technology
+                                    environments. </br>
+                                    We work with businesses to modernize platforms, improve security, establish
+                                    governance, and ensure technology systems support long-term growth.
                                 </div>
                             </div>
                         </div>
@@ -764,14 +770,20 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Do you sell software or specific products?
+                                    Who do you typically work with?
                                 </button>
                             </h2>
 
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
                                 <div class="accordion-body">
-                                    No. We are completely vendor-agnostic.<br>
-                                    Our recommendations are driven only by business fit.
+                                    <h6>We work with:</h6>
+                                    <ul class="faq-points">
+                                        <li>Founders and business owners</li>
+                                        <li>Growing companies scaling their technology environments</li>
+                                        <li>Enterprises modernizing legacy systems</li>
+                                        <li>Organizations looking to strengthen security, governance, and operational
+                                            efficiency</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -781,13 +793,19 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    What size businesses do you work with?
+                                    When should a company consider working with Technosprout?
                                 </button>
                             </h2>
 
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
                                 <div class="accordion-body">
-                                    We work with startups, small businesses, and mid-sized companies.
+                                    <h6>Organizations typically engage us when:</h6>
+                                    <ul class="faq-points">
+                                        <li>Technology systems are becoming difficult to manage</li>
+                                        <li>Multiple tools and platforms are not working together effectively</li>
+                                        <li>Security and compliance requirements are increasing</li>
+                                        <li>The business is scaling and needs stronger technology foundations</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -797,13 +815,23 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    Do you replace our IT team?
+                                    How do I know if technology is becoming a problem in my company?
                                 </button>
                             </h2>
 
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
                                 <div class="accordion-body">
-                                    No. We align and strengthen your existing teams within a structured framework.
+                                    <h6>A few early signs include:</h6>
+                                    <ul class="faq-points">
+                                        <li>Teams using too many disconnected tools without any business justification
+                                        </li>
+                                        <li>Important business data scattered across systems without any visibility</li>
+                                        <li>Increasing operational complexity as the company grows</li>
+                                        <li>Security, access, or compliance concerns</li>
+                                        <li>Technology decisions being made reactively instead of strategically</li>
+                                    </ul>
+                                    <p>If any of these sound familiar, it usually means the technology environment needs
+                                        better structure and governance.</p>
                                 </div>
                             </div>
                         </div>
@@ -821,17 +849,22 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    When should we engage?
+                                    We already have an IT team. Why would we need an external partner?
                                 </button>
                             </h2>
 
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
                                 <div class="accordion-body">
                                     <ul class="faq-points">
-                                        <li>Growth feels operationally heavy</li>
-                                        <li>Systems feel fragmented</li>
-                                        <li>Technology decisions feel reactive</li>
-                                        <li>You want clarity and structured scale</li>
+                                        <li>Internal teams are often focused on maintaining systems and supporting
+                                            day-to-day operations.</li>
+                                        <li>An external partner brings a broader architectural and governance
+                                            perspective, backed by a large pool of experts across strategic and
+                                            operational technology domains and deep cross-industry experience.</li>
+                                        <li>This ensures technology decisions align with long-term business goals,
+                                            scalability, and security.</li>
+                                        <li>We work alongside internal teams to strengthen and future-proof the overall
+                                            technology foundation.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -842,17 +875,19 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    What outcomes can we expect?
+                                    Will we need to replace our existing technology stack?
                                 </button>
                             </h2>
 
                             <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
                                 <div class="accordion-body">
                                     <ul class="faq-points">
-                                        <li>Complete technology visibility</li>
-                                        <li>Reduced operational friction</li>
-                                        <li>Structured governance</li>
-                                        <li>Scalable roadmap</li>
+                                        <p>In most cases, no. </br>
+                                            Most organizations already have the right tools in place. The real challenge
+                                            is usually how those systems are structured, integrated, governed, and
+                                            managed. </br>
+                                            Our approach focuses on optimizing and structuring existing environments
+                                            rather than replacing everything.</p>
                                     </ul>
                                 </div>
                             </div>
@@ -863,13 +898,23 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq7">
-                                    How long does implementation take?
+                                    At what stage of growth should founders start thinking about technology structure?
                                 </button>
                             </h2>
 
                             <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqRight">
                                 <div class="accordion-body">
-                                    Typical engagement timelines range between 4-12 weeks depending on scope.
+                                    <h6>The need usually becomes visible when companies begin to scale — typically when:
+                                    </h6>
+                                    <ul class="faq-points">
+                                        <li>Multiple teams start using different systems</li>
+                                        <li>Technology decisions begin to impact operational efficiency or security</li>
+                                        <li>Technology budgets go out of control, with little visibility into the tech
+                                            stack or alignment with business goals</li>
+                                        <li>Internal teams are unable to demonstrate clear value from technology
+                                            investments Establishing structure early helps prevent major complexity
+                                            later.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -879,14 +924,19 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq8">
-                                    Do you work with internal teams?
+                                    What is the biggest technology mistake growing companies make?
                                 </button>
                             </h2>
 
                             <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqRight">
                                 <div class="accordion-body">
-                                    Yes. We collaborate closely with leadership and internal teams to align technology
-                                    strategy.
+                                One of the most common mistakes organizations make is adding more tools to solve every problem without a clear structure or governance model.
+                                </br>
+                                Teams continue to purchase tools without considering the enterprise-wide impact or the outcomes they are meant to achieve. Many SMEs also lack a comprehensive enterprise architecture and technology governance framework.
+                                 </br>
+                                 Over time, this leads to fragmented systems, operational inefficiencies, and increased security risks.
+                                 </br>
+                                 The most successful organizations treat technology as a structured system aligned with business strategy, rather than a collection of independent tools.
                                 </div>
                             </div>
                         </div>
@@ -936,9 +986,9 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label>Contact No. <span style="color: red;">*</span></label>
-                                <input type="text" class="form-control custom-input"
-                                    placeholder="Enter Your Contact Number">
+                                <label>Phone Number <span style="color:red">*</span></label>
+                                <input id="phone" type="tel" class="form-control phone-input"
+                                    placeholder="Enter phone number">
                             </div>
 
                             <div class="col-md-6">
@@ -985,8 +1035,8 @@
                             </br>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a> -->
                         </div>
                     </div>
 
@@ -994,11 +1044,11 @@
                     <div class="col-lg-2 col-md-6">
                         <h6 class="footer-title">Quick Links</h6>
                         <ul class="footer-links">
-                            <li><a href="#">Our Company</a></li>
-                            <li><a href="#">Our Solutions</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
                             <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Capabilities</a></li>
+                            <li><a href="#">Careers</a></li>
                         </ul>
                     </div>
 
@@ -1006,8 +1056,6 @@
                     <div class="col-lg-2 col-md-6">
                         <h6 class="footer-title">Support</h6>
                         <ul class="footer-links">
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
@@ -1016,7 +1064,7 @@
                     <!-- Contact -->
                     <div class="col-lg-3 col-md-6">
                         <h6 class="footer-title">Contact</h6>
-                        <p><a href="tel:+91xxxxxxxxxx">+91 xxxxx xxxxx</a></p>
+                        <p><a href="tel:+9594415599">+91 95944 15599</a></p>
                         <p> <a href="mailto:support@technosprout.in">support@technosprout.in</a> </p>
                         <p>
                             1009, Lodha Supremus,</br> Kolshet Road,<br>
@@ -1036,6 +1084,7 @@
             </div>
         </div>
     </footer>
+
 
 
     <script>
@@ -1094,10 +1143,29 @@
     </script>
 
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="counters.js"></script>
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const phoneInput = document.querySelector("#phone");
+
+            window.intlTelInput(phoneInput, {
+                initialCountry: "in",
+                separateDialCode: false,
+                preferredCountries: ["in", "us", "gb"],
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"
+            });
+
+        });
+    </script>
 </body>
 
 </html>
