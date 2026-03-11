@@ -1426,3 +1426,228 @@ body {
     }
 
 }
+
+
+/* popup form */
+
+/* Modal Design */
+.consult-modal{
+border-radius:20px;
+overflow:hidden;
+border:none;
+}
+
+/* LEFT PANEL */
+
+.consult-left{
+background: linear-gradient(135deg,#2b0a5c,#6f42c1);
+color:white;
+padding:40px;
+align-items:center;
+}
+
+.consult-info h3{
+font-weight:700;
+margin-bottom:15px;
+}
+
+.consult-info p{
+opacity:.9;
+margin-bottom:20px;
+}
+
+.consult-info ul{
+list-style:none;
+padding:0;
+}
+
+.consult-info li{
+margin-bottom:10px;
+font-size:15px;
+}
+
+/* FORM */
+
+.modal-title{
+font-weight:700;
+color:#2b0a5c;
+}
+
+label{
+font-size:14px;
+font-weight:600;
+margin-bottom:5px;
+}
+
+/* Inputs */
+
+.input-group-text{
+background:#f3f3f7;
+border:none;
+}
+
+.form-control{
+border:1px solid #e2e2e2;
+border-radius:8px;
+padding:10px;
+}
+
+.form-control:focus{
+box-shadow:none;
+border-color:#6f42c1;
+}
+
+.textarea{
+height:110px;
+}
+
+/* Button */
+
+.btn-consult-submit{
+background:linear-gradient(135deg,#6f42c1,#2b0a5c);
+color:#fff;
+padding:12px 40px;
+border:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-consult-submit:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+How we can help section
+
+.help-section{
+background:#f4f4f6;
+}
+
+.help-title{
+font-size:38px;
+font-weight:700;
+color:#2e0a46;
+}
+
+.help-title span{
+font-style:italic;
+}
+
+.help-subtitle{
+color:#6b6b6b;
+font-size:16px;
+}
+
+.help-card{
+background:#fff;
+padding:25px 18px;
+border-radius:14px;
+box-shadow:0 8px 18px rgba(0,0,0,0.08);
+transition:all .3s ease;
+height:100%;
+}
+
+.help-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.12);
+}
+
+.help-icon{
+width:42px;
+margin-bottom:15px;
+}
+
+.help-card p{
+font-size:14px;
+color:#333;
+margin:0;
+line-height:1.5;
+}
+
+
+.contact-page-section{
+background:#f6f4f8;
+}
+
+.approach-title{
+font-size:42px;
+font-weight:700;
+color:#2b0a5c;
+}
+
+.approach-title span{
+font-style:italic;
+}
+
+.contact-text{
+color:#2b0a5c;
+margin-top:15px;
+font-size:15px;
+line-height:1.6;
+}
+
+.contact-details{
+margin-top:25px;
+}
+
+.contact-item{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-bottom:18px;
+color:#2b0a5c;
+font-size:15px;
+}
+
+.contact-item i{
+font-size:16px;
+margin-top:4px;
+}
+
+.contact-form{
+background:#fff;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.custom-input{
+padding:12px 14px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+.custom-input:focus{
+box-shadow:none;
+border-color:#5c2ca5;
+}
+
+.contact-btn{
+background:#5c2ca5;
+color:#fff;
+padding:12px 28px;
+border-radius:30px;
+border:none;
+font-weight:500;
+}
+
+.contact-btn:hover{
+background:#441f7a;
+color:#fff;
+}
+
+/* map */
+
+.map-section{
+width:100%;
+height:500px;
+}
+
+.map-section iframe{
+width:100%;
+height:100%;
+border:0;
+display:block;
+}
