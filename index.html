@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <a href="tel:+1234567890" class="call-float">
+    <a href="tel:+9594415599" class="call-float">
         <i class="fa-solid fa-phone"></i>
     </a>
     <!-- HEADER -->
@@ -76,7 +76,7 @@
 
                     </ul>
 
-                    <a class="btn btn-consult desktop-btn" href="#">
+                    <a class="btn btn-consult desktop-btn" href="tel:+9594415599">
                         <i class="fa-solid fa-phone me-1"></i> Get in Touch
                     </a>
 
@@ -120,11 +120,11 @@
                     </p>
 
                     <p><strong>Email</strong><br>
-                        support@technosprout.in
+                        <a href="mailto:support@technosprout.in">support@technosprout.in</a>
                     </p>
 
                     <p><strong>Phone</strong><br>
-                        +1 234 567 890
+                        <a href="tel:+9594415599">+91 95944 15599</a>
                     </p>
 
                     <div class="mobile-social">
@@ -219,7 +219,7 @@
                             <i class="fa-solid fa-calendar-check me-2"></i> Book Consultation
                         </a>
 
-                        <a href="#" class="btn btn-consult">
+                        <a href="tel:+9594415599" class="btn btn-consult">
                             <i class="fa-solid fa-phone me-1"></i> Let's Talk
                         </a>
 
@@ -380,340 +380,323 @@
     </section>
 
 
-    <!-- Our technology -->
-    <section class="approach-section py-5">
-        <div class="container">
-
-            <div class="row align-items-center gy-5">
-
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-6">
-
-                    <h2 class="approach-title">
-                        Our <span>Technology <br>Excellence</span> Framework
-                    </h2>
-
-                    <p class="approach-desc">
-                        Our framework ensures technology decisions stay aligned with business goals while maintaining
-                        governance, security, and control.
-                    </p>
-
-                    <a href="#" class="btn btn-consult">
-                        Know More <i class="fa-solid fa-circle-arrow-right"></i>
-                    </a>
-
-                </div>
-
-
-                <!-- RIGHT ORBIT -->
-                <div class="col-lg-6 text-center">
-
-                    <div class="orbit-wrapper">
-
-                        <div class="center-circle">
-                            technosprout
-                        </div>
-
-                        <!-- ORBIT 1 -->
-                        <div class="orbit orbit1">
-                            <div class="orbit-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-database"></i>
-                                </div>
-                                <div class="label">Data Platform</div>
-                            </div>
-                        </div>
-
-                        <!-- ORBIT 2 -->
-                        <div class="orbit orbit2">
-                            <div class="orbit-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-code"></i>
-                                </div>
-                                <div class="label">Development</div>
-                            </div>
-                        </div>
-
-                        <!-- ORBIT 3 -->
-                        <div class="orbit orbit3">
-                            <div class="orbit-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-cloud"></i>
-                                </div>
-                                <div class="label">Cloud</div>
-                            </div>
-                        </div>
-
-                        <!-- ORBIT 4 -->
-                        <div class="orbit orbit4">
-                            <div class="orbit-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-shield-halved"></i>
-                                </div>
-                                <div class="label">Security</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .approach-section {
-            background: #f4f4f4;
-        }
-
-
-        /* WRAPPER */
-
-        .orbit-wrapper {
-            position: relative;
-            width: 420px;
-            height: 420px;
-            margin: auto;
-        }
-
-
-        /* CENTER */
-
-        .center-circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 160px;
-            height: 160px;
-            background: #5e2c91;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 18px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            z-index: 10;
-        }
-
-
-        /* ORBITS */
-
-        .orbit {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 1px solid #dcdcdc;
-            border-radius: 50%;
-            pointer-events: none;
-            /* IMPORTANT FIX */
-        }
-
-
-        /* ORBIT SIZE */
-
-        .orbit1 {
-            width: 220px;
-            height: 220px;
-            animation: spin 16s linear infinite;
-        }
-
-        .orbit2 {
-            width: 300px;
-            height: 300px;
-            animation: spin 20s linear infinite;
-        }
-
-        .orbit3 {
-            width: 360px;
-            height: 360px;
-            animation: spin 24s linear infinite;
-        }
-
-        .orbit4 {
-            width: 420px;
-            height: 420px;
-            animation: spin 28s linear infinite;
-        }
-
-
-        /* ROTATION */
-
-        @keyframes spin {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
-
-        /* ORBIT ITEM */
-
-        .orbit-item {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 20;
-            /* IMPORTANT FIX */
-            pointer-events: auto;
-        }
-
-
-        /* DIFFERENT POSITIONS */
-
-        .orbit1 .orbit-item {
-            transform: rotate(40deg) translate(110px) rotate(-40deg);
-        }
-
-        .orbit2 .orbit-item {
-            transform: rotate(140deg) translate(150px) rotate(-140deg);
-        }
-
-        .orbit3 .orbit-item {
-            transform: rotate(220deg) translate(180px) rotate(-220deg);
-        }
-
-        .orbit4 .orbit-item {
-            transform: rotate(300deg) translate(210px) rotate(-300deg);
-        }
-
-
-        /* ICON */
-
-        .icon {
-            width: 42px;
-            height: 42px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
-        }
-
-        .icon i {
-            color: #5e2c91;
-            font-size: 18px;
-        }
-
-
-        /* TOOLTIP */
-
-        .label {
-            position: absolute;
-            top: -45px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #111;
-            color: #fff;
-            padding: 6px 12px;
-            font-size: 12px;
-            border-radius: 6px;
-            opacity: 0;
-            white-space: nowrap;
-            transition: 0.3s;
-        }
-
-
-        /* SHOW LABEL */
-
-        .orbit-item:hover .label {
-            opacity: 1;
-        }
-
-
-        /* PAUSE */
-
-        .orbit-wrapper:hover .orbit {
-            animation-play-state: paused;
-        }
-
-
-        /* RESPONSIVE */
-
-        @media(max-width:991px) {
-
-            .orbit-wrapper {
-                width: 330px;
-                height: 330px;
-            }
-
-            .orbit1 {
-                width: 180px;
-                height: 180px;
-            }
-
-            .orbit2 {
-                width: 230px;
-                height: 230px;
-            }
-
-            .orbit3 {
-                width: 280px;
-                height: 280px;
-            }
-
-            .orbit4 {
-                width: 330px;
-                height: 330px;
-            }
-
-            .center-circle {
-                width: 130px;
-                height: 130px;
-                font-size: 16px;
-            }
-
-        }
-
-        @media(max-width:576px) {
-
-            .orbit-wrapper {
-                width: 260px;
-                height: 260px;
-            }
-
-            .orbit1 {
-                width: 140px;
-                height: 140px;
-            }
-
-            .orbit2 {
-                width: 180px;
-                height: 180px;
-            }
-
-            .orbit3 {
-                width: 220px;
-                height: 220px;
-            }
-
-            .orbit4 {
-                width: 260px;
-                height: 260px;
-            }
-
-            .center-circle {
-                width: 100px;
-                height: 100px;
-                font-size: 14px;
-            }
-
-            .icon {
-                width: 34px;
-                height: 34px;
-            }
-
-        }
-    </style>
+<section class="approach-section">
+<div class="container">
+
+<div class="row align-items-center">
+
+<!-- LEFT CONTENT -->
+<div class="col-lg-6 content-side">
+
+<h2 class="approach-title">
+Our <span>Technology <br>Excellence</span> Framework
+</h2>
+
+<p class="approach-desc">
+Our framework ensures technology decisions stay aligned with business goals while maintaining governance, security, and control.
+</p>
+
+<a href="#" class="btn-consult">
+Know More <i class="fa-solid fa-circle-arrow-right"></i>
+</a>
+
+</div>
+
+
+<!-- RIGHT ORBIT -->
+<div class="col-lg-6 text-center">
+
+<div class="orbit-wrapper">
+
+<div class="center-circle">
+<img src="assets/icon.png" alt="">
+</div>
+
+
+<!-- Orbit 1 -->
+<div class="orbit orbit1">
+<div class="orbit-item">
+<div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+<div class="tooltip">Business Context</div>
+</div>
+</div>
+
+<!-- Orbit 2 -->
+<div class="orbit orbit2">
+<div class="orbit-item">
+<div class="icon"><i class="fa-solid fa-sitemap"></i></div>
+<div class="tooltip">Governance Structure</div>
+</div>
+</div>
+
+<!-- Orbit 3 -->
+<div class="orbit orbit3">
+<div class="orbit-item">
+<div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+<div class="tooltip">Technology Architecture</div>
+</div>
+</div>
+
+<!-- Orbit 4 -->
+<div class="orbit orbit4">
+<div class="orbit-item">
+<div class="icon"><i class="fa-solid fa-user-gear"></i></div>
+<div class="tooltip">Management Excellence</div>
+</div>
+</div>
+
+<!-- Orbit 5 -->
+<div class="orbit orbit5">
+<div class="orbit-item">
+<div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+<div class="tooltip">Risk & Compliance</div>
+</div>
+</div>
+
+<!-- Orbit 6 -->
+<div class="orbit orbit6">
+<div class="orbit-item">
+<div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+<div class="tooltip">Continuous Optimization</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<style>
+    .approach-section{
+background:#f5f5f7;
+padding:80px 0;
+}
+
+
+/* LEFT CONTENT */
+
+.approach-title{
+font-size:38px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.approach-title span{
+color:#5e2c91;
+}
+
+.approach-desc{
+color:#666;
+margin-bottom:25px;
+max-width:480px;
+}
+
+
+
+/* ORBIT WRAPPER */
+
+.orbit-wrapper{
+position:relative;
+width:520px;
+height:520px;
+margin:auto;
+overflow:visible;
+}
+
+
+/* CENTER CIRCLE */
+
+.center-circle{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:160px;
+height:160px;
+background:#5e2c91;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+z-index:10;
+padding:20px;
+}
+
+.center-circle img{
+width:100%;
+max-width:90px;
+height:auto;
+object-fit:contain;
+}
+
+/* ORBITS */
+
+.orbit{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+border:1px solid rgba(0,0,0,0.08);
+border-radius:50%;
+pointer-events:none;
+}
+
+.orbit1{width:200px;height:200px;}
+.orbit2{width:260px;height:260px;}
+.orbit3{width:320px;height:320px;}
+.orbit4{width:380px;height:380px;}
+.orbit5{width:450px;height:450px;}
+.orbit6{width:520px;height:520px;}
+
+
+/* ORBIT ITEMS */
+
+.orbit-item{
+position:absolute;
+top:50%;
+left:50%;
+transform-origin:center;
+animation:orbitMove 20s linear infinite;
+pointer-events:auto;
+z-index:5;
+}
+
+.orbit-item:hover{
+z-index:50;
+}
+
+
+/* ORBIT SPEED + DISTANCE */
+
+.orbit1 .orbit-item{animation-duration:16s; --radius:100px;}
+.orbit2 .orbit-item{animation-duration:18s; --radius:130px;}
+.orbit3 .orbit-item{animation-duration:20s; --radius:160px;}
+.orbit4 .orbit-item{animation-duration:22s; --radius:190px;}
+.orbit5 .orbit-item{animation-duration:24s; --radius:225px;}
+.orbit6 .orbit-item{animation-duration:26s; --radius:260px;}
+
+
+/* ORBIT ANIMATION */
+
+@keyframes orbitMove{
+
+0%{
+transform:rotate(0deg) translateX(var(--radius)) rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg) translateX(var(--radius)) rotate(-360deg);
+}
+
+}
+
+
+/* ICON */
+
+.icon{
+width:48px;
+height:48px;
+background:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+cursor:pointer;
+transition:.3s;
+}
+
+.icon i{
+color:#5e2c91;
+font-size:18px;
+}
+
+.icon:hover{
+transform:scale(1.1);
+}
+
+
+/* TOOLTIP */
+
+.tooltip{
+position:absolute;
+bottom:60px;
+left:50%;
+transform:translateX(-50%);
+background:#111;
+color:#fff;
+padding:6px 14px;
+border-radius:6px;
+font-size:13px;
+white-space:nowrap;
+opacity:0;
+transition:.3s;
+z-index:100;
+}
+
+.orbit-item:hover .tooltip{
+opacity:1;
+}
+
+
+/* PAUSE ON HOVER */
+
+.orbit-wrapper:hover .orbit-item{
+animation-play-state:paused;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:992px){
+
+.orbit-wrapper{
+width:380px;
+height:380px;
+}
+
+.orbit1{width:150px;height:150px;}
+.orbit2{width:200px;height:200px;}
+.orbit3{width:240px;height:240px;}
+.orbit4{width:290px;height:290px;}
+.orbit5{width:330px;height:330px;}
+.orbit6{width:380px;height:380px;}
+
+.orbit1 .orbit-item{--radius:75px;}
+.orbit2 .orbit-item{--radius:100px;}
+.orbit3 .orbit-item{--radius:120px;}
+.orbit4 .orbit-item{--radius:145px;}
+.orbit5 .orbit-item{--radius:165px;}
+.orbit6 .orbit-item{--radius:190px;}
+
+.center-circle{
+width:120px;
+height:120px;
+font-size:15px;
+}
+
+}
+
+
+@media (max-width:576px){
+
+.orbit-wrapper{
+width:300px;
+height:300px;
+}
+
+.center-circle{
+width:100px;
+height:100px;
+font-size:14px;
+}
+
+}
+</style>
 
 
     <!-- our services section -->
@@ -1328,28 +1311,28 @@
                                 <div class="d-flex align-items-center gap-4 flex-wrap">
 
                                     <!-- <div class="g-recaptcha" data-sitekey="6LfgtIcsAAAAAJTcA3X4N3NZA525XnZFnZwENlVd"> -->
-                                    </div>
-
-                                    <button type="submit" class="btn contact-btn-white">
-                                        Submit
-                                        <span class="service-icon">
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
                                 </div>
+
+                                <button type="submit" class="btn contact-btn-white">
+                                    Submit
+                                    <span class="service-icon">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </button>
 
                             </div>
 
                         </div>
-                        <!-- <a href="#" class="btn btn-consult">
+
+                </div>
+                <!-- <a href="#" class="btn btn-consult">
                         Submit <i class="fa-solid fa-circle-arrow-right"></i>
                     </a> -->
 
-                    </form>
-                </div>
-
+                </form>
             </div>
+
+        </div>
         </div>
     </section>
 
@@ -1405,8 +1388,8 @@
                     <!-- Contact -->
                     <div class="col-lg-3 col-md-6">
                         <h6 class="footer-title">Contact</h6>
-                        <p><a href="tel:+9594415599">+91 95944 15599</a></p>
-                        <p> <a href="mailto:support@technosprout.in">support@technosprout.in</a> </p>
+                        <p><a href="tel:+9594415599"  style="color: #fff;">+91 95944 15599</a></p>
+                        <p> <a href="mailto:support@technosprout.in"  style="color: #fff;">support@technosprout.in</a> </p>
                         <p>
                             1009, Lodha Supremus,</br> Kolshet Road,<br>
                             Thane - 400 607

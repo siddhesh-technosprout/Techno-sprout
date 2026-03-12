@@ -99,6 +99,7 @@ body {
     padding: 10px 22px;
     font-weight: 500;
     transition: .3s;
+    text-decoration: none;
 }
 
 .btn-consult:hover {
@@ -1703,6 +1704,42 @@ color:#fff;
 transform:translateX(4px);
 }
 
+a[href^="tel"]{
+    cursor: pointer;
+}
+
+.contact-item a{
+    text-decoration: none;
+    color: #2b2b8f; /* same blue color like screenshot */
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover{
+    color: #36005A;
+}
+
+p a[href^="tel"],
+p a[href^="mailto"]{
+    text-decoration: none;
+    color: #36005A;
+    transition: color 0.3s ease;
+}
+
+p a[href^="tel"]:hover,
+p a[href^="mailto"]:hover{
+    color: #5e2c91; /* hover color */
+}
+
+.form-error{
+color:red;
+font-size:13px;
+margin-top:4px;
+display:none;
+}
+
+.input-error{
+border:1px solid red;
+}
 
 .custom-input {
     padding: 12px 14px;
