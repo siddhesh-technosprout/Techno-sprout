@@ -3,41 +3,37 @@ document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
 
   const startCounter = (counter) => {
+
+    const start = parseInt(counter.getAttribute("data-start")) || 0;
     const target = parseInt(counter.getAttribute("data-target"));
-    const symbol = counter.getAttribute("data-symbol") || "+";
-    let count = 0;
+    const symbol = counter.getAttribute("data-symbol") || "";
+    const speed = parseInt(counter.getAttribute("data-speed")) || 80;
 
-    const duration = 2000; // animation duration (2 seconds)
-    const stepTime = Math.abs(Math.floor(duration / target));
+    let count = start;
 
-    const timer = setInterval(() => {
-      count++;
+    const update = () => {
 
-      counter.innerText = count + symbol;
+      if (count < target) {
 
-      if (count >= target) {
+        count++;
+
+        counter.innerText = count + symbol;
+
+        setTimeout(update, speed);
+
+      } else {
+
         counter.innerText = target + symbol;
-        clearInterval(timer);
+
       }
 
-    }, stepTime);
+    };
+
+    update();
   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-        startCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-
-    });
-  }, {
-    threshold: 0.6
-  });
-
   counters.forEach(counter => {
-    observer.observe(counter);
+    startCounter(counter);
   });
 
 });

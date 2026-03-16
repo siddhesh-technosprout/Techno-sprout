@@ -439,85 +439,119 @@ body {
 
 }
 
-
-
-/* Our Impact */
-/* Section */
-
-.impact-section {
-    background: linear-gradient(180deg, #F4F4F7 0%, #EFEFF3 100%);
-    padding: 30px 0;
-    color: white;
-}
-
 /* Title */
 
-.impact-title {
-    font-size: 42px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    position: relative;
-    text-align: center;
-    color: #130020;
+.approach-title{
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:50px;
 }
 
-/* Single border under title */
-
-.impact-title::after {
-    content: "";
-    display: block;
-    width: 80%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 20px auto 0;
+.approach-title span{
+    color:#2b0a5c;
 }
 
-/* Row */
-/* 
-.impact-row {
-    padding: 40px 0;
-} */
 
-/* Numbers */
+/* SECTION */
 
-.impact-box h3 {
-    font-size: 55px;
-    font-weight: 700;
-    color: #66358b;
-    margin-top: 15px;
+.impact-section{
+    padding:80px 20px;
+    background:#f9f7fb;
+    text-align:center;
 }
 
-/* Text under numbers */
+/* TITLE */
 
-.impact-box p {
-    color: #130020;
-    font-size: 16px;
+.impact-title{
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:60px;
 }
 
-/* Bottom paragraph */
-
-.impact-text {
-    margin-top: 15px;
+.impact-title span{
+    color:#2b0a5c;
 }
 
-.impact-text p {
-    color: #130020;
-    max-width: 750px;
-    margin: auto;
-    font-size: 16px;
+/* STATS LAYOUT */
+
+.impact-stats{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    max-width:1000px;
+    margin:auto;
 }
 
-/* Responsive */
+/* ITEM */
 
-@media (max-width:768px) {
+.impact-item{
+    flex:1;
+    min-width:200px;
+}
 
-    .impact-box h3 {
-        font-size: 44px;
-    }
+/* NUMBER */
 
-    .impact-title {
-        font-size: 32px;
-    }
+.impact-item h3{
+    font-size:60px;
+    color:#66358b;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+/* TEXT */
+
+.impact-item p{
+    font-size:16px;
+    color:#444;
+    line-height:1.6;
+}
+
+/* BOTTOM TEXT */
+
+.impact-text{
+    margin-top:60px;
+}
+
+.impact-text p{
+    max-width:650px;
+    margin:auto;
+    font-size:16px;
+    color:#555;
+    line-height:1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.impact-title{
+    font-size:32px;
+}
+
+.impact-item h3{
+    font-size:42px;
+}
+
+.impact-item{
+    width:45%;
+}
+
+}
+
+@media (max-width:480px){
+
+.impact-item{
+    width:100%;
+}
+
+.impact-item h3{
+    font-size:36px;
+}
+
+.impact-item p{
+    font-size:14px;
+}
 
 }
 
@@ -2368,7 +2402,7 @@ p a[href^="mailto"]:hover {
 }
 
 .framework-image img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 
@@ -2377,6 +2411,7 @@ p a[href^="mailto"]:hover {
 .timeline-wrapper {
     position: relative;
     padding-left: 80px;
+    
 }
 
 
@@ -2546,55 +2581,179 @@ p a[href^="mailto"]:hover {
 /* .story-section {
     background: #efefef;
 } */
-
-
-.story-img {
-    width: 100%;
-    height: 320px;
-    /* background: #d9d9d9; */
-    
-    overflow: hidden;
+.journey-section{
+background:#fafafa;
+padding:80px 0;
 }
 
-.story-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.journey-timeline{
+position:relative;
 }
 
-/* .story-img {
-    width: 100%;
-    height: 220px;
-    background: #d9d9d9;
-    overflow: hidden;
-    border: 2px solid #e5e5e5;
-    border-radius: 8px; 
+.journey-timeline::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+width:3px;
+height:100%;
+background:#e4e4e4;
+transform:translateX(-50%);
 }
 
-.story-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-.story-text {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.7;
+.journey-item{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:90px;
+position:relative;
+opacity:0;
+transform:translateY(60px);
+transition:.8s;
 }
 
-.story-text ul {
-    padding-left: 18px;
-    margin-bottom: 15px;
+.journey-item.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.story-text ol {
-    padding-left: 18px;
-    margin: 10px 0 15px;
+.journey-item.reverse{
+flex-direction:row-reverse;
 }
 
-.story-text li {
-    margin-bottom: 6px;
+/* circle */
+
+.journey-item::before{
+content:"";
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:18px;
+height:18px;
+background:#66358b;
+border-radius:50%;
+animation:journeyPulse 2s infinite;
+z-index:2;
+}
+
+@keyframes journeyPulse{
+0%{box-shadow:0 0 0 0 rgba(102,53,139,.5);}
+70%{box-shadow:0 0 0 14px rgba(102,53,139,0);}
+100%{box-shadow:0 0 0 0 rgba(102,53,139,0);}
+}
+
+/* image */
+
+.journey-img{
+width:44%;
+overflow:hidden;
+border-radius:12px;
+}
+
+.journey-img img{
+width:100%;
+height:220px;
+object-fit:cover;
+transition:.6s;
+}
+
+.journey-img:hover img{
+transform:scale(1.08);
+}
+
+/* card */
+
+.journey-card{
+position:relative;
+width:44%;
+background:#fff;
+padding:35px;
+border-radius:12px;
+font-size:18px;
+line-height:1.9;
+color:#444;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+overflow:hidden;
+cursor:pointer;
+transition:.4s;
+}
+
+.journey-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:0%;
+height:100%;
+background:#66358b;
+z-index:-1;
+transition:.5s;
+}
+
+.journey-card:hover::before{
+width:100%;
+}
+
+.journey-card:hover{
+color:#fff;
+transform:translateY(-6px);
+}
+
+.journey-highlight{
+color:#66358b;
+font-weight:600;
+font-size:19px;
+}
+
+.journey-card:hover .journey-highlight{
+color:#fff;
+}
+
+/* mobile */
+
+@media(max-width:991px){
+
+.journey-timeline::before{
+left:20px;
+}
+
+.journey-item{
+flex-direction:column;
+padding-left:30px;
+}
+
+.journey-item.reverse{
+flex-direction:column;
+}
+
+.journey-item::before{
+left:20px;
+}
+
+.journey-img,
+.journey-card{
+width:100%;
+}
+
+.journey-img img{
+height:200px;
+margin-bottom:20px;
+}
+
+}
+/* Mobile */
+@media (max-width:991px) {
+
+    .story-img {
+        height: 240px;
+        margin-bottom: 20px;
+    }
+
+    .story-text {
+        text-align: left;
+    }
+
 }
 
 .quote-section {
@@ -2609,7 +2768,7 @@ p a[href^="mailto"]:hover {
 .quote-text {
     font-size: 20px;
     font-weight: 600;
-    color: #66358b;
+    color: #2b0a5c;
     line-height: 1.4;
     margin-bottom: 15px;
 }
@@ -2631,6 +2790,8 @@ p a[href^="mailto"]:hover {
     }
 
 }
+
+
 
 .mt-5 {
     margin-top: 5rem !important;
