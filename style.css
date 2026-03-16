@@ -630,7 +630,7 @@ body {
 
 .footer-divider {
     border-color: rgba(255, 255, 255, 0.15);
-    margin: 40px 0 20px;
+    margin: 20px 0 20px;
 }
 
 .footer-bottom {
@@ -1231,9 +1231,12 @@ body {
     color: #fff;
     border-radius: 22px;
     padding: 25px;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center; /* center content */
+    gap: 15px; /* auto spacing */
+
     opacity: 0;
     transform: translateY(30px);
     transition: .4s;
@@ -2603,4 +2606,33 @@ p a[href^="mailto"]:hover {
 
 .mt-5 {
     margin-top: 5rem !important;
+}
+
+/* scroll to top */
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: #66358b;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background: #7a45a3;
+    transform: translateY(-4px);
+}
+
+#scrollTopBtn i {
+    line-height: 48px;
 }

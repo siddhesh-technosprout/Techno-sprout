@@ -38,6 +38,9 @@
     <!-- <a href="tel:+9594415599" class="call-float">
         <i class="fa-solid fa-phone"></i>
     </a> -->
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- HEADER -->
     <header class="main-header">
 
@@ -682,7 +685,7 @@
 
 
     <!-- our services section -->
-    <section class="services-section py-5">
+    <section class="services-section">
         <div class="container">
 
             <!-- Title -->
@@ -793,7 +796,7 @@
 
 
     <!-- business outcomes section -->
-    <section class="benefits-section py-5">
+    <section class="benefits-section py-5 mt-5">
         <div class="container">
             <div class="text-center">
                 <h2 class="approach-title">
@@ -917,7 +920,7 @@
                     <div class="col-lg-7">
 
                         <div class="modal-header border-0">
-                            <h5 class="modal-title">Book a Consultation</h5>
+                            <h5 class="modal-title">Book a Appointment</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
 
@@ -1059,7 +1062,7 @@
 
                 <div class="footer-bottom"
                     style="display:flex; justify-content:center; align-items:center; font-size: 22px;">
-                    <p style="margin:0;">Copyright © 2026 All Rights Reserved.</p>
+                    <p style="margin:0;">© 2026 TechnoSprout. All rights reserved.</p>
                 </div>
 
             </div>
@@ -1123,6 +1126,25 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+     <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
 </body>
 
 </html>

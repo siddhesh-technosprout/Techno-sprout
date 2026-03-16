@@ -40,6 +40,9 @@
     <!-- <a href="tel:+9594415599" class="call-float">
             <i class="fa-solid fa-phone"></i>
         </a> -->
+        <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- HEADER -->
     <header class="main-header">
 
@@ -466,7 +469,7 @@
 
                 <div class="footer-bottom"
                     style="display:flex; justify-content:center; align-items:center; font-size: 22px;">
-                    <p style="margin:0;">Copyright © 2026 All Rights Reserved.</p>
+                    <p style="margin:0;">© 2026 TechnoSprout. All rights reserved.</p>
                 </div>
 
             </div>
@@ -542,6 +545,25 @@
             });
 
         });
+    </script>
+
+     <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
     </script>
 
 

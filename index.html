@@ -28,6 +28,9 @@
     <!-- <a href="tel:+9594415599" class="call-float">
         <i class="fa-solid fa-phone"></i>
     </a> -->
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- HEADER -->
     <header class="main-header">
 
@@ -422,7 +425,7 @@
                     <div class="framework-image">
                         <img src="assets/img.png" class="img-fluid" alt="framework">
                     </div>
-                
+
                 </div>
 
             </div>
@@ -458,7 +461,7 @@
 
                         <div class="service-card-hover">
                             <p>Designing and implementing modern technology platforms.</p>
-                            <a href="#" class="service-btn">
+                            <a href="services.html" class="service-btn">
                                 Know More
                                 <span class="service-icon">
                                     <i class="fa-solid fa-arrow-right"></i>
@@ -480,7 +483,7 @@
 
                         <div class="service-card-hover">
                             <p>Deploy scalable platforms that power modern business.</p>
-                            <a href="#" class="service-btn">
+                            <a href="services.html" class="service-btn">
                                 Know More
                                 <span class="service-icon">
                                     <i class="fa-solid fa-arrow-right"></i>
@@ -502,7 +505,7 @@
 
                         <div class="service-card-hover">
                             <p>Operate and optimize systems for reliability and growth.</p>
-                            <a href="#" class="service-btn">
+                            <a href="services.html" class="service-btn">
                                 Know More
                                 <span class="service-icon">
                                     <i class="fa-solid fa-arrow-right"></i>
@@ -524,7 +527,7 @@
 
                         <div class="service-card-hover">
                             <p>Automate workflows and improve operational efficiency.</p>
-                            <a href="#" class="service-btn">
+                            <a href="services.html" class="service-btn">
                                 Know More
                                 <span class="service-icon">
                                     <i class="fa-solid fa-arrow-right"></i>
@@ -563,13 +566,13 @@
                     We Deliver
                 </h2>
                 <p class="services-subtitle">
-                     Our focus is not just technology implementation
+                    Our focus is not just technology implementation
                     but measurable business impact.
                     Organizations working with us achieve:
                 </p>
             </div>
 
-            
+
 
             <div class="row benefits-row text-center mt-4 g-4">
 
@@ -626,8 +629,8 @@
                 <div class="col-lg-6">
 
                     <h2 class="approach-title">
-                        <span>Industries</span>
-                        We </br> Serve
+                        <span>Industries</span> </br>
+                        We Serve
                     </h2>
                     <p class="approach-desc">
                         We empower small and mid-sized businesses to
@@ -673,7 +676,7 @@
 
                     </div>
 
-                    <p class="industry-title">Industries We Serve</p>
+                    <!-- <p class="industry-title">Industries We Serve</p> -->
 
                 </div>
 
@@ -892,7 +895,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq5">
-                                  Why would we need an external partner if we have an IT team?
+                                    Why would we need an external partner if we have an IT team?
                                 </button>
                             </h2>
 
@@ -918,7 +921,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed faq-btn" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq6">
-                                   Will we need to replace our existing technology?
+                                    Will we need to replace our existing technology?
                                 </button>
                             </h2>
 
@@ -1238,7 +1241,7 @@
 
 
     <!-- FOOTER -->
-   <footer class="footer">
+    <footer class="footer">
         <div class="footer-overlay">
             <div class="container">
 
@@ -1290,10 +1293,11 @@
                     <div class="col-lg-3 col-md-6">
                         <h6 class="footer-title">Contact</h6>
                         <!-- <p><a href="tel:+9594415599" style="color: #fff;">+91 95944 15599</a></p> -->
-                        <p> <a href="mailto:support@technosprout.in" style="color: #fff; font-size: 16px;"><i class="fa-solid fa-envelope me-2"></i>support@technosprout.in</a>
+                        <p> <a href="mailto:support@technosprout.in" style="color: #fff; font-size: 16px;"><i
+                                    class="fa-solid fa-envelope me-2"></i>support@technosprout.in</a>
                         </p>
                         <p style="font-size: 16px;">
-                          <i class="fa-solid fa-location-dot me-2"></i>1009, Lodha Supremus,</br> Kolshet Road,<br>
+                            <i class="fa-solid fa-location-dot me-2"></i>1009, Lodha Supremus,</br> Kolshet Road,<br>
                             Thane - 400 607
                         </p>
                     </div>
@@ -1304,14 +1308,14 @@
 
                 <div class="footer-bottom"
                     style="display:flex; justify-content:center; align-items:center; font-size: 22px;">
-                    <p style="margin:0;">Copyright © 2026 All Rights Reserved.</p>
+                    <p style="margin:0;">© 2026 TechnoSprout. All rights reserved.</p>
                 </div>
 
             </div>
         </div>
     </footer>
 
-   <!-- Consultation Modal -->
+    <!-- Consultation Modal -->
     <div class="modal fade" id="consultModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content consult-modal">
@@ -1339,7 +1343,7 @@
                     <div class="col-lg-7">
 
                         <div class="modal-header border-0">
-                            <h5 class="modal-title">Book a Consultation</h5>
+                            <h5 class="modal-title">Book a Appointment</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
 
@@ -1463,6 +1467,25 @@
             });
 
         });
+    </script>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
     </script>
 
 
