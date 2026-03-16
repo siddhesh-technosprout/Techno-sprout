@@ -441,14 +441,19 @@ body {
 
 /* Title */
 
-.approach-title{
-    font-size:40px;
-    font-weight:700;
-    margin-bottom:50px;
-}
+
 
 .approach-title span{
     color:#2b0a5c;
+}
+
+@media (max-width: 500px) {
+   .approach-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #2b0a5c;
+    margin-bottom: 5px;
+}
 }
 
 
@@ -1160,6 +1165,12 @@ body {
 
 .approach-img {
     max-width: 420px;
+}
+
+@media (max-width: 500px) {
+    .approach-img {
+        max-width: 267px;
+    }
 }
 
 /* MOBILE */
