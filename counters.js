@@ -1,39 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const counters = document.querySelectorAll(".counter");
+    const counters = document.querySelectorAll(".counter");
 
-  const startCounter = (counter) => {
+    counters.forEach(counter => {
 
-    const start = parseInt(counter.getAttribute("data-start")) || 0;
-    const target = parseInt(counter.getAttribute("data-target"));
-    const symbol = counter.getAttribute("data-symbol") || "";
-    const speed = parseInt(counter.getAttribute("data-speed")) || 80;
+        let start = parseFloat(counter.getAttribute("data-start")) || 0;
+        let target = parseFloat(counter.getAttribute("data-target"));
+        let symbol = counter.getAttribute("data-symbol") || "";
 
-    let count = start;
+        let current = start;
 
-    const update = () => {
+        let duration = 1500; // same speed for all
+        let steps = 60;
+        let increment = (target - start) / steps;
+        let stepTime = duration / steps;
 
-      if (count < target) {
+        function updateCounter() {
 
-        count++;
+            current += increment;
 
-        counter.innerText = count + symbol;
+            if (current >= target) current = target;
 
-        setTimeout(update, speed);
+            let value;
 
-      } else {
+            // integers for +
+            if (symbol === "+") {
+                value = Math.floor(current);
+            } 
+            // decimals for X
+            else {
+                value = current.toFixed(1);
+                if (value.endsWith(".0")) value = parseInt(value);
+            }
 
-        counter.innerText = target + symbol;
+            counter.innerHTML = value + '<span class="symbol">' + symbol + '</span>';
 
-      }
+            if (current < target) {
+                setTimeout(updateCounter, stepTime);
+            }
+        }
 
-    };
+        updateCounter();
 
-    update();
-  };
-
-  counters.forEach(counter => {
-    startCounter(counter);
-  });
+    });
 
 });
