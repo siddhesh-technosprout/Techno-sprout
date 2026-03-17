@@ -493,7 +493,7 @@ body {
 
 /* SYMBOL */
 .symbol {
-    font-size: 28px;
+    font-size: 45px;
     position: relative;
     top: -12px;
     margin-left: 6px; /* spacing from number */
@@ -2723,7 +2723,7 @@ p a[href^="mailto"]:hover {
 
 .journey-highlight {
     color: #66358b;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 19px;
 }
 

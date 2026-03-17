@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let current = start;
 
-        let duration = 1500; // same speed for all
+        let duration = 1500;
         let steps = 60;
         let increment = (target - start) / steps;
         let stepTime = duration / steps;
@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let value;
 
-            // integers for +
-            if (symbol === "+") {
+            // integers for + and %
+            if (symbol === "+" || symbol === "%") {
                 value = Math.floor(current);
             } 
-            // decimals for X
+            // decimals for others
             else {
                 value = current.toFixed(1);
                 if (value.endsWith(".0")) value = parseInt(value);
