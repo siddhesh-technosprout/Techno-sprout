@@ -457,48 +457,42 @@ body {
 }
 
 /* SECTION */
+/* SECTION */
 .impact-section {
-    padding: 30px 20px; /* more breathing space */
+    padding: 30px 20px;
     background: linear-gradient(180deg, #F4F4F7 0%, #EFEFF3 100%);
     text-align: center;
 }
 
-
-
 /* HORIZONTAL LAYOUT */
 .impact-stats {
     display: flex;
-    justify-content: center;   /* CENTER everything */
+    justify-content: center;
     align-items: flex-start;
     max-width: 1100px;
     margin: 0 auto 40px auto;
-    gap: 100px; /* 🔥 control spacing between counters */
+    gap: 100px;
 }
+
 /* ITEM */
 .impact-item {
     flex: 1;
+    transition: transform 0.3s ease;
 }
 
 /* NUMBER */
 .impact-item h3 {
-    font-size: 64px;
+    font-size: 54px;
     font-weight: 700;
     color: #5b2ca0;
-    margin-bottom: 16px; /* gap between number & text */
+    margin-bottom: 16px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: baseline;
     line-height: 1;
 }
 
-/* SYMBOL */
-.symbol {
-    font-size: 45px;
-    position: relative;
-    top: -12px;
-    margin-left: 6px; /* spacing from number */
-    
-}
+
 
 /* TEXT */
 .impact-item p {
@@ -510,7 +504,7 @@ body {
 
 /* BOTTOM TEXT */
 .impact-text {
-    margin-top: 20px; /* gap from stats */
+    margin-top: 20px;
 }
 
 .impact-text p {
@@ -519,15 +513,14 @@ body {
 }
 
 /* HOVER */
-.impact-item:hover h3 {
-    transform: translateY(-4px);
+.impact-item:hover {
+    transform: translateY(-6px);
 }
 
 /* TABLET */
 @media (max-width:768px) {
     .impact-stats {
         flex-wrap: wrap;
-        justify-content: center;
         gap: 40px;
     }
 
@@ -537,6 +530,10 @@ body {
 
     .impact-item h3 {
         font-size: 48px;
+    }
+
+    .symbol {
+        font-size: 28px;
     }
 }
 
@@ -550,10 +547,9 @@ body {
         font-size: 38px;
     }
 
-    .symbol {
-        font-size: 14px;
-        top: -6px;
-    }
+    /* .symbol {
+        font-size: 20px;
+    } */
 
     .impact-item p {
         font-size: 13px;

@@ -1,47 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const counters = document.querySelectorAll(".counter");
+    const counters = document.querySelectorAll(".animate-counter");
 
-    counters.forEach(counter => {
+    const startCounter = (counter) => {
+        let start = +counter.getAttribute("data-start");
+        let target = +counter.getAttribute("data-target");
+        let symbol = counter.getAttribute("data-symbol");
 
-        let start = parseFloat(counter.getAttribute("data-start")) || 0;
-        let target = parseFloat(counter.getAttribute("data-target"));
-        let symbol = counter.getAttribute("data-symbol") || "";
-
-        let current = start;
-
+        let count = start;
         let duration = 1500;
-        let steps = 60;
-        let increment = (target - start) / steps;
-        let stepTime = duration / steps;
 
-        function updateCounter() {
+        let increment = Math.ceil(target / (duration / 16));
 
-            current += increment;
+        function updateCount() {
+            if (count < target) {
+                count += increment;
 
-            if (current >= target) current = target;
+                if (count > target) count = target;
 
-            let value;
-
-            // integers for + and %
-            if (symbol === "+" || symbol === "%") {
-                value = Math.floor(current);
-            } 
-            // decimals for others
-            else {
-                value = current.toFixed(1);
-                if (value.endsWith(".0")) value = parseInt(value);
-            }
-
-            counter.innerHTML = value + '<span class="symbol">' + symbol + '</span>';
-
-            if (current < target) {
-                setTimeout(updateCounter, stepTime);
+                counter.innerHTML = count + `<span class="symbol">${symbol}</span>`;
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerHTML = target + `<span class="symbol">${symbol}</span>`;
             }
         }
 
-        updateCounter();
+        updateCount();
+    };
 
+    // Intersection Observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
     });
 
 });
