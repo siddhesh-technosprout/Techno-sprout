@@ -274,7 +274,7 @@
 
             </div>
 
-            <hr class="line">
+            <!-- <hr class="line"> -->
 
 
             <!-- COMPANY LOGO SLIDER -->
@@ -408,7 +408,7 @@
     </section>
 
 
-    <section class="approach-section py-5">
+    <section class="approach-section">
         <div class="container">
 
             <div class="row align-items-center">
@@ -1071,6 +1071,11 @@
                                     placeholder="Enter Your Message..."></textarea>
                             </div>
 
+                            <!-- <div class="col-12 mt-2">
+                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                                <span id="captchaError" class="form-error">Please verify captcha</span>
+                            </div> -->
+
                             <div class="col-12 mt-3">
 
                                 <button type="submit" class="btn contact-btn-white">
@@ -1089,16 +1094,27 @@
 
 
                 </div>
-                <!-- <a href="#" class="btn btn-consult">
-                        Submit <i class="fa-solid fa-circle-arrow-right"></i>
-                    </a> -->
-
             </div>
 
         </div>
         </div>
     </section>
 
+
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    let captcha = grecaptcha.getResponse();
+
+    if (captcha.length === 0) {
+        e.preventDefault();
+        document.getElementById("captchaError").style.display = "block";
+    } else {
+        document.getElementById("captchaError").style.display = "none";
+    }
+
+});
+</script>
     <style>
         .form-error {
             color: #ff4d4d;
@@ -1320,7 +1336,7 @@
 
                 <div class="footer-bottom"
                     style="display:flex; justify-content:center; align-items:center; font-size: 22px;">
-                    <p style="margin:0;">© 2026 TechnoSprout. All rights reserved.</p>
+                    <p style="margin:0;">© 2026 Technosprout. All rights reserved.</p>
                 </div>
 
             </div>
