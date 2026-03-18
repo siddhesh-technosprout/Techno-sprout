@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    <script>
+window.hsConversationsSettings = {
+    loadImmediately: false
+};
+</script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJM404PWPZ"></script>
     <script>
@@ -1102,19 +1107,19 @@
 
 
     <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
 
-    let captcha = grecaptcha.getResponse();
+            let captcha = grecaptcha.getResponse();
 
-    if (captcha.length === 0) {
-        e.preventDefault();
-        document.getElementById("captchaError").style.display = "block";
-    } else {
-        document.getElementById("captchaError").style.display = "none";
-    }
+            if (captcha.length === 0) {
+                e.preventDefault();
+                document.getElementById("captchaError").style.display = "block";
+            } else {
+                document.getElementById("captchaError").style.display = "none";
+            }
 
-});
-</script>
+        });
+    </script>
     <style>
         .form-error {
             color: #ff4d4d;
@@ -1378,6 +1383,16 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     </div>
 
     <style>
+        /* FORCE HIDE HUBSPOT MEETING POPUP */
+iframe[src*="hubspot"] {
+    display: none !important;
+}
+
+.hs-modal,
+[class*="hubspot"],
+[id*="hubspot"] {
+    display: none !important;
+}
         /* LOCK SCROLL */
         .no-scroll {
             overflow: hidden;
@@ -1533,103 +1548,38 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         }
     </style>
 
-    <!-- <script>
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const modal = document.getElementById("cookieModal");
-  const acceptBtn = document.getElementById("cookieAcceptBtn");
-  const rejectBtn = document.getElementById("cookieRejectBtn");
-  const closeBtn = document.getElementById("cookieCloseBtn");
+    const modal = document.getElementById("cookieModal");
+    if (!modal) return;
 
-  // SHOW POPUP AFTER 3 SEC
-  if (!localStorage.getItem("cookieConsent")) {
-    setTimeout(() => {
-      modal.style.display = "flex";
-      document.body.classList.add("no-scroll");
-    }, 3000);
-  }
+    // show only once
+    if (!localStorage.getItem("cookieConsent")) {
+        setTimeout(() => {
+            modal.style.display = "flex";
+        }, 3000);
+    }
 
-  // CLOSE FUNCTION
-  function closeModal() {
-    modal.style.display = "none";
-    document.body.classList.remove("no-scroll");
-  }
+    function closeModal() {
+        modal.style.display = "none";
+    }
 
-  // ACCEPT
-  if (acceptBtn) {
-    acceptBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      localStorage.setItem("cookieConsent", "accepted");
-      closeModal();
+    document.getElementById("cookieAcceptBtn")?.addEventListener("click", function(e){
+        e.preventDefault();
+        localStorage.setItem("cookieConsent", "accepted");
+        closeModal();
     });
-  }
 
-  // REJECT
-  if (rejectBtn) {
-    rejectBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      localStorage.setItem("cookieConsent", "rejected");
-      closeModal();
+    document.getElementById("cookieRejectBtn")?.addEventListener("click", function(e){
+        e.preventDefault();
+        localStorage.setItem("cookieConsent", "rejected");
+        closeModal();
     });
-  }
-
-  // CLOSE ICON
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeModal);
-  }
 
 });
-</script> -->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const modal = document.getElementById("cookieModal");
-            const acceptBtn = document.getElementById("cookieAcceptBtn");
-            const rejectBtn = document.getElementById("cookieRejectBtn");
-            const closeBtn = document.getElementById("cookieCloseBtn");
-
-            // SHOW POPUP AFTER 3 SEC (ONLY ONCE PER SESSION)
-            if (!sessionStorage.getItem("cookieConsentShown")) {
-                setTimeout(() => {
-                    modal.style.display = "flex";
-                    document.body.classList.add("no-scroll");
-
-                    // mark as shown
-                    sessionStorage.setItem("cookieConsentShown", "true");
-                }, 3000);
-            }
-
-            // CLOSE FUNCTION
-            function closeModal() {
-                modal.style.display = "none";
-                document.body.classList.remove("no-scroll");
-            }
-
-            // ACCEPT
-            if (acceptBtn) {
-                acceptBtn.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    closeModal();
-                });
-            }
-
-            // REJECT
-            if (rejectBtn) {
-                rejectBtn.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    closeModal();
-                });
-            }
-
-            // CLOSE ICON
-            if (closeBtn) {
-                closeBtn.addEventListener("click", closeModal);
-            }
-
-        });
-    </script>
-
+</script>
 
 
     <!-- industry-card js -->
@@ -1709,6 +1659,26 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
     <!-- End of HubSpot Embed Code -->
+
+   <script>
+/* HARD BLOCK HUBSPOT POPUP */
+const observer = new MutationObserver(() => {
+
+    // remove hubspot iframe
+    document.querySelectorAll('iframe[src*="hubspot"]').forEach(el => el.remove());
+
+    // remove any hubspot modal containers
+    document.querySelectorAll('[class*="hubspot"], [id*="hubspot"]').forEach(el => {
+        el.remove();
+    });
+
+});
+
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+</script>
 </body>
 
 </html>
