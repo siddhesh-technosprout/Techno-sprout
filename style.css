@@ -1331,6 +1331,13 @@ body {
     margin-left: 90px;
 }
 
+/* Mobile devices */
+@media (max-width: 768px) {
+    .service-btn {
+        margin-left: 200px;
+    }
+}
+
 .service-btn span {
     background: #fff;
     color: #5a2d91;
