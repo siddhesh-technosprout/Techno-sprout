@@ -1334,7 +1334,7 @@ body {
 /* Mobile devices */
 @media (max-width: 768px) {
     .service-btn {
-        margin-left: 200px;
+        margin-left: 0px;
     }
 }
 
