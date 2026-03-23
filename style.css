@@ -36,6 +36,7 @@ html {
 
 body {
     font-family: "Avenir", sans-serif;
+     overflow-x: hidden; /* prevents horizontal scroll */
 }
 
 /* HEADER */
@@ -74,6 +75,14 @@ body {
 
     color: #591487 !important;
 }
+
+.py-5 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Mobile devices */
+
 
 /* BUTTON */
 
@@ -304,7 +313,7 @@ body {
 /* TITLE */
 
 .hero-title {
-    font-size: 41px;
+    font-size: 50px;
     font-weight: 550;
     color: #36005a;
     line-height: 1.3;
@@ -366,7 +375,7 @@ body {
 /* IMAGE */
 
 .hero-image {
-    max-width: 400px;
+    max-width: 450px;
 }
 
 /* LOGO SLIDER */
@@ -384,7 +393,7 @@ body {
 }
 
 .logo-track img {
-    height: 35px;
+    height: 40px;
     /* opacity: 0.7; */
 }
 
@@ -426,11 +435,11 @@ body {
 @media (max-width:576px) {
 
     .hero-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .hero-image {
-        max-width: 300px;
+        max-width: 330px;
     }
 
     .logo-track {
@@ -600,6 +609,28 @@ body {
     width: 120px;
     height: auto;
     object-fit: contain;
+}
+
+/* Mobile only */
+@media (max-width: 767px) {
+    .last-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .last-card-title{
+    font-size: 22px !important;
+    margin-top: 50px !important;
+    }
+
+    .last-card-img {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 170px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
 }
 
 
@@ -1119,6 +1150,66 @@ body {
     font-style: italic;
 }
 
+@media (max-width: 767px) {
+    .content-side {
+        text-align: center;
+    }
+
+    .content-side .btn-consult {
+        /* display: inline-flex; */
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-lg-6,
+    .col-lg-7 {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .approach-title {
+        font-size: 24px;
+    }
+
+    .approach-desc {
+        font-size: 14px;
+    }
+
+    .btn-consult {
+        display: inline-flex;
+        margin: 15px auto 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile-center {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .mobile-center .btn,
+    .mobile-center .btn-consult {
+        display: inline-flex;
+        justify-content: center;
+        margin: 15px auto 0;
+    }
+
+    .mobile-center br {
+        display: none; /* removes forced line breaks */
+    }
+}
+
+.contact-section label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    text-align: left; /* start alignment */
+    display: block;
+}
+
+
+
 /* DESCRIPTION */
 
 /* .approach-desc {
@@ -1444,6 +1535,13 @@ body {
     font-size: 16px;
     color: #666;
     line-height: 1.6;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+    .choose-card p {
+        font-size: 12px;
+    }
 }
 
 /* button */
