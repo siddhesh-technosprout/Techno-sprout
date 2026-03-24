@@ -36,7 +36,8 @@ html {
 
 body {
     font-family: "Avenir", sans-serif;
-     overflow-x: hidden; /* prevents horizontal scroll */
+    overflow-x: hidden;
+    /* prevents horizontal scroll */
 }
 
 /* HEADER */
@@ -452,10 +453,6 @@ body {
 
 
 
-.approach-title span {
-    color: #2b0a5c;
-}
-
 @media (max-width: 500px) {
     .approach-title {
         font-size: 25px !important;
@@ -617,19 +614,20 @@ body {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .last-card-title{
-    font-size: 22px !important;
-    margin-top: 50px !important;
+
+    .last-card-title {
+        font-size: 22px !important;
+        margin-top: 50px !important;
     }
 
     .last-card-img {
-    position: absolute !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    width: 170px !important;
-    height: auto !important;
-    object-fit: contain !important;
-}
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        width: 170px !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
 
 }
 
@@ -1142,6 +1140,8 @@ body {
 
 .approach-title span {
     font-style: italic;
+    color: #2b0a5c;
+    font-weight: 900;
 }
 
 @media (max-width: 767px) {
@@ -1157,6 +1157,7 @@ body {
 }
 
 @media (max-width: 767px) {
+
     .col-lg-6,
     .col-lg-7 {
         text-align: center;
@@ -1168,7 +1169,7 @@ body {
     }
 
     .approach-desc {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .btn-consult {
@@ -1191,14 +1192,16 @@ body {
     }
 
     .mobile-center br {
-        display: none; /* removes forced line breaks */
+        display: none;
+        /* removes forced line breaks */
     }
 }
 
 .contact-section label {
     font-size: 14px;
     margin-bottom: 6px;
-    text-align: left; /* start alignment */
+    text-align: left;
+    /* start alignment */
     display: block;
 }
 
@@ -1259,7 +1262,7 @@ body {
 @media (max-width:768px) {
 
     .approach-title {
-        font-size: 32px !important;
+        font-size: 28px !important;
     }
 
     /* .approach-desc {
@@ -1349,12 +1352,14 @@ body {
     width: 155px;
     align-self: flex-end;
 }
+
 /* Mobile (all small devices) */
 @media (max-width: 768px) {
     .service-card-default img {
         width: 90px;
     }
 }
+
 @media (max-width: 576px) {
     .service-card-default img {
         width: 90px;
@@ -1482,7 +1487,10 @@ body {
 
 }
 
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
     cursor: pointer;
     border: none;
 }
@@ -2438,33 +2446,24 @@ p a[href^="mailto"]:hover {
 }
 
 /* container */
-
 .stack-container {
     max-width: 900px;
     margin: auto;
 }
 
 /* cards */
-
 .stack-card {
-
     position: sticky;
     top: 120px;
-
     background: linear-gradient(180deg, #f3f3f6, #e9e9ee);
-
     padding: 50px;
     border-radius: 30px;
-
     margin-bottom: 40px;
-
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.08);
-
     transition: height .4s ease;
 }
 
 /* stacking spacing */
-
 .stack-card:nth-child(2) {
     top: 150px;
 }
@@ -2474,25 +2473,17 @@ p a[href^="mailto"]:hover {
 }
 
 /* number */
-
 .card-number {
-
     position: absolute;
-
     right: 20px;
     top: 20px;
-
     width: 46px;
     height: 46px;
-
     border: 2px solid #5c3fa3;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-weight: 700;
     color: #5c3fa3;
 }
@@ -2504,9 +2495,7 @@ p a[href^="mailto"]:hover {
 }
 
 /* responsive */
-
 @media(max-width:768px) {
-
     .framework-title {
         font-size: 30px;
     }
@@ -2515,7 +2504,6 @@ p a[href^="mailto"]:hover {
         padding: 30px;
         top: 100px;
     }
-
 }
 
 /* operating model section (Services) */
@@ -2969,4 +2957,223 @@ p a[href^="mailto"]:hover {
 
 #scrollTopBtn i {
     line-height: 48px;
+}
+
+
+/* about page hi amigo */
+
+/* Technology Excellence Section */
+.tech-excellence-section {
+    position: relative;
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.tech-excellence-section i {
+    color: #000;
+}
+
+.tech-excellence-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.tech-excellence-section .goal-box {
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    color: #4B0082;
+    /* deep purple text */
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 767.98px) {
+    .tech-excellence-section p {
+        font-size: 0.95rem;
+    }
+
+    .tech-excellence-section .goal-box {
+        font-size: 1rem;
+        padding: 20px;
+    }
+}
+
+/* about us transforming business */
+
+.inception-section {
+    background: #f8f9fa;
+}
+
+.main-img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Progress Bar */
+.progress-wrapper {
+    width: 100%;
+}
+
+.progress-line {
+    position: absolute;
+    top: 9px; /* adjust to align with circles */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ddd;
+    z-index: 1;
+}
+
+.steps {
+    position: relative;
+    z-index: 2;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Circle */
+.circle {
+    width: 18px;
+    height: 18px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.circle.active {
+    background: #6f42c1;
+    transform: scale(1.2);
+    animation: pulse 1.2s infinite;
+}
+
+/* Step Title Under Circle */
+.step-title {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.circle.active + .step-title {
+    font-weight: 600;
+    color: #6f42c1;
+}
+
+/* Keyframe pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(111, 66, 193, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(111, 66, 193, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(111, 66, 193, 0);
+    }
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .main-img {
+        max-height: 200px;
+    }
+    .circle {
+        width: 14px;
+        height: 14px;
+    }
+    .step-title {
+        font-size: 10px;
+    }
+
+    .progress-line {
+    position: absolute;
+    top: 5px; /* adjust to align with circles */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ddd;
+    z-index: 1;
+}
+
+}
+
+
+/* what we are building */
+
+.approach-section {
+    background-color: #f5f5f5;
+}
+
+.approach-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #3b0a57;
+    line-height: 1.2;
+}
+
+.approach-title span {
+    font-style: italic;
+}
+
+.approach-subtitle {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.approach-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.approach-highlight {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.approach-description {
+    font-size: 15px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .approach-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .approach-title {
+        font-size: 32px;
+    }
+
+    .approach-subtitle,
+    .approach-description,
+    .approach-highlight {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .approach-title {
+        font-size: 26px;
+    }
 }

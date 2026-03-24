@@ -105,9 +105,7 @@
 
 <style>
     @media (max-width: 576px) {
-        .bpw-card {
-            padding: 10px;
-        }
+
 
         .bpw-content h4 {
             font-size: 14px;
@@ -118,7 +116,15 @@
         }
 
     }
+
+    @media (max-width: 768px) {
+        .bpw-text {
+            padding: 15px !important;
+        }
+    }
 </style>
+
+
 
 
 <body>
@@ -257,9 +263,6 @@
                 </ul>
 
 
-                <hr class="line">
-
-
                 <div class="mobile-contact">
 
                     <p>
@@ -321,80 +324,78 @@
                     </p>
 
                     <button id="openMeetingBtn" class="btn btn-consult">
-                            <i class="fa-solid fa-calendar-check me-2"></i> Book Appointment
-                        </button>
+                        <i class="fa-solid fa-calendar-check me-2"></i> Book Appointment
+                    </button>
 
-                        <!-- POPUP -->
-                        <div id="meetingPopup" class="popup-overlay">
+                    <!-- POPUP -->
+                    <div id="meetingPopup" class="popup-overlay">
 
-                            <div class="popup-card">
+                        <div class="popup-card">
 
-                                <!-- CLOSE -->
-                                <span class="popup-close" id="closeMeetingPopup">&times;</span>
+                            <!-- CLOSE -->
+                            <span class="popup-close" id="closeMeetingPopup">&times;</span>
 
-                                <div class="popup-flex">
+                            <div class="popup-flex">
 
-                                    <!-- LEFT -->
-                                    <div class="popup-left">
-                                        <h2>Let's Connect</h2>
-                                        </br>
-                                        <p style="font-size: 18px;">We help you grow faster with smart solutions.</p>
-                                    </div>
+                                <!-- LEFT -->
+                                <div class="popup-left">
+                                    <h2>Let's Connect</h2>
+                                    </br>
+                                    <p style="font-size: 18px;">We help you grow faster with smart solutions.</p>
+                                </div>
 
-                                    <!-- RIGHT -->
-                                    <div class="popup-right">
+                                <!-- RIGHT -->
+                                <div class="popup-right">
 
-                                        <form id="popupForm">
+                                    <form id="popupForm">
 
-                                            <div class="row">
+                                        <div class="row">
 
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="text" name="firstname" placeholder="Enter Your Full Name *"
-                                                        class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="email" name="email" placeholder="Email *"
-                                                        class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="tel" name="phone" placeholder="Phone *"
-                                                        class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="text" name="company" placeholder="Organisation Name *"
-                                                        class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-12">
-                                                    <textarea name="message" placeholder="Message"
-                                                        class="form-control"></textarea>
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="col-12 mt-3">
-                                                    <button type="submit" class="btn btn-consult w-40"
-                                                        style="display:block; margin:0 auto; text-align:center;">
-
-                                                        Submit
-                                                        <span class="service-icon ms-2">
-                                                            <i class="fa-solid fa-circle-arrow-right"></i>
-                                                        </span>
-
-                                                    </button>
-                                                </div>
-
+                                            <div class="form-group col-md-6 mb-3">
+                                                <input type="text" name="firstname" placeholder="Enter Your Full Name *"
+                                                    class="form-control">
+                                                <small class="error-msg"></small>
                                             </div>
 
-                                        </form>
+                                            <div class="form-group col-md-6 mb-3">
+                                                <input type="email" name="email" placeholder="Email *"
+                                                    class="form-control">
+                                                <small class="error-msg"></small>
+                                            </div>
 
-                                    </div>
+                                            <div class="form-group col-md-6 mb-3">
+                                                <input type="tel" name="phone" placeholder="Phone *"
+                                                    class="form-control">
+                                                <small class="error-msg"></small>
+                                            </div>
+
+                                            <div class="form-group col-md-6 mb-3">
+                                                <input type="text" name="company" placeholder="Organisation Name *"
+                                                    class="form-control">
+                                                <small class="error-msg"></small>
+                                            </div>
+
+                                            <div class="form-group col-12">
+                                                <textarea name="message" placeholder="Message"
+                                                    class="form-control"></textarea>
+                                                <small class="error-msg"></small>
+                                            </div>
+
+                                            <div class="col-12 mt-3">
+                                                <button type="submit" class="btn btn-consult w-40"
+                                                    style="display:block; margin:0 auto; text-align:center;">
+
+                                                    Submit
+                                                    <span class="service-icon ms-2">
+                                                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                                    </span>
+
+                                                </button>
+                                            </div>
+
+                                        </div>
+
+                                    </form>
 
                                 </div>
 
@@ -402,298 +403,300 @@
 
                         </div>
 
-                        <style>
-                            .error-msg {
-                                color: red;
-                                font-size: 12px;
-                                display: block;
-                                margin-top: 5px;
+                    </div>
+
+                    <style>
+                        .error-msg {
+                            color: red;
+                            font-size: 12px;
+                            display: block;
+                            margin-top: 5px;
+                        }
+
+                        input.error,
+                        textarea.error {
+                            border-color: red;
+                        }
+
+                        .popup-overlay {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.6);
+                            display: none;
+                            align-items: center;
+                            justify-content: center;
+                            z-index: 9999;
+                        }
+
+                        .popup-card {
+                            width: 90%;
+                            max-width: 900px;
+                            background: #fff;
+                            border-radius: 16px;
+                            overflow: hidden;
+                            display: flex;
+                            position: relative;
+                            animation: popupFade 0.3s ease;
+                        }
+
+                        @keyframes popupFade {
+                            from {
+                                transform: scale(0.9);
+                                opacity: 0;
                             }
 
-                            input.error,
-                            textarea.error {
-                                border-color: red;
+                            to {
+                                transform: scale(1);
+                                opacity: 1;
+                            }
+                        }
+
+                        .popup-close {
+                            position: absolute;
+                            top: 10px;
+                            right: 15px;
+                            font-size: 22px;
+                            cursor: pointer;
+                            color: #ddd;
+                            transition: all 0.3s ease;
+                        }
+
+                        .popup-close:hover {
+                            color: #ff4d4d;
+                            /* change to your preferred color */
+                            transform: scale(1.2);
+                            /* optional zoom effect */
+                        }
+
+                        .popup-flex {
+                            display: flex;
+                            width: 100%;
+                        }
+
+                        /* LEFT */
+                        .popup-left {
+                            width: 40%;
+                            background: linear-gradient(135deg, #591486, #200e42);
+                            color: #fff;
+                            padding: 40px;
+                        }
+
+                        .popup-left h2 {
+                            font-size: 60px;
+                            margin-bottom: 10px;
+                            font-weight: 800;
+                        }
+
+                        /* RIGHT */
+                        .popup-right {
+                            width: auto;
+                            padding: 60px;
+                        }
+
+                        .form-group {
+                            margin-bottom: 15px;
+                        }
+
+                        .form-group input,
+                        .form-group textarea {
+                            width: 100%;
+                            padding: 12px !important;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                            outline: none;
+                        }
+
+                        .form-group input:focus,
+                        .form-group textarea:focus {
+                            border-color: #0d6efd;
+                        }
+
+                        .submit-btn {
+                            width: auto;
+                            padding: 12px;
+                            border: none;
+                            background: #0d6efd;
+                            color: #fff;
+                            border-radius: 8px;
+                            font-weight: 600;
+                        }
+
+                        /* MOBILE */
+                        @media(max-width:768px) {
+                            .popup-flex {
+                                flex-direction: column;
                             }
 
-                            .popup-overlay {
-                                position: fixed;
-                                top: 0;
-                                left: 0;
+                            .popup-left,
+                            .popup-right {
                                 width: 100%;
-                                height: 100%;
-                                background: rgba(0, 0, 0, 0.6);
-                                display: none;
-                                align-items: center;
-                                justify-content: center;
-                                z-index: 9999;
+                            }
+                        }
+
+                        @media(max-width: 768px) {
+                            .popup-overlay {
+                                padding: 10px;
+                                /* Prevents card from touching screen edges */
+                                align-items: flex-start;
+                                /* Better for long forms to allow scrolling */
+                                overflow-y: auto;
                             }
 
                             .popup-card {
-                                width: 90%;
-                                max-width: 900px;
-                                background: #fff;
-                                border-radius: 16px;
-                                overflow: hidden;
-                                display: flex;
-                                position: relative;
-                                animation: popupFade 0.3s ease;
-                            }
-
-                            @keyframes popupFade {
-                                from {
-                                    transform: scale(0.9);
-                                    opacity: 0;
-                                }
-
-                                to {
-                                    transform: scale(1);
-                                    opacity: 1;
-                                }
-                            }
-
-                            .popup-close {
-                                position: absolute;
-                                top: 10px;
-                                right: 15px;
-                                font-size: 22px;
-                                cursor: pointer;
-                                color: #ddd;
-                                transition: all 0.3s ease;
-                            }
-
-                            .popup-close:hover {
-                                color: #ff4d4d;
-                                /* change to your preferred color */
-                                transform: scale(1.2);
-                                /* optional zoom effect */
+                                flex-direction: column;
+                                width: 100%;
+                                max-height: 95vh;
+                                /* Prevents card from being taller than screen */
+                                overflow-y: auto;
+                                /* Allows the form itself to scroll if needed */
                             }
 
                             .popup-flex {
-                                display: flex;
-                                width: 100%;
+                                flex-direction: column;
                             }
 
-                            /* LEFT */
                             .popup-left {
-                                width: 40%;
-                                background: linear-gradient(135deg, #591486, #200e42);
-                                color: #fff;
-                                padding: 40px;
+                                width: 100%;
+                                padding: 30px 20px;
+                                text-align: center;
                             }
 
                             .popup-left h2 {
-                                font-size: 60px;
-                                margin-bottom: 10px;
-                                font-weight: 800;
+                                font-size: 28px;
+                                /* Smaller font for mobile */
                             }
 
-                            /* RIGHT */
                             .popup-right {
-                                width: auto;
-                                padding: 60px;
-                            }
-
-                            .form-group {
-                                margin-bottom: 15px;
-                            }
-
-                            .form-group input,
-                            .form-group textarea {
                                 width: 100%;
-                                padding: 12px !important;
-                                border: 1px solid #ddd;
-                                border-radius: 8px;
-                                outline: none;
+                                padding: 20px;
                             }
 
-                            .form-group input:focus,
-                            .form-group textarea:focus {
-                                border-color: #0d6efd;
+                            /* Adjust button width for mobile */
+                            .popup-right .btn-consult {
+                                width: 100% !important;
                             }
+                        }
+                    </style>
 
-                            .submit-btn {
-                                width: auto;
-                                padding: 12px;
-                                border: none;
-                                background: #0d6efd;
-                                color: #fff;
-                                border-radius: 8px;
-                                font-weight: 600;
-                            }
+                    <script>
+                        const popup = document.getElementById("meetingPopup");
 
-                            /* MOBILE */
-                            @media(max-width:768px) {
-                                .popup-flex {
-                                    flex-direction: column;
-                                }
+                        /* OPEN POPUP */
+                        document.getElementById("openMeetingBtn").onclick = () => {
+                            popup.style.display = "flex";
+                            document.body.style.overflow = "hidden"; // ✅ disable scroll
+                        };
 
-                                .popup-left,
-                                .popup-right {
-                                    width: 100%;
-                                }
-                            }
+                        /* CLOSE POPUP (X BUTTON) */
+                        document.getElementById("closeMeetingPopup").onclick = () => {
+                            closePopup();
+                        };
 
-                            @media(max-width: 768px) {
-                                .popup-overlay {
-                                    padding: 10px;
-                                    /* Prevents card from touching screen edges */
-                                    align-items: flex-start;
-                                    /* Better for long forms to allow scrolling */
-                                    overflow-y: auto;
-                                }
-
-                                .popup-card {
-                                    flex-direction: column;
-                                    width: 100%;
-                                    max-height: 95vh;
-                                    /* Prevents card from being taller than screen */
-                                    overflow-y: auto;
-                                    /* Allows the form itself to scroll if needed */
-                                }
-
-                                .popup-flex {
-                                    flex-direction: column;
-                                }
-
-                                .popup-left {
-                                    width: 100%;
-                                    padding: 30px 20px;
-                                    text-align: center;
-                                }
-
-                                .popup-left h2 {
-                                    font-size: 28px;
-                                    /* Smaller font for mobile */
-                                }
-
-                                .popup-right {
-                                    width: 100%;
-                                    padding: 20px;
-                                }
-
-                                /* Adjust button width for mobile */
-                                .popup-right .btn-consult {
-                                    width: 100% !important;
-                                }
-                            }
-                        </style>
-
-                        <script>
-                            const popup = document.getElementById("meetingPopup");
-
-                            /* OPEN POPUP */
-                            document.getElementById("openMeetingBtn").onclick = () => {
-                                popup.style.display = "flex";
-                                document.body.style.overflow = "hidden"; // ✅ disable scroll
-                            };
-
-                            /* CLOSE POPUP (X BUTTON) */
-                            document.getElementById("closeMeetingPopup").onclick = () => {
+                        /* CLOSE ON OUTSIDE CLICK */
+                        window.onclick = (e) => {
+                            if (e.target === popup) {
                                 closePopup();
-                            };
-
-                            /* CLOSE ON OUTSIDE CLICK */
-                            window.onclick = (e) => {
-                                if (e.target === popup) {
-                                    closePopup();
-                                }
-                            };
-
-                            /* COMMON CLOSE FUNCTION */
-                            function closePopup() {
-                                popup.style.display = "none";
-                                document.body.style.overflow = ""; // ✅ restore scroll
                             }
+                        };
 
-                            /* VALIDATION FUNCTION */
-                            function validatePopupForm(form) {
+                        /* COMMON CLOSE FUNCTION */
+                        function closePopup() {
+                            popup.style.display = "none";
+                            document.body.style.overflow = ""; // ✅ restore scroll
+                        }
 
-                                let isValid = true;
-                                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        /* VALIDATION FUNCTION */
+                        function validatePopupForm(form) {
 
-                                const fields = form.querySelectorAll("input, textarea");
+                            let isValid = true;
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                                fields.forEach(field => {
-                                    const errorEl = field.nextElementSibling;
-                                    field.classList.remove("error");
-                                    errorEl.textContent = "";
-                                });
+                            const fields = form.querySelectorAll("input, textarea");
 
-                                // Name
-                                if (!form.firstname.value.trim()) {
-                                    showError(form.firstname, "Enter your full name");
-                                    isValid = false;
-                                }
-
-                                // Email
-                                if (!emailPattern.test(form.email.value.trim())) {
-                                    showError(form.email, "Enter valid email");
-                                    isValid = false;
-                                }
-
-                                // Phone
-                                if (!form.phone.value.trim()) {
-                                    showError(form.phone, "Enter phone number");
-                                    isValid = false;
-                                }
-
-                                // Company
-                                if (!form.company.value.trim()) {
-                                    showError(form.company, "Enter company name");
-                                    isValid = false;
-                                }
-
-                                return isValid;
-                            }
-
-                            /* SHOW ERROR */
-                            function showError(input, message) {
-                                input.classList.add("error");
-                                input.nextElementSibling.textContent = message;
-                            }
-
-                            /* SUBMIT */
-                            document.getElementById("popupForm").addEventListener("submit", function (e) {
-
-                                e.preventDefault();
-                                const form = this;
-
-                                if (!validatePopupForm(form)) return;
-
-                                const data = {
-                                    submittedAt: Date.now(),
-                                    fields: [
-                                        { name: "firstname", value: form.firstname.value },
-                                        { name: "email", value: form.email.value },
-                                        { name: "phone", value: form.phone.value },
-                                        { name: "company", value: form.company.value },
-                                        { name: "message", value: form.message.value }
-                                    ],
-                                    context: {
-                                        pageUri: window.location.href,
-                                        pageName: document.title
-                                    }
-                                };
-
-                                fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
-                                    method: "POST",
-                                    headers: { "Content-Type": "application/json" },
-                                    body: JSON.stringify(data)
-                                })
-                                    .then(res => res.json())
-                                    .then(response => {
-                                        if (response.status === "error") {
-                                            alert("Submission failed");
-                                        } else {
-                                            form.reset();
-                                            closePopup(); // ✅ use same function
-                                            window.location.href = "thankyou.html";
-                                        }
-                                    })
-                                    .catch(() => alert("Submission failed"));
-
+                            fields.forEach(field => {
+                                const errorEl = field.nextElementSibling;
+                                field.classList.remove("error");
+                                errorEl.textContent = "";
                             });
-                        </script>
+
+                            // Name
+                            if (!form.firstname.value.trim()) {
+                                showError(form.firstname, "Enter your full name");
+                                isValid = false;
+                            }
+
+                            // Email
+                            if (!emailPattern.test(form.email.value.trim())) {
+                                showError(form.email, "Enter valid email");
+                                isValid = false;
+                            }
+
+                            // Phone
+                            if (!form.phone.value.trim()) {
+                                showError(form.phone, "Enter phone number");
+                                isValid = false;
+                            }
+
+                            // Company
+                            if (!form.company.value.trim()) {
+                                showError(form.company, "Enter company name");
+                                isValid = false;
+                            }
+
+                            return isValid;
+                        }
+
+                        /* SHOW ERROR */
+                        function showError(input, message) {
+                            input.classList.add("error");
+                            input.nextElementSibling.textContent = message;
+                        }
+
+                        /* SUBMIT */
+                        document.getElementById("popupForm").addEventListener("submit", function (e) {
+
+                            e.preventDefault();
+                            const form = this;
+
+                            if (!validatePopupForm(form)) return;
+
+                            const data = {
+                                submittedAt: Date.now(),
+                                fields: [
+                                    { name: "firstname", value: form.firstname.value },
+                                    { name: "email", value: form.email.value },
+                                    { name: "phone", value: form.phone.value },
+                                    { name: "company", value: form.company.value },
+                                    { name: "message", value: form.message.value }
+                                ],
+                                context: {
+                                    pageUri: window.location.href,
+                                    pageName: document.title
+                                }
+                            };
+
+                            fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify(data)
+                            })
+                                .then(res => res.json())
+                                .then(response => {
+                                    if (response.status === "error") {
+                                        alert("Submission failed");
+                                    } else {
+                                        form.reset();
+                                        closePopup(); // ✅ use same function
+                                        window.location.href = "thankyou.html";
+                                    }
+                                })
+                                .catch(() => alert("Submission failed"));
+
+                        });
+                    </script>
                 </div>
 
                 <!-- RIGHT IMAGE -->
@@ -732,6 +735,7 @@
                             <div class="bpw-hover"></div>
 
                             <div class="bpw-content">
+                                </br>
                                 <h4>People & Skill <br> Dependency</h4>
 
                                 <p>
@@ -757,7 +761,7 @@
                         <div class="bpw-text">
 
                             <div class="bpw-hover"></div>
-
+                            </br>
                             <div class="bpw-content">
                                 <h4>Founder <br> Bandwidth</h4>
 
@@ -784,7 +788,7 @@
                         <div class="bpw-text">
 
                             <div class="bpw-hover"></div>
-
+                            </br>
                             <div class="bpw-content">
                                 <h4>Reputational Risk</h4>
 
@@ -810,7 +814,7 @@
                         <div class="bpw-text">
 
                             <div class="bpw-hover"></div>
-
+                            </br>
                             <div class="bpw-content">
                                 <h4>Compliance & <br> Regulatory Risk</h4>
 
@@ -831,7 +835,7 @@
                 </div>
 
                 <!-- CARD 5 -->
-               <div class="col-12 col-md-6 bpw-col">
+                <div class="col-12 col-md-6 bpw-col">
                     <div class="bpw-card">
 
                         <div class="bpw-text">
@@ -839,7 +843,7 @@
                             <div class="bpw-hover"></div>
 
                             <div class="bpw-content">
-                            </br>
+                                </br>
                                 <h4 style="font-size: 19px;">Technology Debt</h4>
 
                                 <p style="font-size: 16px;">
@@ -851,7 +855,8 @@
                         </div>
 
                         <div class="bpw-image">
-                            <img src="assets/problem-5.png" style="width: 140px;">
+                            </br>
+                            <img src="assets/problem-5.png" style="width: 100px;">
                         </div>
 
                     </div>
@@ -1011,176 +1016,91 @@
 
     <!-- How the framework works (Services) -->
     <section class="framework-section">
-
         <div class="container">
-
-            <h2 class="approach-title text-center mb-5">
-                How the framework <span>Works</span>
-            </h2>
-
-            <div class="stack-container">
-
-                <!-- CARD 1 -->
-                <div class="stack-card">
-                    <!-- <div class="card-number">06</div> -->
-
+            <h2 class="approach-title text-center mb-5"> How the framework <span>Works</span> </h2>
+            <div class="stack-container"> <!-- CARD 1 -->
+                <div class="stack-card"> <!-- <div class="card-number">06</div> -->
                     <h3>Business Context</h3>
-
                     <p>Every transformation begins with understanding the business. We analyze:</p>
-
                     <ul>
                         <li>Business objectives</li>
                         <li>Operational processes</li>
                         <li>Growth strategies</li>
                         <li>Technology dependencies</li>
                     </ul>
-
                     <p>This ensures technology decisions align directly with business outcomes.</p>
-
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="stack-card">
-
-                    <!-- <div class="card-number">05</div> -->
-
+                </div> <!-- CARD 2 -->
+                <div class="stack-card"> <!-- <div class="card-number">05</div> -->
                     <h3>Capability Layer</h3>
-
                     <p>The foundation of the framework includes four core technology domains.</p>
-
                     <div class="row">
-
                         <div class="col-md-6">
                             <ul>
                                 <li><strong>Applications</strong><br>Business systems and enterprise platforms</li>
-
                                 <li><strong>Infrastructure</strong><br>Cloud platforms, compute environments, and
                                     networks</li>
                             </ul>
                         </div>
-
                         <div class="col-md-6">
                             <ul>
                                 <li><strong>Users</strong><br>Identity, access, and workforce productivity</li>
-
                                 <li><strong>Data</strong><br>Analytics and information management</li>
                             </ul>
                         </div>
-
                     </div>
-
                     <p>Together these capabilities form the technology foundation of the organization.</p>
-
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="stack-card">
-
-                    <!-- <div class="card-number">04</div> -->
-
+                </div> <!-- CARD 3 -->
+                <div class="stack-card"> <!-- <div class="card-number">04</div> -->
                     <h3>Management Domains</h3>
-
                     <p>Technology capabilities must be effectively managed to deliver value. We focus on three
                         operational domains:</p>
-
                     <ul>
-
-                        <li>
-                            <strong>Design</strong><br>
-                            Architecture and technology planning aligned with business goals
+                        <li> <strong>Design</strong><br> Architecture and technology planning aligned with business
+                            goals </li>
+                        <li> <strong>Deploy</strong><br> Implementation, integration, and rollout of technology
+                            platforms </li>
+                        <li> <strong>Manage</strong><br> Ongoing operations, monitoring, and performance optimization
                         </li>
-
-                        <li>
-                            <strong>Deploy</strong><br>
-                            Implementation, integration, and rollout of technology platforms
-                        </li>
-
-                        <li>
-                            <strong>Manage</strong><br>
-                            Ongoing operations, monitoring, and performance optimization
-                        </li>
-
                     </ul>
-
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="stack-card">
-
-                    <!-- <div class="card-number">03</div> -->
-
+                </div> <!-- CARD 4 -->
+                <div class="stack-card"> <!-- <div class="card-number">03</div> -->
                     <h3>Governance</h3>
-
                     <p>Governance ensures that technology initiatives remain aligned with organizational priorities. It
                         establishes:</p>
-
                     <ul>
                         <li>Technology standards</li>
                         <li>Decision-making frameworks</li>
                         <li>Operational accountability</li>
                         <li>Change management processes</li>
                     </ul>
-
                     <p>Governance provides control and strategic alignment.</p>
-
-                </div>
-
-                <!-- CARD 5 -->
-                <div class="stack-card">
-
-                    <!-- <div class="card-number">02</div> -->
-
+                </div> <!-- CARD 5 -->
+                <div class="stack-card"> <!-- <div class="card-number">02</div> -->
                     <h3>Risk & Compliance</h3>
-
                     <p>Risk and compliance overlay the entire technology environment. This ensures that all systems and
                         operations adhere to security standards and regulatory requirements.</p>
-
                     <p>Focus areas include:</p>
-
                     <ul>
                         <li>Security frameworks</li>
                         <li>Identity governance</li>
                         <li>Compliance readiness</li>
                         <li>Risk monitoring</li>
                     </ul>
-
-                </div>
-
-                <!-- CARD 6 -->
-                <div class="stack-card">
-
-                    <!-- <div class="card-number">01</div> -->
-
+                </div> <!-- CARD 6 -->
+                <div class="stack-card"> <!-- <div class="card-number">01</div> -->
                     <h3>Continuous Optimization</h3>
-
                     <p>Technology environments must evolve as businesses grow. Our framework includes a continuous
                         feedback loop that enables:</p>
-
                     <ul>
                         <li>Performance improvement</li>
                         <li>Automation of manual processes</li>
                         <li>Technology optimization</li>
                         <li>Increased operational efficiency</li>
                     </ul>
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
             </div>
-
         </div>
-
     </section>
-
 
     <!-- our services section -->
     <section class="services-section">
@@ -1562,7 +1482,7 @@
             });
         };
     </script>
-   
+
 </body>
 
 </html>
