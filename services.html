@@ -79,7 +79,47 @@
         transform: translateY(30px);
         transition: .4s;
     }
+
+    @media (max-width: 768px) {
+        .service-card-default img {
+            width: 190px;
+        }
+
+        .service-card-default h5 {
+            font-size: 24px;
+
+        }
+    }
+
+    @media (max-width: 576px) {
+        .service-card-default img {
+            width: 190px;
+        }
+
+        .service-card-default h5 {
+            font-size: 24px;
+
+        }
+    }
 </style>
+
+<style>
+    @media (max-width: 576px) {
+        .bpw-card {
+            padding: 10px;
+        }
+
+        .bpw-content h4 {
+            font-size: 14px;
+        }
+
+        .bpw-content p {
+            font-size: 12px;
+        }
+
+    }
+</style>
+
 
 <body>
     <!-- <a href="tel:+9594415599" class="call-float">
@@ -384,7 +424,7 @@
             <div class="row g-4 justify-content-center">
 
                 <!-- CARD 1 -->
-                <div class="col-lg-6 col-md-6 bpw-col">
+                <div class="col-6 col-md-6 col-lg-6 bpw-col">
                     <div class="bpw-card">
 
                         <div class="bpw-text">
@@ -411,7 +451,7 @@
                 </div>
 
                 <!-- CARD 2 -->
-                <div class="col-lg-6 col-md-6 bpw-col">
+                <div class="col-6 col-md-6 col-lg-6 bpw-col">
                     <div class="bpw-card">
 
                         <div class="bpw-text">
@@ -438,7 +478,7 @@
                 </div>
 
                 <!-- CARD 3 -->
-                <div class="col-lg-6 col-md-6 bpw-col">
+                <div class="col-6 col-md-6 col-lg-6 bpw-col">
                     <div class="bpw-card">
 
                         <div class="bpw-text">
@@ -464,7 +504,7 @@
                 </div>
 
                 <!-- CARD 4 -->
-                <div class="col-lg-6 col-md-6 bpw-col">
+                <div class="col-6 col-md-6 col-lg-6 bpw-col">
                     <div class="bpw-card">
 
                         <div class="bpw-text">
@@ -491,7 +531,7 @@
                 </div>
 
                 <!-- CARD 5 -->
-                <div class="col-lg-6 col-md-6 bpw-col">
+               <div class="col-12 col-md-6 bpw-col">
                     <div class="bpw-card">
 
                         <div class="bpw-text">
@@ -499,9 +539,10 @@
                             <div class="bpw-hover"></div>
 
                             <div class="bpw-content">
-                                <h4>Technology Debt</h4>
+                            </br>
+                                <h4 style="font-size: 19px;">Technology Debt</h4>
 
-                                <p>
+                                <p style="font-size: 16px;">
                                     Outdated systems and fragmented infrastructure
                                     slow down innovation and increase operational cost.
                                 </p>
@@ -510,7 +551,7 @@
                         </div>
 
                         <div class="bpw-image">
-                            <img src="assets/problem-5.png">
+                            <img src="assets/problem-5.png" style="width: 140px;">
                         </div>
 
                     </div>

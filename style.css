@@ -458,7 +458,7 @@ body {
 
 @media (max-width: 500px) {
     .approach-title {
-        font-size: 25px;
+        font-size: 25px !important;
         font-weight: 700;
         color: #2b0a5c;
         margin-bottom: 5px;
@@ -814,14 +814,14 @@ body {
 }
 
 .contact-title {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 550;
     line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .contact-text {
-    font-size: 16px;
+    font-size: 20px;
     max-width: 360px;
     opacity: .9;
 }
@@ -1139,12 +1139,6 @@ body {
 
 /* TITLE */
 
-.approach-title {
-    font-size: 38px;
-    font-weight: 700;
-    color: #1b0d2b;
-    line-height: 1.2;
-}
 
 .approach-title span {
     font-style: italic;
@@ -1170,7 +1164,7 @@ body {
     }
 
     .approach-title {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 
     .approach-desc {
@@ -1265,7 +1259,7 @@ body {
 @media (max-width:768px) {
 
     .approach-title {
-        font-size: 32px;
+        font-size: 32px !important;
     }
 
     /* .approach-desc {
@@ -1292,6 +1286,9 @@ body {
 
 /* our services section */
 
+.mb-3 {
+    margin-bottom: 2rem !important;
+}
 
 .services-section {
     background: #f5f5f7;
@@ -1321,7 +1318,7 @@ body {
 
 .service-card-box {
     position: relative;
-    height: 230px;
+    height: 280px;
     border-radius: 22px;
     overflow: hidden;
     cursor: pointer;
@@ -1349,8 +1346,19 @@ body {
 }
 
 .service-card-default img {
-    width: 135px;
+    width: 155px;
     align-self: flex-end;
+}
+/* Mobile (all small devices) */
+@media (max-width: 768px) {
+    .service-card-default img {
+        width: 90px;
+    }
+}
+@media (max-width: 576px) {
+    .service-card-default img {
+        width: 90px;
+    }
 }
 
 /* hover card */
@@ -1419,7 +1427,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 90px;
+    margin-left: 110px;
 }
 
 /* Mobile devices */
@@ -1472,6 +1480,11 @@ body {
         height: 200px;
     }
 
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border: none;
 }
 
 .choose-section {
@@ -1810,7 +1823,7 @@ How we can help section .help-section {
 }
 
 .approach-title {
-    font-size: 42px;
+    font-size: 50px;
     font-weight: 700;
     color: #2b0a5c;
 }
@@ -2129,6 +2142,13 @@ p a[href^="mailto"]:hover {
     padding: 30px;
     overflow: hidden;
 }
+
+@media (max-width: 768px) {
+    .bpw-text {
+        padding: 0 !important;
+    }
+}
+
 
 /* HOVER PANEL */
 

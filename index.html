@@ -2,13 +2,7 @@
 <html lang="en">
 
 <head>
-    <script>
-        window.hsConversationsSettings = {
-            loadImmediately: false,
-            enableWidgetCookieBanner: false,
-            disableAttachment: true
-        };
-    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJM404PWPZ"></script>
     <script>
@@ -50,7 +44,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="canonical" href="https://www.technosprout.in/" />
 
 </head>
@@ -285,76 +278,376 @@
                             <i class="fa-solid fa-calendar-check me-2"></i> Book Appointment
                         </button>
 
+                        <!-- POPUP -->
+                        <div id="meetingPopup" class="popup-overlay">
+
+                            <div class="popup-card">
+
+                                <!-- CLOSE -->
+                                <span class="popup-close" id="closeMeetingPopup">&times;</span>
+
+                                <div class="popup-flex">
+
+                                    <!-- LEFT -->
+                                    <div class="popup-left">
+                                        <h2>Let's Connect</h2>
+                                        </br>
+                                        <p style="font-size: 18px;">We help you grow faster with smart solutions.</p>
+                                    </div>
+
+                                    <!-- RIGHT -->
+                                    <div class="popup-right">
+
+                                        <form id="popupForm">
+
+                                            <div class="row">
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="text" name="firstname" placeholder="Enter Your Full Name *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="email" name="email" placeholder="Email *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="tel" name="phone" placeholder="Phone *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="text" name="company" placeholder="Organisation Name *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-12">
+                                                    <textarea name="message" placeholder="Message"
+                                                        class="form-control"></textarea>
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+                                                    <button type="submit" class="btn btn-consult w-40"
+                                                        style="display:block; margin:0 auto; text-align:center;">
+
+                                                        Submit
+                                                        <span class="service-icon ms-2">
+                                                            <i class="fa-solid fa-circle-arrow-right"></i>
+                                                        </span>
+
+                                                    </button>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <style>
+                            .error-msg {
+                                color: red;
+                                font-size: 12px;
+                                display: block;
+                                margin-top: 5px;
+                            }
+
+                            input.error,
+                            textarea.error {
+                                border-color: red;
+                            }
+
+                            .popup-overlay {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.6);
+                                display: none;
+                                align-items: center;
+                                justify-content: center;
+                                z-index: 9999;
+                            }
+
+                            .popup-card {
+                                width: 90%;
+                                max-width: 900px;
+                                background: #fff;
+                                border-radius: 16px;
+                                overflow: hidden;
+                                display: flex;
+                                position: relative;
+                                animation: popupFade 0.3s ease;
+                            }
+
+                            @keyframes popupFade {
+                                from {
+                                    transform: scale(0.9);
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
+                            }
+
+                            .popup-close {
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                                font-size: 22px;
+                                cursor: pointer;
+                                color: #ddd;
+                                transition: all 0.3s ease;
+                            }
+
+                            .popup-close:hover {
+                                color: #ff4d4d;
+                                /* change to your preferred color */
+                                transform: scale(1.2);
+                                /* optional zoom effect */
+                            }
+
+                            .popup-flex {
+                                display: flex;
+                                width: 100%;
+                            }
+
+                            /* LEFT */
+                            .popup-left {
+                                width: 40%;
+                                background: linear-gradient(135deg, #591486, #200e42);
+                                color: #fff;
+                                padding: 40px;
+                            }
+
+                            .popup-left h2 {
+                                font-size: 60px;
+                                margin-bottom: 10px;
+                                font-weight: 800;
+                            }
+
+                            /* RIGHT */
+                            .popup-right {
+                                width: auto;
+                                padding: 60px;
+                            }
+
+                            .form-group {
+                                margin-bottom: 15px;
+                            }
+
+                            .form-group input,
+                            .form-group textarea {
+                                width: 100%;
+                                padding: 12px !important;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;
+                                outline: none;
+                            }
+
+                            .form-group input:focus,
+                            .form-group textarea:focus {
+                                border-color: #0d6efd;
+                            }
+
+                            .submit-btn {
+                                width: auto;
+                                padding: 12px;
+                                border: none;
+                                background: #0d6efd;
+                                color: #fff;
+                                border-radius: 8px;
+                                font-weight: 600;
+                            }
+
+                            /* MOBILE */
+                            @media(max-width:768px) {
+                                .popup-flex {
+                                    flex-direction: column;
+                                }
+
+                                .popup-left,
+                                .popup-right {
+                                    width: 100%;
+                                }
+                            }
+
+                            @media(max-width: 768px) {
+                                .popup-overlay {
+                                    padding: 10px;
+                                    /* Prevents card from touching screen edges */
+                                    align-items: flex-start;
+                                    /* Better for long forms to allow scrolling */
+                                    overflow-y: auto;
+                                }
+
+                                .popup-card {
+                                    flex-direction: column;
+                                    width: 100%;
+                                    max-height: 95vh;
+                                    /* Prevents card from being taller than screen */
+                                    overflow-y: auto;
+                                    /* Allows the form itself to scroll if needed */
+                                }
+
+                                .popup-flex {
+                                    flex-direction: column;
+                                }
+
+                                .popup-left {
+                                    width: 100%;
+                                    padding: 30px 20px;
+                                    text-align: center;
+                                }
+
+                                .popup-left h2 {
+                                    font-size: 28px;
+                                    /* Smaller font for mobile */
+                                }
+
+                                .popup-right {
+                                    width: 100%;
+                                    padding: 20px;
+                                }
+
+                                /* Adjust button width for mobile */
+                                .popup-right .btn-consult {
+                                    width: 100% !important;
+                                }
+                            }
+                        </style>
+
                         <script>
-                            document.addEventListener("DOMContentLoaded", function () {
+                            const popup = document.getElementById("meetingPopup");
 
-                                const btn = document.getElementById("openMeetingBtn");
-                                const modal = document.getElementById("meetingModal");
-                                const closeBtn = document.querySelector(".close-btn");
-                                const container = document.getElementById("meetingContainer");
+                            /* OPEN POPUP */
+                            document.getElementById("openMeetingBtn").onclick = () => {
+                                popup.style.display = "flex";
+                                document.body.style.overflow = "hidden"; // ✅ disable scroll
+                            };
 
-                                btn.addEventListener("click", function () {
+                            /* CLOSE POPUP (X BUTTON) */
+                            document.getElementById("closeMeetingPopup").onclick = () => {
+                                closePopup();
+                            };
 
-                                    modal.style.display = "block";
+                            /* CLOSE ON OUTSIDE CLICK */
+                            window.onclick = (e) => {
+                                if (e.target === popup) {
+                                    closePopup();
+                                }
+                            };
 
-                                    // Clear container
-                                    container.innerHTML = "";
+                            /* COMMON CLOSE FUNCTION */
+                            function closePopup() {
+                                popup.style.display = "none";
+                                document.body.style.overflow = ""; // ✅ restore scroll
+                            }
 
-                                    // Create iframe manually (🔥 THIS IS THE FIX)
-                                    const iframe = document.createElement("iframe");
+                            /* VALIDATION FUNCTION */
+                            function validatePopupForm(form) {
 
-                                    iframe.src = "https://meetings-na2.hubspot.com/kamesh4?uuid=f1f5f28f-13f7-43ab-b100-6feae094204e";
-                                    iframe.width = "100%";
-                                    iframe.height = "100%";
-                                    iframe.style.border = "none";
-                                    iframe.allowFullscreen = true;
+                                let isValid = true;
+                                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                                    container.appendChild(iframe);
+                                const fields = form.querySelectorAll("input, textarea");
 
+                                fields.forEach(field => {
+                                    const errorEl = field.nextElementSibling;
+                                    field.classList.remove("error");
+                                    errorEl.textContent = "";
                                 });
 
-                                closeBtn.addEventListener("click", function () {
-                                    modal.style.display = "none";
-                                });
+                                // Name
+                                if (!form.firstname.value.trim()) {
+                                    showError(form.firstname, "Enter your full name");
+                                    isValid = false;
+                                }
+
+                                // Email
+                                if (!emailPattern.test(form.email.value.trim())) {
+                                    showError(form.email, "Enter valid email");
+                                    isValid = false;
+                                }
+
+                                // Phone
+                                if (!form.phone.value.trim()) {
+                                    showError(form.phone, "Enter phone number");
+                                    isValid = false;
+                                }
+
+                                // Company
+                                if (!form.company.value.trim()) {
+                                    showError(form.company, "Enter company name");
+                                    isValid = false;
+                                }
+
+                                return isValid;
+                            }
+
+                            /* SHOW ERROR */
+                            function showError(input, message) {
+                                input.classList.add("error");
+                                input.nextElementSibling.textContent = message;
+                            }
+
+                            /* SUBMIT */
+                            document.getElementById("popupForm").addEventListener("submit", function (e) {
+
+                                e.preventDefault();
+                                const form = this;
+
+                                if (!validatePopupForm(form)) return;
+
+                                const data = {
+                                    submittedAt: Date.now(),
+                                    fields: [
+                                        { name: "firstname", value: form.firstname.value },
+                                        { name: "email", value: form.email.value },
+                                        { name: "phone", value: form.phone.value },
+                                        { name: "company", value: form.company.value },
+                                        { name: "message", value: form.message.value }
+                                    ],
+                                    context: {
+                                        pageUri: window.location.href,
+                                        pageName: document.title
+                                    }
+                                };
+
+                                fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify(data)
+                                })
+                                    .then(res => res.json())
+                                    .then(response => {
+                                        if (response.status === "error") {
+                                            alert("Submission failed");
+                                        } else {
+                                            form.reset();
+                                            closePopup(); // ✅ use same function
+                                            window.location.href = "thankyou.html";
+                                        }
+                                    })
+                                    .catch(() => alert("Submission failed"));
 
                             });
                         </script>
-
-                        <style>
-                            .meeting-modal {
-                                display: none;
-                                position: fixed;
-                                z-index: 99999;
-                                left: 0;
-                                top: 0;
-                                width: 100%;
-                                height: 100%;
-                                background: rgba(0, 0, 0, 0.7);
-                            }
-
-                            .meeting-modal-content {
-                                background: #fff;
-                                margin: 3% auto;
-                                width: 90%;
-                                height: 90%;
-                                border-radius: 10px;
-                                overflow: hidden;
-                            }
-
-                            #meetingContainer,
-                            .meetings-iframe-container {
-                                width: 100%;
-                                height: 100%;
-                            }
-
-                            .close-btn {
-                                position: absolute;
-                                right: 15px;
-                                top: 10px;
-                                font-size: 24px;
-                                cursor: pointer;
-                            }
-                        </style>
 
                         <a href="contact.html" class="btn btn-consult">
                             <i class="fa-solid fa-phone me-1"></i> Let's Talk
@@ -373,6 +666,7 @@
                 </div>
 
             </div>
+
 
             <!-- <hr class="line"> -->
 
@@ -525,8 +819,10 @@
                         governance, security, and control.
                     </p>
 
-                    <a href="services.html" class="btn-consult">
-                        Know More <i class="fa-solid fa-circle-arrow-right"></i>
+                    <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
+                        Know More
+                        <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
+                        </span>
                     </a>
 
                 </div>
@@ -590,6 +886,7 @@
 
                         <div class="service-card-default">
                             <h5>Technology <br> Transformation</h5>
+                            </br>
                             <img src="assets/service-2.png" alt="">
                         </div>
 
@@ -612,6 +909,7 @@
 
                         <div class="service-card-default">
                             <h5>Technology <br> Operations</h5>
+                        </br>
                             <img src="assets/service-3.png" alt="">
                         </div>
 
@@ -634,6 +932,7 @@
 
                         <div class="service-card-default">
                             <h5>Automation & <br> Optimization</h5>
+                            </br>
                             <img src="assets/service-4.png" alt="">
                         </div>
 
@@ -753,8 +1052,11 @@
                         </br>
                         We partner with businesses across a wide range of industries.
                     </p>
-                    <a href="services.html" class="btn btn-consult">
-                        Explore <i class="fa-solid fa-circle-arrow-right"></i>
+
+                    <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
+                        Explore
+                        <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
+                        </span>
                     </a>
                 </div>
 
@@ -816,7 +1118,7 @@
             <!-- Cards -->
             <div class="row g-4 justify-content-center">
 
-               <div class="col-6 col-md-6 col-lg-3">
+                <div class="col-6 col-md-6 col-lg-3">
                     <div class="choose-card">
 
                         <img src="assets/cooperation.png" class="choose-icon" alt="">
@@ -830,7 +1132,7 @@
                     </div>
                 </div>
 
-               <div class="col-6 col-md-6 col-lg-3">
+                <div class="col-6 col-md-6 col-lg-3">
                     <div class="choose-card">
 
                         <img src="assets/logical-thinking.png" class="choose-icon" alt="">
@@ -844,7 +1146,7 @@
                     </div>
                 </div>
 
-               <div class="col-6 col-md-6 col-lg-3">
+                <div class="col-6 col-md-6 col-lg-3">
                     <div class="choose-card">
 
                         <img src="assets/platform.png" class="choose-icon" alt="">
@@ -858,7 +1160,7 @@
                     </div>
                 </div>
 
-               <div class="col-6 col-md-6 col-lg-3">
+                <div class="col-6 col-md-6 col-lg-3">
                     <div class="choose-card">
 
                         <img src="assets/business-partnership.png" class="choose-icon" alt="">
@@ -876,8 +1178,11 @@
 
             <!-- Button -->
             <div class="text-center mt-5">
-                <a href="services.html" class="btn btn-consult">Consult Now <i
-                        class="fa-solid fa-circle-arrow-right"></i></a>
+                        <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
+                        Consult Now
+                        <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
+                        </span>
+                    </a>
             </div>
 
         </div>
@@ -1201,20 +1506,6 @@
     </section>
 
 
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-
-            let captcha = grecaptcha.getResponse();
-
-            if (captcha.length === 0) {
-                e.preventDefault();
-                document.getElementById("captchaError").style.display = "block";
-            } else {
-                document.getElementById("captchaError").style.display = "none";
-            }
-
-        });
-    </script>
     <style>
         .form-error {
             color: #ff4d4d;
@@ -1451,229 +1742,158 @@
 
 
 
-    <div id="cookieModal" class="cookie-modal">
-        <div class="cookie-container">
+    <div id="cookieBar" class="cookie-bar">
+        <div class="cookie-inner">
 
-            <!-- CLOSE -->
-            <!-- <span class="cookie-close-btn" id="cookieCloseBtn">&times;</span> -->
-
-            <!-- IMAGE -->
-            <div class="cookie-left">
-                <img src="assets/cookies.png" alt="Cookies">
-            </div>
-
-            <!-- CONTENT -->
-            <div class="cookie-right">
-                <h2>We value your <span>privacy</span></h2>
-
+            <div class="cookie-text">
                 <p>
                     We use cookies to improve your experience, personalize content,
                     and analyze traffic. By clicking “Accept”, you agree to our use of cookies.
                 </p>
+            </div>
 
-                <p class="cookie-note">
-                    You can manage your preferences anytime.
-                </p>
-
-                <div class="cookie-actions">
-                    <a href="#" id="cookieRejectBtn" class="btn-outline">Reject</a>
-                    <a href="#" id="cookieAcceptBtn" class="btn btn-consult">Accept All</a>
-                </div>
+            <div class="cookie-actions">
+                <a href="#" id="cookieRejectBtn" class="btn-outline">Reject</a>
+                <a href="#" id="cookieAcceptBtn" class="btn btn-consult">Accept All</a>
             </div>
 
         </div>
     </div>
 
     <style>
-        /* LOCK SCROLL */
-        .no-scroll {
-            overflow: hidden;
-        }
-
-        /* BACKDROP */
-        .cookie-modal {
+        /* COOKIE BAR */
+        .cookie-bar {
             position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            display: none;
-            align-items: center;
-            justify-content: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            color: #fff;
             z-index: 99999;
-            padding: 20px;
+            padding: 15px 20px;
+            display: none;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* BOX */
-        .cookie-container {
-            background: #f6f6f9;
-            border-radius: 20px;
-            padding: 30px;
-            max-width: 900px;
-            width: 100%;
+        /* INNER */
+        .cookie-inner {
+            max-width: 1200px;
+            margin: auto;
             display: flex;
             align-items: center;
-            gap: 40px;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-            animation: fadeInUp 0.4s ease;
+            justify-content: space-between;
+            gap: 20px;
         }
 
-        /* CLOSE */
-        .cookie-close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 22px;
-            cursor: pointer;
-            color: #777;
-        }
-
-        .cookie-close-btn:hover {
-            color: #000;
-        }
-
-        /* IMAGE */
-        .cookie-left img {
-            width: 230px;
-        }
-
-        /* CONTENT */
-        .cookie-right {
-            flex: 1;
-        }
-
-        .cookie-right h2 {
-            font-size: 35px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #2b0a5c;
-        }
-
-        .cookie-right h2 span {
-            font-style: italic;
-        }
-
-        .cookie-right p {
+        /* TEXT */
+        .cookie-text p {
             font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .cookie-note {
-            font-size: 13px;
-            color: #888;
-            margin: 10px 0 20px;
+            margin: 0;
+            color: #2b0a4a;
+            line-height: 1.5;
         }
 
         /* BUTTONS */
         .cookie-actions {
             display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
+            gap: 10px;
+            flex-shrink: 0;
         }
 
-        /* BUTTONS STYLE (SAFE, WILL NOT BREAK YOUR GLOBAL CSS) */
+        /* BUTTON SAFE STYLE */
         .cookie-actions a {
-            padding: 10px 18px;
-            border-radius: 25px;
+            padding: 8px 16px;
+            border-radius: 20px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
+            white-space: nowrap;
         }
 
+        /* OUTLINE */
         .btn-outline {
-            border: 1px solid #ccc;
-            color: #333;
+            border: 1px solid #aaa;
+            color: #000;
+
         }
 
         .btn-outline:hover {
-            background: #e5e5e5;
+            background: #ffffff;
         }
 
-        .btn-primary {
-            background: #6c3cff;
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background: #552edc;
-        }
-
-        /* ANIMATION */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px) scale(0.95);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+        /* PRIMARY (uses your existing btn-consult if present) */
+        .cookie-actions .btn-consult {
+            padding: 8px 18px;
         }
 
         /* TABLET */
         @media (max-width: 900px) {
-            .cookie-container {
-                padding: 30px;
-                gap: 25px;
+            .cookie-inner {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .cookie-left img {
-                width: 150px;
+            .cookie-actions {
+                width: 100%;
             }
         }
 
         /* MOBILE */
-        @media (max-width: 650px) {
-            .cookie-container {
+        @media (max-width: 600px) {
+            .cookie-inner {
                 flex-direction: column;
+                align-items: stretch;
                 text-align: center;
-                padding: 25px 20px;
             }
 
-            .cookie-left img {
-                width: 120px;
+            .cookie-text p {
+                font-size: 13px;
             }
 
             .cookie-actions {
                 justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .cookie-actions a {
+                flex: 1;
+                text-align: center;
             }
         }
     </style>
 
-
-
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            const modal = document.getElementById("cookieModal");
-            if (!modal) return;
+            const bar = document.getElementById("cookieBar");
+            if (!bar) return;
 
             // show only once
             if (!localStorage.getItem("cookieConsent")) {
                 setTimeout(() => {
-                    modal.style.display = "flex";
-                }, 3000);
+                    bar.style.display = "block";
+                }, 2000);
             }
 
-            function closeModal() {
-                modal.style.display = "none";
+            function closeBar() {
+                bar.style.display = "none";
             }
 
             document.getElementById("cookieAcceptBtn")?.addEventListener("click", function (e) {
                 e.preventDefault();
                 localStorage.setItem("cookieConsent", "accepted");
-                closeModal();
+                closeBar();
             });
 
             document.getElementById("cookieRejectBtn")?.addEventListener("click", function (e) {
                 e.preventDefault();
                 localStorage.setItem("cookieConsent", "rejected");
-                closeModal();
+                closeBar();
             });
 
         });
     </script>
+
+
 
 
     <!-- industry-card js -->
@@ -1748,23 +1968,6 @@
         };
     </script>
 
-
-
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
-    <!-- End of HubSpot Embed Code -->
-
-    <div id="meetingModal" class="meeting-modal">
-        <div class="meeting-modal-content">
-
-            <span class="close-btn">&times;</span>
-
-            <div id="meetingContainer"></div>
-
-        </div>
-    </div>
-
-    <script src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 </body>
 
 </html>
