@@ -321,79 +321,379 @@
                     </p>
 
                     <button id="openMeetingBtn" class="btn btn-consult">
-                        <i class="fa-solid fa-calendar-check me-2"></i> Book Appointment
-                    </button>
+                            <i class="fa-solid fa-calendar-check me-2"></i> Book Appointment
+                        </button>
 
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function () {
+                        <!-- POPUP -->
+                        <div id="meetingPopup" class="popup-overlay">
 
-                            const btn = document.getElementById("openMeetingBtn");
-                            const modal = document.getElementById("meetingModal");
-                            const closeBtn = document.querySelector(".close-btn");
-                            const container = document.getElementById("meetingContainer");
+                            <div class="popup-card">
 
-                            btn.addEventListener("click", function () {
+                                <!-- CLOSE -->
+                                <span class="popup-close" id="closeMeetingPopup">&times;</span>
 
-                                modal.style.display = "block";
+                                <div class="popup-flex">
 
-                                // Clear container
-                                container.innerHTML = "";
+                                    <!-- LEFT -->
+                                    <div class="popup-left">
+                                        <h2>Let's Connect</h2>
+                                        </br>
+                                        <p style="font-size: 18px;">We help you grow faster with smart solutions.</p>
+                                    </div>
 
-                                // Create iframe manually (🔥 THIS IS THE FIX)
-                                const iframe = document.createElement("iframe");
+                                    <!-- RIGHT -->
+                                    <div class="popup-right">
 
-                                iframe.src = "https://meetings-na2.hubspot.com/kamesh4?uuid=f1f5f28f-13f7-43ab-b100-6feae094204e";
-                                iframe.width = "100%";
-                                iframe.height = "100%";
-                                iframe.style.border = "none";
-                                iframe.allowFullscreen = true;
+                                        <form id="popupForm">
 
-                                container.appendChild(iframe);
+                                            <div class="row">
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="text" name="firstname" placeholder="Enter Your Full Name *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="email" name="email" placeholder="Email *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="tel" name="phone" placeholder="Phone *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-md-6 mb-3">
+                                                    <input type="text" name="company" placeholder="Organisation Name *"
+                                                        class="form-control">
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="form-group col-12">
+                                                    <textarea name="message" placeholder="Message"
+                                                        class="form-control"></textarea>
+                                                    <small class="error-msg"></small>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+                                                    <button type="submit" class="btn btn-consult w-40"
+                                                        style="display:block; margin:0 auto; text-align:center;">
+
+                                                        Submit
+                                                        <span class="service-icon ms-2">
+                                                            <i class="fa-solid fa-circle-arrow-right"></i>
+                                                        </span>
+
+                                                    </button>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <style>
+                            .error-msg {
+                                color: red;
+                                font-size: 12px;
+                                display: block;
+                                margin-top: 5px;
+                            }
+
+                            input.error,
+                            textarea.error {
+                                border-color: red;
+                            }
+
+                            .popup-overlay {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.6);
+                                display: none;
+                                align-items: center;
+                                justify-content: center;
+                                z-index: 9999;
+                            }
+
+                            .popup-card {
+                                width: 90%;
+                                max-width: 900px;
+                                background: #fff;
+                                border-radius: 16px;
+                                overflow: hidden;
+                                display: flex;
+                                position: relative;
+                                animation: popupFade 0.3s ease;
+                            }
+
+                            @keyframes popupFade {
+                                from {
+                                    transform: scale(0.9);
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
+                            }
+
+                            .popup-close {
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                                font-size: 22px;
+                                cursor: pointer;
+                                color: #ddd;
+                                transition: all 0.3s ease;
+                            }
+
+                            .popup-close:hover {
+                                color: #ff4d4d;
+                                /* change to your preferred color */
+                                transform: scale(1.2);
+                                /* optional zoom effect */
+                            }
+
+                            .popup-flex {
+                                display: flex;
+                                width: 100%;
+                            }
+
+                            /* LEFT */
+                            .popup-left {
+                                width: 40%;
+                                background: linear-gradient(135deg, #591486, #200e42);
+                                color: #fff;
+                                padding: 40px;
+                            }
+
+                            .popup-left h2 {
+                                font-size: 60px;
+                                margin-bottom: 10px;
+                                font-weight: 800;
+                            }
+
+                            /* RIGHT */
+                            .popup-right {
+                                width: auto;
+                                padding: 60px;
+                            }
+
+                            .form-group {
+                                margin-bottom: 15px;
+                            }
+
+                            .form-group input,
+                            .form-group textarea {
+                                width: 100%;
+                                padding: 12px !important;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;
+                                outline: none;
+                            }
+
+                            .form-group input:focus,
+                            .form-group textarea:focus {
+                                border-color: #0d6efd;
+                            }
+
+                            .submit-btn {
+                                width: auto;
+                                padding: 12px;
+                                border: none;
+                                background: #0d6efd;
+                                color: #fff;
+                                border-radius: 8px;
+                                font-weight: 600;
+                            }
+
+                            /* MOBILE */
+                            @media(max-width:768px) {
+                                .popup-flex {
+                                    flex-direction: column;
+                                }
+
+                                .popup-left,
+                                .popup-right {
+                                    width: 100%;
+                                }
+                            }
+
+                            @media(max-width: 768px) {
+                                .popup-overlay {
+                                    padding: 10px;
+                                    /* Prevents card from touching screen edges */
+                                    align-items: flex-start;
+                                    /* Better for long forms to allow scrolling */
+                                    overflow-y: auto;
+                                }
+
+                                .popup-card {
+                                    flex-direction: column;
+                                    width: 100%;
+                                    max-height: 95vh;
+                                    /* Prevents card from being taller than screen */
+                                    overflow-y: auto;
+                                    /* Allows the form itself to scroll if needed */
+                                }
+
+                                .popup-flex {
+                                    flex-direction: column;
+                                }
+
+                                .popup-left {
+                                    width: 100%;
+                                    padding: 30px 20px;
+                                    text-align: center;
+                                }
+
+                                .popup-left h2 {
+                                    font-size: 28px;
+                                    /* Smaller font for mobile */
+                                }
+
+                                .popup-right {
+                                    width: 100%;
+                                    padding: 20px;
+                                }
+
+                                /* Adjust button width for mobile */
+                                .popup-right .btn-consult {
+                                    width: 100% !important;
+                                }
+                            }
+                        </style>
+
+                        <script>
+                            const popup = document.getElementById("meetingPopup");
+
+                            /* OPEN POPUP */
+                            document.getElementById("openMeetingBtn").onclick = () => {
+                                popup.style.display = "flex";
+                                document.body.style.overflow = "hidden"; // ✅ disable scroll
+                            };
+
+                            /* CLOSE POPUP (X BUTTON) */
+                            document.getElementById("closeMeetingPopup").onclick = () => {
+                                closePopup();
+                            };
+
+                            /* CLOSE ON OUTSIDE CLICK */
+                            window.onclick = (e) => {
+                                if (e.target === popup) {
+                                    closePopup();
+                                }
+                            };
+
+                            /* COMMON CLOSE FUNCTION */
+                            function closePopup() {
+                                popup.style.display = "none";
+                                document.body.style.overflow = ""; // ✅ restore scroll
+                            }
+
+                            /* VALIDATION FUNCTION */
+                            function validatePopupForm(form) {
+
+                                let isValid = true;
+                                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                                const fields = form.querySelectorAll("input, textarea");
+
+                                fields.forEach(field => {
+                                    const errorEl = field.nextElementSibling;
+                                    field.classList.remove("error");
+                                    errorEl.textContent = "";
+                                });
+
+                                // Name
+                                if (!form.firstname.value.trim()) {
+                                    showError(form.firstname, "Enter your full name");
+                                    isValid = false;
+                                }
+
+                                // Email
+                                if (!emailPattern.test(form.email.value.trim())) {
+                                    showError(form.email, "Enter valid email");
+                                    isValid = false;
+                                }
+
+                                // Phone
+                                if (!form.phone.value.trim()) {
+                                    showError(form.phone, "Enter phone number");
+                                    isValid = false;
+                                }
+
+                                // Company
+                                if (!form.company.value.trim()) {
+                                    showError(form.company, "Enter company name");
+                                    isValid = false;
+                                }
+
+                                return isValid;
+                            }
+
+                            /* SHOW ERROR */
+                            function showError(input, message) {
+                                input.classList.add("error");
+                                input.nextElementSibling.textContent = message;
+                            }
+
+                            /* SUBMIT */
+                            document.getElementById("popupForm").addEventListener("submit", function (e) {
+
+                                e.preventDefault();
+                                const form = this;
+
+                                if (!validatePopupForm(form)) return;
+
+                                const data = {
+                                    submittedAt: Date.now(),
+                                    fields: [
+                                        { name: "firstname", value: form.firstname.value },
+                                        { name: "email", value: form.email.value },
+                                        { name: "phone", value: form.phone.value },
+                                        { name: "company", value: form.company.value },
+                                        { name: "message", value: form.message.value }
+                                    ],
+                                    context: {
+                                        pageUri: window.location.href,
+                                        pageName: document.title
+                                    }
+                                };
+
+                                fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify(data)
+                                })
+                                    .then(res => res.json())
+                                    .then(response => {
+                                        if (response.status === "error") {
+                                            alert("Submission failed");
+                                        } else {
+                                            form.reset();
+                                            closePopup(); // ✅ use same function
+                                            window.location.href = "thankyou.html";
+                                        }
+                                    })
+                                    .catch(() => alert("Submission failed"));
 
                             });
-
-                            closeBtn.addEventListener("click", function () {
-                                modal.style.display = "none";
-                            });
-
-                        });
-                    </script>
-
-                    <style>
-                        .meeting-modal {
-                            display: none;
-                            position: fixed;
-                            z-index: 99999;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: rgba(0, 0, 0, 0.7);
-                        }
-
-                        .meeting-modal-content {
-                            background: #fff;
-                            margin: 3% auto;
-                            width: 90%;
-                            height: 90%;
-                            border-radius: 10px;
-                            overflow: hidden;
-                        }
-
-                        #meetingContainer,
-                        .meetings-iframe-container {
-                            width: 100%;
-                            height: 100%;
-                        }
-
-                        .close-btn {
-                            position: absolute;
-                            right: 15px;
-                            top: 10px;
-                            font-size: 24px;
-                            cursor: pointer;
-                        }
-                    </style>
+                        </script>
                 </div>
 
                 <!-- RIGHT IMAGE -->
@@ -1028,7 +1328,7 @@
                 <!-- Item 1 -->
                 <div class="col-lg col-md-4 col-6 benefit-item">
                     <img src="assets/outcome.png" alt="">
-                    <h6>Faster business operations</h6>
+                    <h6>Faster business </br> operations</h6>
                 </div>
 
                 <!-- Item 2 -->
@@ -1262,21 +1562,7 @@
             });
         };
     </script>
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
-    <!-- End of HubSpot Embed Code -->
-
-    <div id="meetingModal" class="meeting-modal">
-        <div class="meeting-modal-content">
-
-            <span class="close-btn">&times;</span>
-
-            <div id="meetingContainer"></div>
-
-        </div>
-    </div>
-
-    <script src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+   
 </body>
 
 </html>

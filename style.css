@@ -349,7 +349,7 @@ body {
     padding: 5px 22px;
     border-radius: 30px;
     font-weight: 600;
-    border: 2px solid #000;
+    border: 2px solid #000 !important;
     transition: 0.3s ease;
 }
 
@@ -1919,7 +1919,7 @@ How we can help section .help-section {
     gap: 12px;
     padding: 8px 22px;
     border-radius: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.7) !important;
     color: #fff;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
@@ -2648,10 +2648,12 @@ p a[href^="mailto"]:hover {
 
 .timeline-item.active h5 {
     color: #66358b;
+    text-align: start;
 }
 
 .timeline-item.active p {
     color: #333;
+    text-align: start;
 }
 
 
