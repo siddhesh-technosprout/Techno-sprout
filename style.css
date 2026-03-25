@@ -2968,6 +2968,7 @@ p a[href^="mailto"]:hover {
     background: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
+     overflow: hidden; /* IMPORTANT: prevents overflow issues */
 }
 
 .tech-excellence-section i {
@@ -2978,6 +2979,26 @@ p a[href^="mailto"]:hover {
     font-size: 1rem;
     line-height: 1.6;
     color: #333;
+}
+
+.side-decor {
+    position: absolute;
+    top: 33%;
+    transform: translateY(-50%);
+    width: 230px;
+    max-width: 20%;
+    opacity: 0.15; /* subtle look */
+    pointer-events: none;
+}
+
+/* LEFT */
+.left-decor {
+    left: 0;
+}
+
+/* RIGHT */
+.right-decor {
+    right: 0;
 }
 
 .tech-excellence-section .goal-box {
@@ -3004,10 +3025,7 @@ p a[href^="mailto"]:hover {
 
 /* about us transforming business */
 
-/* .inception-section {
-    background: #f8f9fa;
-} */
-
+/* inception-section */
 .main-img {
     max-height: 300px;
     object-fit: contain;
