@@ -1492,7 +1492,7 @@ body {
 [type=submit]:not(:disabled),
 button:not(:disabled) {
     cursor: pointer;
-    border: none;
+    /* border: none; */
 }
 
 .choose-section {
@@ -3015,6 +3015,11 @@ p a[href^="mailto"]:hover {
 .goal-box:hover {
     background: #591487;
     color: #ffffff;
+}
+
+.py-6 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
 }
 
 .text-center{
