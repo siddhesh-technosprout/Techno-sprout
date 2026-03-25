@@ -592,7 +592,7 @@ body {
 }
 
 .problems-subtitle {
-    font-size: 16px;
+    font-size: 17px;
     color: #130020;
     text-align: center;
 }
@@ -2545,7 +2545,7 @@ p a[href^="mailto"]:hover {
     left: 30px;
     top: 0;
     bottom: 0;
-    border-left: 2px dashed #d4d4d4;
+    border-left: 2px dashed #b1b0b0;
 }
 
 
@@ -2558,13 +2558,13 @@ p a[href^="mailto"]:hover {
     width: 3px;
     height: 0;
 
-    background: linear-gradient(to bottom,
+    /* background: linear-gradient(to bottom,
             #6a4cff,
             #9a63ff,
             #ff7bd5,
             #ff9a4a,
             #ffc94a,
-            #3ddc97);
+            #3ddc97); */
 
     transition: height .8s cubic-bezier(.22, .61, .36, 1);
 }
@@ -3215,7 +3215,7 @@ p a[href^="mailto"]:hover {
 
 .build-description {
     font-size: 16px;
-    color: #555;
+    color: #333333;
     line-height: 1.6;
 }
 
