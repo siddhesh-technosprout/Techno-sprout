@@ -3012,8 +3012,33 @@ p a[href^="mailto"]:hover {
     font-size: 1.1rem;
 }
 
-.goal-box:hover {
+.goal-box {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.goal-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
     background: #591487;
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+/* Hover Effect */
+.goal-box:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.goal-box:hover {
     color: #ffffff;
 }
 
@@ -3142,7 +3167,11 @@ p a[href^="mailto"]:hover {
 
 }
 
-
+@media (max-width: 576px) {
+    .benefits-row .benefit-item p {
+        font-size: 11px;
+    }
+}
 
 .highlight-text {
     color: #4B0082;
@@ -3150,7 +3179,68 @@ p a[href^="mailto"]:hover {
 }
 
 #stepText {
-    color: #000000 !important; /* nice professional gray */
-    font-size: 18px;
+    color: #333333 !important; /* nice professional gray */
+    font-size: 16px;
+    font-weight: 500;
 
+}
+
+
+/* What We are building */
+
+.build-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.build-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* New classes */
+.build-text {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.build-highlight {
+    font-size: 20px;
+    font-weight: 600;
+    color: #591487;
+    margin: 20px 0;
+}
+
+.build-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .approach-title {
+        font-size: 32px;
+    }
+
+    .approach-subtitle {
+        font-size: 16px;
+    }
+
+    .build-highlight {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .approach-title {
+        font-size: 26px;
+    }
+
+    .build-text,
+    .build-description {
+        font-size: 14px;
+    }
 }

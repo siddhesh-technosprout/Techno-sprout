@@ -360,6 +360,12 @@
         </div>
     </section>
 
+    <style>
+        ul {
+    padding-left: 1rem;
+}
+    </style>
+
     <script>
         const steps = document.querySelectorAll(".step");
         const img = document.getElementById("stepImage");
@@ -376,8 +382,17 @@
             },
             {
                 img: "assets/about/inception3.png",
-                text: "The problem wasn’t technology.<br>It was the approach.<br><br>Decisions weren’t aligned to business context.<br>Execution lacked operational discipline.<br>And success was measured by deployment, not impact."
-            },
+                text: `
+                The problem wasn’t technology.<br>
+                It was the approach.<br><br>
+
+                <ul class="custom-bullets">
+                    <li>Decisions weren’t aligned to business context.</li>
+                    <li>Execution lacked operational discipline.</li>
+                    <li>Success was measured by deployment, not impact.</li>
+                </ul>
+            `
+                    },
             {
                 img: "assets/about/inception4.jpg",
                 text: "That realization led to building this company.<br><br>With a simple mantra:<br><br><span class='highlight-text'>Technology should be implemented with the same discipline and accountability as any core business capability.</span>"
@@ -538,7 +553,7 @@
 
                         <div class="service-card-hover" style="justify-content: center;">
                             <p style="margin:0;">
-                                it evolves through continuous optimization for performance, efficiency, and cost
+                                It evolves through continuous optimization for performance, efficiency, and cost
                             </p>
                         </div>
 
@@ -604,7 +619,8 @@
                     <img src="assets/about/outcome.png" alt="">
                     <h6>Outcome First</h6>
                     </br>
-                    <p>Technology decisions should be mapped to business outcomes, not just </br>product capabilities.</p>
+                    <p>Technology decisions should be mapped to business outcomes, not just </br>product capabilities.
+                    </p>
                 </div>
 
                 <!-- Item 2 -->
@@ -638,28 +654,28 @@
     </section>
 
     <!-- What We are building -->
-    <section class="approach-section py-5 text-center">
-        <div class="container">
-            <h2 class="approach-title mb-4">
+    <section class="build-section">
+        <div class="build-container">
+            <h2 class="approach-title">
                 What We <br> <span>Are Building</span>
             </h2>
 
-            <p class="approach-subtitle mb-4">
-                Technology is no longer just infrastructure or support — it’s a core driver of business performance.
+            <p class="approach-subtitle">
+                Technology is no longer just infrastructure or support it’s a core driver of business performance.
             </p>
 
-            <p class="approach-text mb-3">
+            <p class="build-text">
                 We help organizations move from:
             </p>
 
-            <p class="approach-highlight mb-4">
+            <p class="build-highlight">
                 🚀 Reactive technology operations to structured, optimized, and outcome-driven technology environments
             </p>
 
-            <p class="approach-description">
+            <p class="build-description">
                 Our approach embraces Kaizen, ensuring continuous, incremental improvements in every system, process,
-                and operation.
-                Because when technology operates with excellence and evolves constantly, it becomes one of the most
+                and operation. Because when technology operates with excellence and evolves constantly, it becomes one
+                of the most
                 powerful enablers of business success.
             </p>
         </div>
