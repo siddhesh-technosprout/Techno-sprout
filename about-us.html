@@ -253,14 +253,7 @@
         </div>
     </section>
 
-<style>
-       .service-card-default img {
-    width: 228px !important;
-    align-self: flex-end !important;
-}
 
-
-</style>
     <!-- Technology Excellence Section -->
     <section class="tech-excellence-section">
 
@@ -413,6 +406,35 @@
         setStep(0);
     </script>
 
+    <style>
+        .service-card-default img {
+            width: 228px !important;
+            align-self: flex-end !important;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .service-card-default img {
+                width: 110px !important;
+            }
+
+            .service-card-default h5 {
+                font-size: 18px !important;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .service-card-default img {
+                width: 110px !important;
+            }
+
+            .service-card-default h5 {
+                font-size: 18px !important;
+            }
+        }
+    </style>
+
     <!-- Our Philosophy in Action -->
 
     <section class="services-section py-5">
@@ -439,10 +461,11 @@
                             <h5>Business
                                 <br> Context
                             </h5>
+                            <br>
                             <img src="assets/about/philosophy_1.png" alt="">
                         </div>
 
-                         <div class="service-card-hover" style="justify-content: center;">
+                        <div class="service-card-hover" style="justify-content: center;">
                             <p style="margin:0;">The strategy begins with understanding the business context</p>
                             <!-- <a href="services.html" class="service-btn">
                                 Know More
@@ -465,8 +488,9 @@
                             <img src="assets/about/philosophy_2.jpg" alt="">
                         </div>
 
-                       <div class="service-card-hover" style="justify-content: center;">
-                            <p style="margin:0;">It continues with building strong foundations across infrastructure, applications, data,
+                        <div class="service-card-hover" style="justify-content: center;">
+                            <p style="margin:0;">It continues with building strong foundations across infrastructure,
+                                applications, data,
                                 and user environments</p>
                             <!-- <a href="services.html" class="service-btn">
                                 Know More
@@ -489,7 +513,7 @@
                             <img src="assets/about/philosophy_3.jpg" alt="">
                         </div>
 
-                         <div class="service-card-hover" style="justify-content: center;">
+                        <div class="service-card-hover" style="justify-content: center;">
                             <p style="margin:0;">It is sustained through disciplined operations and governance</p>
                             <!-- <a href="services.html" class="service-btn">
                                 Know More
@@ -514,7 +538,7 @@
 
                         <div class="service-card-hover" style="justify-content: center;">
                             <p style="margin:0;">
-                              it evolves through continuous optimization for performance, efficiency, and cost
+                                it evolves through continuous optimization for performance, efficiency, and cost
                             </p>
                         </div>
 
@@ -531,7 +555,7 @@
         <div class="container">
             <h2 class="approach-title text-center "> Our <span>Principles</span> </h2>
 
-            <p style="text-align: center;" class="mb-5">Simple principles. Serious outcomes. </br>
+            <p class="services-subtitle text-center mb-3">Simple principles. Serious outcomes. </br>
                 The way we work is guided by a few beliefs that shape how we think, collaborate, and deliver value.</p>
 
             <div class="stack-container"> <!-- CARD 1 -->

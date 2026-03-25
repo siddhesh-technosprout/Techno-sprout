@@ -3012,6 +3012,15 @@ p a[href^="mailto"]:hover {
     font-size: 1.1rem;
 }
 
+.goal-box:hover {
+    background: #591487;
+    color: #ffffff;
+}
+
+.text-center{
+    text-align: center;
+}
+
 @media (max-width: 767.98px) {
     .tech-excellence-section p {
         font-size: 0.95rem;
@@ -3124,77 +3133,11 @@ p a[href^="mailto"]:hover {
     z-index: 1;
 }
 
+
+
 }
 
 
-/* what we are building */
-
-/* .approach-section {
-    background-color: #f5f5f5;
-} */
-
-.approach-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #3b0a57;
-    line-height: 1.2;
-}
-
-.approach-title span {
-    font-style: italic;
-}
-
-.approach-subtitle {
-    font-size: 18px;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.approach-text {
-    font-size: 16px;
-    color: #666;
-}
-
-.approach-highlight {
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.approach-description {
-    font-size: 15px;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .approach-title {
-        font-size: 38px;
-    }
-}
-
-@media (max-width: 768px) {
-    .approach-title {
-        font-size: 32px;
-    }
-
-    .approach-subtitle,
-    .approach-description,
-    .approach-highlight {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .approach-title {
-        font-size: 26px;
-    }
-}
 
 .highlight-text {
     color: #4B0082;
@@ -3203,4 +3146,6 @@ p a[href^="mailto"]:hover {
 
 #stepText {
     color: #000000 !important; /* nice professional gray */
+    font-size: 18px;
+
 }
