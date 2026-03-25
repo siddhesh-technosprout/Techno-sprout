@@ -2981,7 +2981,7 @@ p a[href^="mailto"]:hover {
 }
 
 .tech-excellence-section .goal-box {
-    max-width: 600px;
+    max-width: 800px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -3176,4 +3176,13 @@ p a[href^="mailto"]:hover {
     .approach-title {
         font-size: 26px;
     }
+}
+
+.highlight-text {
+    color: #4B0082;
+    font-weight: 600; /* optional for emphasis */
+}
+
+#stepText {
+    color: #000000 !important; /* nice professional gray */
 }

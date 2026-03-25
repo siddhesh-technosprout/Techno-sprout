@@ -1,114 +1,139 @@
-section class="sb-services-section">
+<section class="sb-services-section">
     <div class="sb-container">
-        
-        <div class="sb-header text-center">
+        <div class="sb-header">
             <h2 class="sb-title-main">Our <span>Services</span></h2>
         </div>
 
         <div class="sb-stack-wrapper">
-            
-            <div class="sb-card" style="--index: 0;">
+            <div class="sb-card" style="--index: 1;">
                 <div class="sb-card-content">
                     <span class="sb-badge">Innovation</span>
                     <h3>TECH FORWARD</h3>
-                    <p>We leverage cutting-edge technologies to deliver modern solutions that empower businesses to stay ahead.</p>
-                    <ul class="sb-pointers">
-                        <li>AI & Machine Learning</li>
-                        <li>Cloud-Native Systems</li>
-                    </ul>
+                    <p>We leverage cutting-edge technologies to deliver modern solutions that empower businesses.</p>
                 </div>
                 <div class="sb-number">01</div>
             </div>
 
-            <div class="sb-card" style="--index: 1;">
+            <div class="sb-card" style="--index: 2;">
                 <div class="sb-card-content">
                     <span class="sb-badge">Experience</span>
                     <h3>DEEP EXPERTISE</h3>
-                    <p>Our team brings extensive knowledge and experience across industries to solve complex challenges.</p>
-                    <ul class="sb-pointers">
-                        <li>10+ Years Experience</li>
-                        <li>Industry Best Practices</li>
-                    </ul>
+                    <p>Our team brings extensive knowledge across industries to solve complex challenges.</p>
                 </div>
                 <div class="sb-number">02</div>
             </div>
 
-            <div class="sb-card" style="--index: 2;">
+            <div class="sb-card" style="--index: 3;">
                 <div class="sb-card-content">
                     <span class="sb-badge">Growth</span>
-                    <h3>SCALABLE SOLUTIONS</h3>
-                    <p>We build solutions that grow with your business, ensuring performance, reliability, and flexibility.</p>
-                    <ul class="sb-pointers">
-                        <li>Auto-Scaling Infrastructure</li>
-                        <li>Global Performance</li>
-                    </ul>
+                    <h3>SCALABLE</h3>
+                    <p>Building solutions that grow with your business, from startup to enterprise.</p>
                 </div>
                 <div class="sb-number">03</div>
             </div>
 
+            <div class="sb-card" style="--index: 4;">
+                <div class="sb-card-content">
+                    <span class="sb-badge">Security</span>
+                    <h3>ROBUST SECURITY</h3>
+                    <p>Enterprise-grade protection integrated into every layer of your digital infrastructure.</p>
+                </div>
+                <div class="sb-number">04</div>
+            </div>
+
+            <div class="sb-card" style="--index: 5;">
+                <div class="sb-card-content">
+                    <span class="sb-badge">Support</span>
+                    <h3>24/7 PARTNERSHIP</h3>
+                    <p>We're not just a vendor; we're your long-term technical partner in every step.</p>
+                </div>
+                <div class="sb-number">05</div>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
-/* 1. The Container must be tall enough to allow the scroll 'track' */
+:root {
+    --card-height: 380px;
+    --stack-offset: 50px; /* This controls how much of the "header" of the previous card stays visible */
+}
+
 .sb-services-section {
     padding: 100px 0;
-    background-color: #f8faff;
+    background-color: #f0f4ff;
     font-family: 'Inter', sans-serif;
 }
 
 .sb-container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.sb-header { margin-bottom: 60px; }
-.sb-title-main { font-size: 42px; font-weight: 800; text-align: center; }
-.sb-title-main span { color: #4c5bd4; }
-
-/* 2. The Wrapper - This is the key! */
-.sb-stack-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    /* This creates 500px of scrolling space so cards have time to stop */
-    gap: 300px; 
-    padding-bottom: 200px;
+.sb-header { 
+    margin-bottom: 60px; 
+    text-align: center;
 }
 
-/* 3. The Card Sticky Logic */
+.sb-title-main { 
+    font-size: 40px; 
+    font-weight: 800; 
+    color: #1a202c;
+}
+
+.sb-title-main span { color: #4c5bd4; }
+
+.sb-stack-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Extra padding at bottom so the last card can be scrolled past */
+    padding-bottom: 20vh; 
+}
+
 .sb-card {
     position: sticky;
-    
-    /* 150px is the starting top. 
-       130px is the height of the previous card's 'visible' area.
-       This prevents Card 3 from ever covering the title of Card 2. */
-    top: calc(150px + (var(--index) * 130px)); 
+    /* Cards stack with a slight offset so they appear layered */
+    top: calc(80px + (var(--index) * var(--stack-offset)));
     
     background: #ffffff;
-    border: 2px solid #4c5bd4;
+    border: 1px solid rgba(76, 91, 212, 0.1);
     border-radius: 40px;
-    padding: 45px 50px;
-    
-    /* We set a fixed-ish height so they align perfectly */
-    height: 400px; 
+    padding: 50px;
+    width: 100%;
+    height: var(--card-height);
     
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
-    background-clip: padding-box;
+    
+    /* Soft shadow to create depth between layers */
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+    
+    /* This creates the scroll gap between card triggers */
+    margin-bottom: 250px; 
+    
+    /* Ensures higher indexed cards are physically on top */
+    z-index: var(--index);
 }
 
-/* 4. Content Styling */
-.sb-card-content { max-width: 75%; text-align: left; }
+/* Optional: Subtle darkening for cards "further back" in the stack */
+.sb-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 40px;
+    background: rgba(76, 91, 212, 0.02);
+    z-index: -1;
+}
+
+.sb-card-content { max-width: 70%; }
 
 .sb-badge {
     background: #edf2ff;
     color: #4c5bd4;
-    padding: 4px 12px;
+    padding: 6px 14px;
     border-radius: 50px;
     font-size: 11px;
     font-weight: 700;
@@ -117,34 +142,19 @@ section class="sb-services-section">
     display: inline-block;
 }
 
-.sb-card h3 { font-size: 28px; font-weight: 800; margin-bottom: 10px; color: #1a202c; }
-.sb-card p { font-size: 15px; color: #4a5568; line-height: 1.6; margin-bottom: 20px; }
-
-.sb-pointers {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+.sb-card h3 { 
+    font-size: 30px; 
+    font-weight: 800; 
+    margin-bottom: 15px; 
+    color: #3b4494; 
 }
 
-.sb-pointers li {
-    font-size: 14px;
-    color: #2d3748;
-    padding-left: 20px;
-    position: relative;
+.sb-card p { 
+    font-size: 17px; 
+    color: #64748b; 
+    line-height: 1.6; 
 }
 
-.sb-pointers li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #4c5bd4;
-    font-size: 18px;
-}
-
-/* 5. Circular Number */
 .sb-number {
     width: 55px;
     height: 55px;
@@ -154,22 +164,23 @@ section class="sb-services-section">
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 700;
     color: #4c5bd4;
     background: #fff;
     flex-shrink: 0;
 }
 
-/* 6. Mobile Adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .sb-stack-wrapper { gap: 100px; }
     .sb-card {
-        padding: 25px;
-        flex-direction: column-reverse;
+        padding: 30px;
         height: auto;
-        min-height: 350px;
-        /* Smaller steps for small screens */
-        top: calc(100px + (var(--index) * 80px));
+        min-height: 320px;
+        /* Narrower stack for small screens */
+        top: calc(40px + (var(--index) * 40px));
+        margin-bottom: 150px;
     }
+    .sb-card-content { max-width: 80%; }
+    .sb-card h3 { font-size: 24px; }
 }
 </style>
