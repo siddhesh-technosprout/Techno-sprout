@@ -3,7 +3,7 @@
     font-family: "Avenir";
     src: url("fonts/Avenir-Light.woff2") format("woff2");
     font-weight: 300;
-    color: #130020;
+    color: #333333;
 }
 
 /* Avenir Regular */
@@ -11,7 +11,7 @@
     font-family: "Avenir";
     src: url("fonts/Avenir-Roman.woff2") format("woff2");
     font-weight: 400;
-    color: #130020;
+    color: #333333;
 }
 
 /* Avenir Medium */
@@ -19,7 +19,7 @@
     font-family: "Avenir";
     src: url("fonts/Avenir-Medium.woff2") format("woff2");
     font-weight: 500;
-    color: #130020;
+    color: #333333;
 }
 
 /* Avenir Heavy */
@@ -27,7 +27,7 @@
     font-family: "Avenir";
     src: url("fonts/Avenir-Heavy.woff2") format("woff2");
     font-weight: 700;
-    color: #130020;
+    color: #333333;
 }
 
 html {
@@ -213,6 +213,7 @@ body {
     font-size: 20px;
     margin-bottom: 10px;
     color: #555;
+    margin-left: 10px;
 }
 
 .mobile-contact a {
@@ -228,6 +229,7 @@ body {
     margin-top: 10px;
 }
 
+
 .mobile-social a {
     width: 34px;
     height: 34px;
@@ -238,6 +240,7 @@ body {
     border-radius: 50%;
     color: #591487;
     transition: .3s;
+    margin-left: 10px;
 }
 
 .mobile-social a:hover {
@@ -503,7 +506,7 @@ body {
 /* TEXT */
 .impact-item p {
     font-size: 16px;
-    color: #130020;
+    color: #333333;
     line-height: 1.6;
     margin: 0;
 }
@@ -515,7 +518,7 @@ body {
 
 .impact-text p {
     font-size: 16px;
-    color: #130020;
+    color: #333333;
 }
 
 /* HOVER */
@@ -588,12 +591,12 @@ body {
 .problems-title {
     font-size: 32px;
     font-weight: 550;
-    color: #130020;
+    color: #333333;
 }
 
 .problems-subtitle {
     font-size: 17px;
-    color: #130020;
+    color: #333333;
     text-align: center;
 }
 
@@ -629,6 +632,12 @@ body {
         object-fit: contain !important;
     }
 
+}
+
+@media (max-width: 768px) {
+    .faq-points li {
+        text-align: start;
+    }
 }
 
 
@@ -900,12 +909,12 @@ body {
 .subtitle {
     /* margin-top: 25px; */
     font-weight: 600;
-    color: #130020;
+    color: #333333;
 }
 
 .info-text {
     /* margin-top: 15px; */
-    color: #130020;
+    color: #333333;
 }
 
 .business-list {
@@ -1654,7 +1663,7 @@ button:not(:disabled) {
 .benefit-item h6 {
     font-size: 16px;
     font-weight: 600;
-    color: #130020;
+    color: #333333;
     line-height: 1.4;
     margin: 0;
 }
