@@ -1429,6 +1429,15 @@ body {
     }
 }
 
+.email-link {
+    color: #333333 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.email-link:hover {
+    color: #5a1ea6 !important;
+}
 /* hover card */
 
 .service-card-hover {
