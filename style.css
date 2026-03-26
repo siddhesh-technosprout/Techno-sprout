@@ -212,7 +212,7 @@ body {
 .mobile-contact p {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #555;
+    color: #333333;
     margin-left: 10px;
 }
 
@@ -236,37 +236,41 @@ body {
     align-items: flex-start; /* Aligns everything to the left */
 }
 
-.social-icons {
-    display: flex; /* Keeps the icons side-by-side on the second line */
-    margin-top: 8px; /* Adds space between text and icons */
+
+
+.mobile-icon {
+    display: flex;
+    gap: 10px;
 }
 
-.mobile-social a {
-    width: 34px;
-    height: 34px;
+.mobile-icon a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f4f1fa;
-    border-radius: 50%;
-    transition: .3s;
-    margin-right: 10px; /* Changed from margin-left to margin-right for better alignment */
+    text-decoration: none;
+    margin-left: 10px;
 }
 
-/* Icon Colors */
-.mobile-social a:nth-child(1) { color: #0077b5; }
-.mobile-social a:nth-child(2) { color: #1877f2; }
+/* LinkedIn */
+.mobile-icon a.linkedin {
+    background-color: #deeefd; /* light blue */
+}
 
-/* Hover effects */
-.mobile-social a:nth-child(1):hover { background: #0077b5; color: #fff; }
-.mobile-social a:nth-child(2):hover { background: #1877f2; color: #fff; }
+.mobile-icon a.linkedin i {
+    color: #0A66C2;
+}
 
-/* .follow-text {
-    font-weight: bolder;
-    font-size: 16px;
-    color: #333333;
-    margin-top: 5px;
-} */
+/* Facebook */
+.mobile-icon a.facebook {
+    background-color: #deeefd; /* light blue */
+}
+
+.mobile-icon a.facebook i {
+    color: #1877F2;
+}
 
 
 /* form flag input */
@@ -1249,6 +1253,19 @@ body {
     text-align: left;
     /* start alignment */
     display: block;
+}
+
+@media(max-width:768px) {
+
+   .mobile-fixing-col{
+    margin-left: 12px;
+   }
+   .contact-text {
+    color: #2b0a5c;
+    margin-top: 18px;
+    font-size: 14px !important;
+    line-height: 1.6;
+}
 }
 
 
