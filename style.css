@@ -638,6 +638,9 @@ body {
     .faq-points li {
         text-align: start;
     }
+    .custom-bullets{
+        text-align: start;
+    }
 }
 
 
