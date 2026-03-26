@@ -367,6 +367,16 @@
 .approach-img {
     max-width: 480px;
 }
+@media (max-width: 768px) {
+    .approach-img {
+        max-width: 280px;
+    }
+}
+@media (max-width: 768px) {
+    .approach-img {
+        max-width: 280px;
+    }
+}
     </style>
 
     <script>
@@ -569,39 +579,205 @@
 
     <!-- Our Principles -->
 
-    <section class="framework-section">
-        <div class="container">
-            <h2 class="approach-title text-center "> Our <span>Principles</span> </h2>
+  <section class="principles-pro">
+    <div class="container">
+        <div class="principles-layout">
 
-            <p class="services-subtitle text-center mb-3">Simple principles. Serious outcomes. </br>
-                The way we work is guided by a few beliefs that shape how we think, collaborate, and deliver value.</p>
+            <!-- LEFT SIDE -->
+            <div class="principles-left">
+                <h2 class="approach-title">Our <span>Principles</span></h2>
+                <p>
+                    Simple principles. Serious outcomes.<br>
+                    The way we work shapes how we think, collaborate, and deliver value.
+                </p>
+            </div>
 
-            <div class="stack-container"> <!-- CARD 1 -->
-                <div class="stack-card"> <!-- <div class="card-number">06</div> -->
+            <!-- RIGHT SIDE -->
+            <div class="principles-right">
+
+                <div class="p-card">
+                    <span>01</span>
                     <h3>Keep It Simple</h3>
-                    <p>Technology environments often become complex because solutions are layered without clarity.
-                        </br>
-                        We focus on building systems that are clear, structured, and easy to operate.
-                    </p>
-
-                </div> <!-- CARD 2 -->
-                
-                <div class="stack-card"> <!-- <div class="card-number">05</div> -->
-                    <h3>Be Curious</h3>
-                    <p>Great solutions start with asking the right questions.
-                        </br>
-                        We take the time to understand the business context before recommending technology.
-                    </p>
-
-                </div> <!-- CARD 3 -->
-                <div class="stack-card"> <!-- <div class="card-number">04</div> -->
-                    <h3>Create Impact</h3>
-                    <p>Technology projects should not end with deployment</p>
-
+                    <p>We build systems that are structured, clear, and easy to operate.</p>
                 </div>
+
+                <div class="p-card">
+                    <span>02</span>
+                    <h3>Be Curious</h3>
+                    <p>We ask the right questions before recommending technology.</p>
+                </div>
+
+                <div class="p-card">
+                    <span>03</span>
+                    <h3>Create Impact</h3>
+                    <p>We focus on measurable outcomes, not just deployment.</p>
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    /* SECTION */
+.principles-pro {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+/* CONTAINER (important for alignment) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LAYOUT */
+.principles-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* LEFT */
+.principles-left {
+    flex: 1;
+    max-width: 420px;
+    position: sticky;
+    top: 120px;
+}
+
+
+
+.principles-left p {
+    margin-top: 20px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* RIGHT */
+.principles-right {
+    flex: 1.2;
+}
+
+/* CARD */
+.p-card {
+    background: #f9fafb;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s ease;
+}
+
+/* SHOW */
+.p-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* NUMBER */
+.p-card span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #5c3fa3;
+}
+
+/* TITLE */
+.p-card h3 {
+    margin: 10px 0;
+    font-size: 25px;
+    color: #1a0e39;
+
+}
+
+/* TEXT */
+.p-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* HOVER */
+.p-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (max-width: 992px) {
+    .principles-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .principles-left {
+        position: relative;
+        top: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .principles-left h2 {
+        font-size: 30px;
+    }
+
+    .principles-right {
+        width: 100%;
+    }
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 576px) {
+    .principles-pro {
+        padding: 60px 16px;
+    }
+
+    .principles-left h2 {
+        font-size: 26px;
+    }
+
+    .principles-left p {
+        font-size: 14px;
+    }
+
+    .p-card {
+        padding: 20px;
+    }
+
+    .p-card h3 {
+        font-size: 18px;
+    }
+
+    .p-card p {
+        font-size: 14px;
+    }
+}
+</style>
+
+<script>
+const cards = document.querySelectorAll(".p-card");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add("show");
+            }, i * 120);
+        }
+    });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+</script>
 
     <!-- The Technosprout Difference -->
     <section class="benefits-section py-5">
