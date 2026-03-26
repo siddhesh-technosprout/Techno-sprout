@@ -230,6 +230,17 @@ body {
 }
 
 
+.mobile-social {
+    display: flex;
+    flex-direction: column; /* This stacks text on top of icons */
+    align-items: flex-start; /* Aligns everything to the left */
+}
+
+.social-icons {
+    display: flex; /* Keeps the icons side-by-side on the second line */
+    margin-top: 8px; /* Adds space between text and icons */
+}
+
 .mobile-social a {
     width: 34px;
     height: 34px;
@@ -238,15 +249,24 @@ body {
     justify-content: center;
     background: #f4f1fa;
     border-radius: 50%;
-    color: #591487;
     transition: .3s;
-    margin-left: 10px;
+    margin-right: 10px; /* Changed from margin-left to margin-right for better alignment */
 }
 
-.mobile-social a:hover {
-    background: #591487;
-    color: #fff;
-}
+/* Icon Colors */
+.mobile-social a:nth-child(1) { color: #0077b5; }
+.mobile-social a:nth-child(2) { color: #1877f2; }
+
+/* Hover effects */
+.mobile-social a:nth-child(1):hover { background: #0077b5; color: #fff; }
+.mobile-social a:nth-child(2):hover { background: #1877f2; color: #fff; }
+
+/* .follow-text {
+    font-weight: bolder;
+    font-size: 16px;
+    color: #333333;
+    margin-top: 5px;
+} */
 
 
 /* form flag input */
@@ -762,10 +782,21 @@ body {
     background: #f10856;
 }
 
-/* YouTube */
-.social-icons a:nth-child(6):hover {
-    background: #ff0000;
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: #8f82824a;
+    color: #fff;
+    margin: 5px;
+    transition: 0.3s;
 }
+
+
 
 .footer-bottom p {
     margin: 0;
@@ -2446,6 +2477,12 @@ p a[href^="mailto"]:hover {
         width: 100%;
     }
 
+}
+@media (max-width: 768px) {
+    .footer-mobile-padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .py-3 {
