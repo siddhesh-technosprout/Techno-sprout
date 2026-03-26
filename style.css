@@ -643,6 +643,9 @@ body {
     }
 }
 
+.mt-2 {
+    margin-top: 1.5rem !important;
+}
 
 /* FOOTER */
 .footer {
@@ -2445,9 +2448,14 @@ p a[href^="mailto"]:hover {
 
 }
 
+.py-3 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
 /* How the framework works (Services) */
 .framework-section {
-    padding: 70px 0;
+    padding: 30px 0;
     background: #f5f5f7;
 }
 
