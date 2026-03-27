@@ -67,7 +67,7 @@ body {
 }
 
 .nav-link {
-    margin: 0 10px;
+    margin: 0 20px;
     color: #424242 !important;
 
 }
@@ -75,6 +75,7 @@ body {
 .nav-link:hover {
 
     color: #591487 !important;
+    font-weight: 500;
 }
 
 .py-5 {
