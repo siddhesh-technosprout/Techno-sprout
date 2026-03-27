@@ -189,12 +189,12 @@
                     <p>
                         <strong>Address</strong><br>
                         1009, Lodha Supremus,<br>
-                         Kolshet Road, Thane - 400 607
+                        Kolshet Road, Thane - 400 607
                     </p>
 
                     <p>
                         <strong>Email</strong><br>
-                       <a href="mailto:tsp@technosprout.in" class="email-link">tsp@technosprout.in</a>
+                        <a href="mailto:tsp@technosprout.in" class="email-link">tsp@technosprout.in</a>
                     </p>
 
                     <p>
@@ -205,15 +205,15 @@
                     <p>
                         <strong>Follow Us:</strong><br>
 
-                        <div class="mobile-icon">
-                            <a href="https://www.linkedin.com/company/technosprout/" target="_blank" class="linkedin">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
+                    <div class="mobile-icon">
+                        <a href="https://www.linkedin.com/company/technosprout/" target="_blank" class="linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
 
-                            <a href="https://www.facebook.com/technosproutspl" target="_blank" class="facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                        </div>
+                        <a href="https://www.facebook.com/technosproutspl" target="_blank" class="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
                     </p>
                 </div>
 
@@ -308,158 +308,265 @@
 
 
     <section class="inception-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 approach-title">The <span>Inception</span></h2>
+    <div class="container">
 
-            <div class="row align-items-center">
-                <!-- LEFT: Image -->
-                <div class="col-lg-6 text-center mb-4 mb-lg-0">
-                    <img id="stepImage" src="assets/banner.png" alt="step" class="img-fluid main-img">
-                </div>
+        <h2 class="text-center mb-5 approach-title">
+            The <span>Inception</span>
+        </h2>
 
-                <!-- RIGHT: Text -->
-                <div class="col-lg-6">
-                    <p id="stepText" class="lead text-muted">
-                        early in my career, I noticed a pattern across organizations. </br>
-                        Technology initiatives were driven by sales- not business outcomes. </br>
-                        Projects were delivered, deals were closed-but one question was often ignored:
-
-                    </p>
-                </div>
+        <div class="row align-items-center">
+            <!-- IMAGE -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img id="stepImage"
+                     src="assets/about/inception/inception1.png"
+                     class="img-fluid main-img"
+                     alt="step">
             </div>
 
-            <!-- Progress Bar -->
-            <div class="progress-wrapper mt-5 position-relative">
-                <div class="progress-line"></div>
+            <!-- TEXT -->
+            <div class="col-lg-6">
+                <div id="stepText" class="step-text"></div>
+            </div>
+        </div>
 
-                <div class="steps d-flex justify-content-between">
-                    <div class="step" data-step="0">
-                        <div class="circle active"></div>
-                        <span class="step-title">Step 1</span>
-                    </div>
-                    <div class="step" data-step="1">
-                        <div class="circle"></div>
-                        <span class="step-title">Step 2</span>
-                    </div>
-                    <div class="step" data-step="2">
-                        <div class="circle"></div>
-                        <span class="step-title">Step 3</span>
-                    </div>
-                    <div class="step" data-step="3">
-                        <div class="circle"></div>
-                        <span class="step-title">Step 4</span>
-                    </div>
-                    <!-- <div class="step" data-step="4">
-                        <div class="circle"></div>
-                        <span class="step-title">Step 5</span>
-                    </div> -->
+        <!-- PROGRESS -->
+        <div class="progress-wrapper">
+            <div class="progress-line">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="steps">
+                <div class="step" data-step="0">
+                    <div class="circle active"></div>
+                    <span>Step 1</span>
+                </div>
+                <div class="step" data-step="1">
+                    <div class="circle"></div>
+                    <span>Step 2</span>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="circle"></div>
+                    <span>Step 3</span>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="circle"></div>
+                    <span>Step 4</span>
                 </div>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <style>
-        ul {
-    padding-left: 1rem;
+        .inception-section {
+    /* background: #f8f8fb; */
+    padding: 80px 0;
 }
-.approach-img {
-    max-width: 480px;
+
+/* TITLE */
+.approach-title {
+    font-size: 42px;
+    font-weight: 700;
 }
+
+.approach-title span {
+    color: #591487;
+}
+
+/* IMAGE */
+.main-img {
+    max-width: 420px;
+    width: 100%;
+}
+
+/* TEXT */
+.step-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* PROGRESS WRAPPER */
+.progress-wrapper {
+    position: relative;
+    margin-top: 70px;
+}
+
+/* LINE */
+.progress-line {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ddd;
+    z-index: 1;
+}
+
+/* FILLED LINE */
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #591487;
+    transition: width 0.5s ease;
+}
+
+/* STEPS */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+/* STEP */
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* DOT */
+.circle {
+    width: 18px;
+    height: 18px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 8px;
+    position: relative;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.circle.active {
+    background: #591487;
+    transform: scale(1.3);
+    box-shadow: 0 0 0 6px rgba(89, 20, 135, 0.15);
+}
+
+/* LABEL */
+.step span {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .approach-img {
-        max-width: 280px;
+    .approach-title {
+        font-size: 28px;
     }
-}
-@media (max-width: 768px) {
-    .approach-img {
-        max-width: 280px;
+
+    .main-img {
+        max-width: 260px;
+    }
+
+    .step-text {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .step span {
+        font-size: 11px;
+    }
+
+    .progress-wrapper {
+        margin-top: 40px;
     }
 }
     </style>
 
     <script>
-        const steps = document.querySelectorAll(".step");
-        const img = document.getElementById("stepImage");
-        const text = document.getElementById("stepText");
+       const steps = document.querySelectorAll(".step");
+const circles = document.querySelectorAll(".circle");
+const img = document.getElementById("stepImage");
+const text = document.getElementById("stepText");
+const progressFill = document.querySelector(".progress-fill");
 
-        const content = [
-            {
-                img: "assets/about/inception/inception1.png",
-                text: "Early in my career, I noticed a pattern across organizations.<br><br>Technology initiatives were driven by sales not business outcomes.<br>Projects were delivered, deals were closed but one question was often ignored:"
-            },
-            {
-                img: "assets/about/inception/inception2.png",
-                text: "Did the technology actually work for the business?<br><br>More often than not, it didn’t.<br>Organizations were left managing systems that were complex, misaligned, and difficult to operate.<br><br>Over time, it became clear"
-            },
-            {
-                img: "assets/about/inception/inception3.png",
-                text: `
-                The problem wasn’t technology.<br>
-                It was the approach.<br><br>
+let currentStep = 0;
+let interval;
 
-                <ul class="custom-bullets">
-                    <li>Decisions weren’t aligned to business context.</li>
-                    <li>Execution lacked operational discipline.</li>
-                    <li>Success was measured by deployment, not impact.</li>
-                </ul>
-            `
-                    },
-            {
-                img: "assets/about/inception/inception5.png",
-                text: "That realization led to building this company.<br><br>With a simple mantra:<br><br><span class='highlight-text'>Technology should be implemented with the same discipline and accountability as any core business capability.</span>"
-            }
-        ];
+/* CONTENT */
+const content = [
+    {
+        img: "assets/about/inception1.png",
+        text: "Early in my career, I noticed a pattern across organizations.<br><br>Technology initiatives were driven by sales not business outcomes.<br>Projects were delivered, deals were closed but one question was often ignored:"
+    },
+    {
+        img: "assets/about/inception2.png",
+        text: "Did the technology actually work for the business?<br><br>More often than not, it didn’t.<br>Organizations were left managing systems that were complex, misaligned, and difficult to operate.<br><br>Over time, it became clear"
+    },
+    {
+        img: "assets/about/inception3.png",
+        text: `
+        The problem wasn’t technology.<br>
+        It was the approach.<br><br>
+        <ul>
+            <li>Decisions weren’t aligned to business context.</li>
+            <li>Execution lacked discipline.</li>
+            <li>Success was measured by deployment, not impact.</li>
+        </ul>`
+    },
+    {
+        img: "assets/about/inception4.png",
+        text: "That realization led to building this company.<br><br><b>Technology should be implemented with discipline and accountability.</b>"
+    }
+];
 
-        function setStep(index) {
-            // remove active from all
-            steps.forEach(step => {
-                step.querySelector(".circle").classList.remove("active");
-            });
+/* SET STEP */
+function setStep(index) {
 
-            // add active to current
-            steps[index].querySelector(".circle").classList.add("active");
+    // Update active circle
+    circles.forEach(c => c.classList.remove("active"));
+    circles[index].classList.add("active");
 
-            // update content
-            img.src = content[index].img;
-            text.innerHTML = content[index].text; // ✅ FIXED
-        }
+    // Update content
+    img.src = content[index].img;
+    text.innerHTML = content[index].text;
 
-        steps.forEach((step, i) => {
-            step.addEventListener("click", () => setStep(i));
-        });
+    // 🔥 PERFECT PROGRESS ALIGNMENT
+    const activeCircle = circles[index];
+    const wrapper = document.querySelector(".progress-wrapper");
 
-        // default load
-        setStep(0);
+    const circleCenter =
+        activeCircle.offsetLeft + activeCircle.offsetWidth / 2;
+
+    const wrapperWidth = wrapper.offsetWidth;
+
+    const percent = (circleCenter / wrapperWidth) * 100;
+
+    progressFill.style.width = percent + "%";
+
+    currentStep = index;
+}
+
+/* AUTO PLAY */
+function autoPlay() {
+    interval = setInterval(() => {
+        currentStep = (currentStep + 1) % content.length;
+        setStep(currentStep);
+    }, 3000);
+}
+
+/* CLICK EVENTS */
+steps.forEach((step, i) => {
+    step.addEventListener("click", () => {
+        clearInterval(interval);
+        setStep(i);
+        autoPlay();
+    });
+});
+
+/* INIT */
+window.addEventListener("load", () => {
+    setStep(0);
+    autoPlay();
+});
     </script>
 
-    <style>
-        .service-card-default img {
-            width: 228px !important;
-            align-self: flex-end !important;
-        }
-
-        /* Tablet */
-        @media (max-width: 768px) {
-            .service-card-default img {
-                width: 110px !important;
-            }
-
-            .service-card-default h5 {
-                font-size: 18px !important;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 576px) {
-            .service-card-default img {
-                width: 110px !important;
-            }
-
-            .service-card-default h5 {
-                font-size: 18px !important;
-            }
-        }
-    </style>
 
     <!-- Our Philosophy in Action -->
 
@@ -575,207 +682,237 @@
         </div>
     </section>
 
+    <style>
+        .service-card-default img {
+            width: 228px !important;
+            align-self: flex-end !important;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .service-card-default img {
+                width: 110px !important;
+            }
+
+            .service-card-default h5 {
+                font-size: 18px !important;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .service-card-default img {
+                width: 110px !important;
+            }
+
+            .service-card-default h5 {
+                font-size: 18px !important;
+            }
+        }
+    </style>
+
+
     <!-- Our Principles -->
 
-  <section class="principles-pro">
-    <div class="container">
-        <div class="principles-layout">
+    <section class="principles-pro">
+        <div class="container">
+            <div class="principles-layout">
 
-            <!-- LEFT SIDE -->
-            <div class="principles-left">
-                <h2 class="approach-title">Our <span>Principles</span></h2>
-                <p>
-                    Simple principles. Serious outcomes.<br>
-                    The way we work shapes how we think, collaborate, and deliver value.
-                </p>
-            </div>
-
-            <!-- RIGHT SIDE -->
-            <div class="principles-right">
-
-                <div class="p-card">
-                    <span>01</span>
-                    <h3>Keep It Simple</h3>
-                    <p>We build systems that are structured, clear, and easy to operate.</p>
+                <!-- LEFT SIDE -->
+                <div class="principles-left">
+                    <h2 class="approach-title">Our <span>Principles</span></h2>
+                    <p>
+                        Simple principles. Serious outcomes.<br>
+                        The way we work shapes how we think, collaborate, and deliver value.
+                    </p>
                 </div>
 
-                <div class="p-card">
-                    <span>02</span>
-                    <h3>Be Curious</h3>
-                    <p>We ask the right questions before recommending technology.</p>
-                </div>
+                <!-- RIGHT SIDE -->
+                <div class="principles-right">
 
-                <div class="p-card">
-                    <span>03</span>
-                    <h3>Create Impact</h3>
-                    <p>We focus on measurable outcomes, not just deployment.</p>
-                </div>
+                    <div class="p-card">
+                        <span>01</span>
+                        <h3>Keep It Simple</h3>
+                        <p>We build systems that are structured, clear, and easy to operate.</p>
+                    </div>
 
+                    <div class="p-card">
+                        <span>02</span>
+                        <h3>Be Curious</h3>
+                        <p>We ask the right questions before recommending technology.</p>
+                    </div>
+
+                    <div class="p-card">
+                        <span>03</span>
+                        <h3>Create Impact</h3>
+                        <p>We focus on measurable outcomes, not just deployment.</p>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<style>
-    /* SECTION */
-.principles-pro {
-    padding: 80px 20px;
-    background: #ffffff;
-}
-
-/* CONTAINER (important for alignment) */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* LAYOUT */
-.principles-layout {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-/* LEFT */
-.principles-left {
-    flex: 1;
-    max-width: 420px;
-    position: sticky;
-    top: 120px;
-}
-
-
-
-.principles-left p {
-    margin-top: 20px;
-    color: #333333;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-/* RIGHT */
-.principles-right {
-    flex: 1.2;
-}
-
-/* CARD */
-.p-card {
-    background: #f9fafb;
-    padding: 28px;
-    border-radius: 16px;
-    border: 1px solid #e5e7eb;
-    margin-bottom: 20px;
-
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.5s ease;
-}
-
-/* SHOW */
-.p-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* NUMBER */
-.p-card span {
-    font-size: 13px;
-    font-weight: 600;
-    color: #5c3fa3;
-}
-
-/* TITLE */
-.p-card h3 {
-    margin: 10px 0;
-    font-size: 25px;
-    color: #130020;
-
-}
-
-/* TEXT */
-.p-card p {
-    color: #333333;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-/* HOVER */
-.p-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-/* ========================= */
-/* 📱 TABLET */
-/* ========================= */
-@media (max-width: 992px) {
-    .principles-layout {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .principles-left {
-        position: relative;
-        top: 0;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .principles-left h2 {
-        font-size: 30px;
-    }
-
-    .principles-right {
-        width: 100%;
-    }
-}
-
-/* ========================= */
-/* 📱 MOBILE */
-/* ========================= */
-@media (max-width: 576px) {
-    .principles-pro {
-        padding: 60px 16px;
-    }
-
-    .principles-left h2 {
-        font-size: 26px;
-    }
-
-    .principles-left p {
-        font-size: 14px;
-    }
-
-    .p-card {
-        padding: 20px;
-    }
-
-    .p-card h3 {
-        font-size: 18px;
-    }
-
-    .p-card p {
-        font-size: 14px;
-    }
-}
-</style>
-
-<script>
-const cards = document.querySelectorAll(".p-card");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add("show");
-            }, i * 120);
+    <style>
+        /* SECTION */
+        .principles-pro {
+            padding: 80px 20px;
+            background: #ffffff;
         }
-    });
-}, { threshold: 0.2 });
 
-cards.forEach(card => observer.observe(card));
-</script>
+        /* CONTAINER (important for alignment) */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* LAYOUT */
+        .principles-layout {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        /* LEFT */
+        .principles-left {
+            flex: 1;
+            max-width: 420px;
+            position: sticky;
+            top: 120px;
+        }
+
+
+
+        .principles-left p {
+            margin-top: 20px;
+            color: #333333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* RIGHT */
+        .principles-right {
+            flex: 1.2;
+        }
+
+        /* CARD */
+        .p-card {
+            background: #f9fafb;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 20px;
+
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.5s ease;
+        }
+
+        /* SHOW */
+        .p-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* NUMBER */
+        .p-card span {
+            font-size: 13px;
+            font-weight: 600;
+            color: #5c3fa3;
+        }
+
+        /* TITLE */
+        .p-card h3 {
+            margin: 10px 0;
+            font-size: 25px;
+            color: #130020;
+
+        }
+
+        /* TEXT */
+        .p-card p {
+            color: #333333;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* HOVER */
+        .p-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ========================= */
+        /* 📱 TABLET */
+        /* ========================= */
+        @media (max-width: 992px) {
+            .principles-layout {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .principles-left {
+                position: relative;
+                top: 0;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .principles-left h2 {
+                font-size: 30px;
+            }
+
+            .principles-right {
+                width: 100%;
+            }
+        }
+
+        /* ========================= */
+        /* 📱 MOBILE */
+        /* ========================= */
+        @media (max-width: 576px) {
+            .principles-pro {
+                padding: 60px 16px;
+            }
+
+            .principles-left h2 {
+                font-size: 26px;
+            }
+
+            .principles-left p {
+                font-size: 14px;
+            }
+
+            .p-card {
+                padding: 20px;
+            }
+
+            .p-card h3 {
+                font-size: 18px;
+            }
+
+            .p-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <script>
+        const cards = document.querySelectorAll(".p-card");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("show");
+                    }, i * 120);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
 
     <!-- The Technosprout Difference -->
     <section class="benefits-section py-5">
@@ -812,7 +949,7 @@ cards.forEach(card => observer.observe(card));
                 <!-- Item 3 -->
                 <div class="col-lg col-md-4 col-6 benefit-item">
                     <img src="assets/about/operational.png" alt="">
-                    <h6>Operational Rigor</h6>
+                    <h6>Operational Efficiency</h6>
                     </br>
                     <p>Technology must not only be </br> implemented well, it must run well </br> every day.</p>
                 </div>
@@ -847,7 +984,7 @@ cards.forEach(card => observer.observe(card));
             </p>
 
             <p class="build-highlight">
-                🚀 Reactive technology operations to structured, optimized, and outcome-driven technology environments
+                Reactive technology operations to structured, optimized, and outcome-driven technology environments
             </p>
 
             <p class="build-description">
