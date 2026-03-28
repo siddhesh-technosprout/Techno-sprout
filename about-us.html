@@ -308,200 +308,198 @@
 
 
     <section class="inception-section py-5">
-    <div class="container">
+        <div class="container">
 
-        <h2 class="text-center mb-5 approach-title">
-            The <span>Inception</span>
-        </h2>
+            <h2 class="text-center mb-5 approach-title">
+                The <span>Inception</span>
+            </h2>
 
-        <div class="row align-items-center">
-            <!-- IMAGE -->
-            <div class="col-lg-6 text-center mb-4 mb-lg-0">
-                <img id="stepImage"
-                     src="assets/about/inception/inception1.png"
-                     class="img-fluid main-img"
-                     alt="step">
+            <div class="row align-items-center">
+                <!-- IMAGE -->
+                <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                    <img id="stepImage" src="assets/about/inception/inception1.png" class="img-fluid main-img"
+                        alt="step">
+                </div>
+
+                <!-- TEXT -->
+                <div class="col-lg-6">
+                    <div id="stepText" class="step-text"></div>
+                </div>
             </div>
 
-            <!-- TEXT -->
-            <div class="col-lg-6">
-                <div id="stepText" class="step-text"></div>
+            <!-- PROGRESS -->
+            <div class="progress-wrapper">
+                <div class="progress-line">
+                    <div class="progress-fill"></div>
+                </div>
+
+                <div class="steps">
+                    <div class="step" data-step="0">
+                        <div class="circle active"></div>
+                        <span>Step 1</span>
+                    </div>
+                    <div class="step" data-step="1">
+                        <div class="circle"></div>
+                        <span>Step 2</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="circle"></div>
+                        <span>Step 3</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="circle"></div>
+                        <span>Step 4</span>
+                    </div>
+                </div>
             </div>
+
         </div>
-
-        <!-- PROGRESS -->
-        <div class="progress-wrapper">
-            <div class="progress-line">
-                <div class="progress-fill"></div>
-            </div>
-
-            <div class="steps">
-                <div class="step" data-step="0">
-                    <div class="circle active"></div>
-                    <span>Step 1</span>
-                </div>
-                <div class="step" data-step="1">
-                    <div class="circle"></div>
-                    <span>Step 2</span>
-                </div>
-                <div class="step" data-step="2">
-                    <div class="circle"></div>
-                    <span>Step 3</span>
-                </div>
-                <div class="step" data-step="3">
-                    <div class="circle"></div>
-                    <span>Step 4</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
+    </section>
 
     <style>
         .inception-section {
-    /* background: #f8f8fb; */
-    padding: 80px 0;
-}
+            /* background: #f8f8fb; */
+            padding: 80px 0;
+        }
 
-/* TITLE */
-.approach-title {
-    font-size: 42px;
-    font-weight: 700;
-}
+        /* TITLE */
+        .approach-title {
+            font-size: 42px;
+            font-weight: 700;
+        }
 
-.approach-title span {
-    color: #591487;
-}
+        .approach-title span {
+            color: #591487;
+        }
 
-/* IMAGE */
-.main-img {
-    max-width: 420px;
-    width: 100%;
-}
+        /* IMAGE */
+        .main-img {
+            max-width: 420px;
+            width: 100%;
+        }
 
-/* TEXT */
-.step-text {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #555;
-}
+        /* TEXT */
+        .step-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
 
-/* PROGRESS WRAPPER */
-.progress-wrapper {
-    position: relative;
-    margin-top: 70px;
-}
+        /* PROGRESS WRAPPER */
+        .progress-wrapper {
+            position: relative;
+            margin-top: 70px;
+        }
 
-/* LINE */
-.progress-line {
-    position: absolute;
-    top: 18px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #ddd;
-    z-index: 1;
-}
+        /* LINE */
+        .progress-line {
+            position: absolute;
+            top: 18px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #ddd;
+            z-index: 1;
+        }
 
-/* FILLED LINE */
-.progress-fill {
-    height: 100%;
-    width: 0%;
-    background: #591487;
-    transition: width 0.5s ease;
-}
+        /* FILLED LINE */
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #591487;
+            transition: width 0.5s ease;
+        }
 
-/* STEPS */
-.steps {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 2;
-}
+        /* STEPS */
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
 
-/* STEP */
-.step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
+        /* STEP */
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
 
-/* DOT */
-.circle {
-    width: 18px;
-    height: 18px;
-    background: #ccc;
-    border-radius: 50%;
-    margin: 8px;
-    position: relative;
-    z-index: 3;
-    transition: all 0.3s ease;
-}
+        /* DOT */
+        .circle {
+            width: 18px;
+            height: 18px;
+            background: #ccc;
+            border-radius: 50%;
+            margin: 8px;
+            position: relative;
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
 
-/* ACTIVE DOT */
-.circle.active {
-    background: #591487;
-    transform: scale(1.3);
-    box-shadow: 0 0 0 6px rgba(89, 20, 135, 0.15);
-}
+        /* ACTIVE DOT */
+        .circle.active {
+            background: #591487;
+            transform: scale(1.3);
+            box-shadow: 0 0 0 6px rgba(89, 20, 135, 0.15);
+        }
 
-/* LABEL */
-.step span {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #777;
-}
+        /* LABEL */
+        .step span {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #777;
+        }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .approach-title {
-        font-size: 28px;
-    }
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .approach-title {
+                font-size: 28px;
+            }
 
-    .main-img {
-        max-width: 260px;
-    }
+            .main-img {
+                max-width: 260px;
+            }
 
-    .step-text {
-        text-align: center;
-        font-size: 14px;
-    }
+            .step-text {
+                text-align: center;
+                font-size: 14px;
+            }
 
-    .step span {
-        font-size: 11px;
-    }
+            .step span {
+                font-size: 11px;
+            }
 
-    .progress-wrapper {
-        margin-top: 40px;
-    }
-}
+            .progress-wrapper {
+                margin-top: 40px;
+            }
+        }
     </style>
 
     <script>
-       const steps = document.querySelectorAll(".step");
-const circles = document.querySelectorAll(".circle");
-const img = document.getElementById("stepImage");
-const text = document.getElementById("stepText");
-const progressFill = document.querySelector(".progress-fill");
+        const steps = document.querySelectorAll(".step");
+        const circles = document.querySelectorAll(".circle");
+        const img = document.getElementById("stepImage");
+        const text = document.getElementById("stepText");
+        const progressFill = document.querySelector(".progress-fill");
 
-let currentStep = 0;
-let interval;
+        let currentStep = 0;
+        let interval;
 
-/* CONTENT */
-const content = [
-    {
-        img: "assets/about/inception1.png",
-        text: "Early in my career, I noticed a pattern across organizations.<br><br>Technology initiatives were driven by sales not business outcomes.<br>Projects were delivered, deals were closed but one question was often ignored:"
-    },
-    {
-        img: "assets/about/inception2.png",
-        text: "Did the technology actually work for the business?<br><br>More often than not, it didn’t.<br>Organizations were left managing systems that were complex, misaligned, and difficult to operate.<br><br>Over time, it became clear"
-    },
-    {
-        img: "assets/about/inception3.png",
-        text: `
+        /* CONTENT */
+        const content = [
+            {
+                img: "assets/about/inception1.png",
+                text: "Early in my career, I noticed a pattern across organizations.<br><br>Technology initiatives were driven by sales not business outcomes.<br>Projects were delivered, deals were closed but one question was often ignored:"
+            },
+            {
+                img: "assets/about/inception2.png",
+                text: "Did the technology actually work for the business?<br><br>More often than not, it didn’t.<br>Organizations were left managing systems that were complex, misaligned, and difficult to operate.<br><br>Over time, it became clear"
+            },
+            {
+                img: "assets/about/inception3.png",
+                text: `
         The problem wasn’t technology.<br>
         It was the approach.<br><br>
         <ul>
@@ -509,63 +507,64 @@ const content = [
             <li>Execution lacked discipline.</li>
             <li>Success was measured by deployment, not impact.</li>
         </ul>`
-    },
-    {
-        img: "assets/about/inception4.png",
-        text: "That realization led to building this company.<br><br><b>Technology should be implemented with discipline and accountability.</b>"
-    }
-];
+            },
+            {
+                img: "assets/about/inception4.png",
+                text: "That realization led to building this company.<br><br><b>Technology should be implemented with discipline and accountability.</b>"
+            }
+        ];
 
-/* SET STEP */
-function setStep(index) {
+        /* SET STEP */
+        function setStep(index) {
 
-    // Update active circle
-    circles.forEach(c => c.classList.remove("active"));
-    circles[index].classList.add("active");
+            // Update active circle
+            circles.forEach(c => c.classList.remove("active"));
+            circles[index].classList.add("active");
 
-    // Update content
-    img.src = content[index].img;
-    text.innerHTML = content[index].text;
+            // Update content
+            img.src = content[index].img;
+            text.innerHTML = content[index].text;
 
-    // 🔥 PERFECT PROGRESS ALIGNMENT
-    const activeCircle = circles[index];
-    const wrapper = document.querySelector(".progress-wrapper");
+            // 🔥 PERFECT PROGRESS ALIGNMENT
+            const activeCircle = circles[index];
+            const wrapper = document.querySelector(".progress-wrapper");
 
-    const circleCenter =
-        activeCircle.offsetLeft + activeCircle.offsetWidth / 2;
+            const circleCenter =
+                activeCircle.offsetLeft + activeCircle.offsetWidth / 2;
 
-    const wrapperWidth = wrapper.offsetWidth;
+            const wrapperWidth = wrapper.offsetWidth;
 
-    const percent = (circleCenter / wrapperWidth) * 100;
+            const percent = (circleCenter / wrapperWidth) * 100;
 
-    progressFill.style.width = percent + "%";
+            progressFill.style.width = percent + "%";
 
-    currentStep = index;
-}
+            currentStep = index;
+        }
 
-/* AUTO PLAY */
-function autoPlay() {
-    interval = setInterval(() => {
-        currentStep = (currentStep + 1) % content.length;
-        setStep(currentStep);
-    }, 3000);
-}
+        /* AUTO PLAY */
+        function autoPlay() {
+            interval = setInterval(() => {
+                currentStep = (currentStep + 1) % content.length;
+                setStep(currentStep);
+            }, 3000);
+        }
 
-/* CLICK EVENTS */
-steps.forEach((step, i) => {
-    step.addEventListener("click", () => {
-        clearInterval(interval);
-        setStep(i);
-        autoPlay();
-    });
-});
+        /* CLICK EVENTS */
+        steps.forEach((step, i) => {
+            step.addEventListener("click", () => {
+                clearInterval(interval);
+                setStep(i);
+                autoPlay();
+            });
+        });
 
-/* INIT */
-window.addEventListener("load", () => {
-    setStep(0);
-    autoPlay();
-});
+        /* INIT */
+        window.addEventListener("load", () => {
+            setStep(0);
+            autoPlay();
+        });
     </script>
+    
 
 
     <!-- Our Philosophy in Action -->
