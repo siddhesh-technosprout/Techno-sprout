@@ -489,16 +489,16 @@
                     </form>
 
                     <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+                        document.getElementById("contactForm").addEventListener("submit", function (e) {
 
-    let captcha = grecaptcha.getResponse();
+                            let captcha = grecaptcha.getResponse();
 
-    if (captcha.length === 0) {
-        e.preventDefault();
-        document.getElementById("captchaError").style.display = "block";
-    }
-});
-</script>
+                            if (captcha.length === 0) {
+                                e.preventDefault();
+                                document.getElementById("captchaError").style.display = "block";
+                            }
+                        });
+                    </script>
 
 
                     <style>

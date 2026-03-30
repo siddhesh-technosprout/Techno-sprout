@@ -329,6 +329,14 @@
                                                     <small class="error-msg"></small>
                                                 </div>
 
+                                                <div class="col-12 d-flex justify-content-center">
+                                                <div class="g-recaptcha"
+                                                    data-sitekey="6Lfu3J0sAAAAAKiT70YdGDKPXOURJGjA1WDty2-y"></div>
+                                                <div class="form-error" id="captchaError" style="display:none;">
+                                                    Please verify captcha
+                                                </div>
+                                            </div>
+
                                                 <div class="col-12 mt-3">
                                                     <button type="submit" class="btn btn-consult w-40"
                                                         style="display:block; margin:0 auto; text-align:center;">
@@ -344,6 +352,18 @@
                                             </div>
 
                                         </form>
+
+                                        <script>
+                                        document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+                                            let captcha = grecaptcha.getResponse();
+
+                                            if (captcha.length === 0) {
+                                                e.preventDefault();
+                                                document.getElementById("captchaError").style.display = "block";
+                                            }
+                                        });
+                                    </script>
 
                                     </div>
 
@@ -1473,10 +1493,12 @@
                                     placeholder="Enter Your Message..."></textarea>
                             </div>
 
-                            <!-- <div class="col-12 mt-2">
-                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-                                <span id="captchaError" class="form-error">Please verify captcha</span>
-                            </div> -->
+                            <div class="col-12 mt-2">
+                                <div class="g-recaptcha" data-sitekey="6Lfu3J0sAAAAAKiT70YdGDKPXOURJGjA1WDty2-y"></div>
+                                <div class="form-error" id="captchaError" style="display:none;">
+                                    Please verify captcha
+                                </div>
+                            </div>
 
                             <div class="col-12 mt-3">
 
@@ -1967,6 +1989,7 @@
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
     <!-- End of HubSpot Embed Code -->
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

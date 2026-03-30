@@ -317,8 +317,7 @@
             <div class="row align-items-center">
                 <!-- IMAGE -->
                 <div class="col-lg-6 text-center mb-4 mb-lg-0">
-                    <img id="stepImage" src="assets/about/inception1.png" class="img-fluid main-img"
-                        alt="step">
+                    <img id="stepImage" src="assets/about/inception1.png" class="img-fluid main-img" alt="step">
                 </div>
 
                 <!-- TEXT -->
@@ -358,7 +357,6 @@
 
     <style>
         .inception-section {
-            /* background: #f8f8fb; */
             padding: 80px 0;
         }
 
@@ -372,10 +370,14 @@
             color: #591487;
         }
 
-        /* IMAGE */
+        /* IMAGE FIXED SIZE */
         .main-img {
-            max-width: 420px;
             width: 100%;
+            max-width: 420px;
+            height: 300px;
+            /* 👈 fixed height */
+            object-fit: contain;
+            /* keeps image ratio */
         }
 
         /* TEXT */
@@ -383,6 +385,18 @@
             font-size: 16px;
             line-height: 1.7;
             color: #555;
+        }
+
+        /* 👇 FORCE UL LEFT ALIGN */
+        .step-text ul {
+            text-align: left !important;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .step-text li {
+            text-align: left !important;
+            margin-bottom: 6px;
         }
 
         /* PROGRESS WRAPPER */
@@ -454,17 +468,27 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+
             .approach-title {
                 font-size: 28px;
             }
 
             .main-img {
                 max-width: 260px;
+                height: 220px;
+                /* 👈 consistent mobile size */
             }
 
             .step-text {
                 text-align: center;
+                /* keep paragraph centered */
                 font-size: 14px;
+            }
+
+            /* 👇 IMPORTANT: override center alignment */
+            .step-text ul,
+            .step-text li {
+                text-align: left !important;
             }
 
             .step span {
@@ -487,7 +511,7 @@
 
         let currentStep = 0;
         let interval;
-        let hasStarted = false; // 👈 prevent multiple triggers
+        let hasStarted = false;
 
         /* CONTENT */
         const content = [
@@ -502,13 +526,13 @@
             {
                 img: "assets/about/inception3.png",
                 text: `
-            The problem wasn’t technology.<br>
-            It was the approach.<br><br>
-            <ul>
-                <li>Decisions weren’t aligned to business context.</li>
-                <li>Execution lacked discipline.</li>
-                <li>Success was measured by deployment, not impact.</li>
-            </ul>`
+        The problem wasn’t technology.<br>
+        It was the approach.<br><br>
+        <ul>
+            <li>Decisions weren’t aligned to business context.</li>
+            <li>Execution lacked discipline.</li>
+            <li>Success was measured by deployment, not impact.</li>
+        </ul>`
             },
             {
                 img: "assets/about/inception4.png",
@@ -518,6 +542,7 @@
 
         /* SET STEP */
         function setStep(index) {
+
             circles.forEach(c => c.classList.remove("active"));
             circles[index].classList.add("active");
 
@@ -540,6 +565,7 @@
 
         /* AUTO PLAY */
         function autoPlay() {
+            clearInterval(interval); // 👈 fix duplicate interval bug
             interval = setInterval(() => {
                 currentStep = (currentStep + 1) % content.length;
                 setStep(currentStep);
@@ -549,29 +575,28 @@
         /* CLICK EVENTS */
         steps.forEach((step, i) => {
             step.addEventListener("click", () => {
-                clearInterval(interval);
                 setStep(i);
                 autoPlay();
             });
         });
 
-        /* 👇 INTERSECTION OBSERVER */
+        /* INTERSECTION OBSERVER */
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasStarted) {
                     hasStarted = true;
-                    autoPlay(); // start animation only once
+                    autoPlay();
                 }
             });
         }, {
-            threshold: 0.5 // 50% visible
+            threshold: 0.5
         });
 
         observer.observe(section);
 
-        /* INIT (ONLY STEP 1 STATIC) */
+        /* INIT */
         window.addEventListener("load", () => {
-            setStep(0); // stay at step 1 initially
+            setStep(0);
         });
     </script>
 
@@ -655,7 +680,8 @@
                         </div>
 
                         <div class="service-card-hover" style="justify-content: center;">
-                            <p style="margin:0;">Strong foundations across infrastructure, applications, data, and user environments are built</p>
+                            <p style="margin:0;">Strong foundations across infrastructure, applications, data, and user
+                                environments are built</p>
                             <!-- <a href="services.html" class="service-btn">
                                 Know More
                                 <span class="service-icon">
@@ -678,7 +704,8 @@
                         </div>
 
                         <div class="service-card-hover" style="justify-content: center;">
-                            <p style="margin:0;">Disciplined design, deployment, and lifecycle management ensure consistency</p>
+                            <p style="margin:0;">Disciplined design, deployment, and lifecycle management ensure
+                                consistency</p>
                             <!-- <a href="services.html" class="service-btn">
                                 Know More
                                 <span class="service-icon">
@@ -701,7 +728,7 @@
 
                         <div class="service-card-hover" style="justify-content: center;">
                             <p style="margin:0;">
-                               Robust risk and compliance management sustains stability and control
+                                Robust risk and compliance management sustains stability and control
                             </p>
                         </div>
 

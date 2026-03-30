@@ -43,7 +43,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="canonical" href="https://www.technosprout.in/services" />
 
 </head>
@@ -284,15 +283,15 @@
                     <p>
                         <strong>Follow Us:</strong><br>
 
-                        <div class="mobile-icon">
-                            <a href="https://www.linkedin.com/company/technosprout/" target="_blank" class="linkedin">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
+                    <div class="mobile-icon">
+                        <a href="https://www.linkedin.com/company/technosprout/" target="_blank" class="linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
 
-                            <a href="https://www.facebook.com/technosproutspl" target="_blank" class="facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                        </div>
+                        <a href="https://www.facebook.com/technosproutspl" target="_blank" class="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
                     </p>
 
                 </div>
@@ -380,6 +379,14 @@
                                                 <small class="error-msg"></small>
                                             </div>
 
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <div class="g-recaptcha"
+                                                    data-sitekey="6Lfu3J0sAAAAAKiT70YdGDKPXOURJGjA1WDty2-y"></div>
+                                                <div class="form-error" id="captchaError" style="display:none;">
+                                                    Please verify captcha
+                                                </div>
+                                            </div>
+
                                             <div class="col-12 mt-3">
                                                 <button type="submit" class="btn btn-consult w-40"
                                                     style="display:block; margin:0 auto; text-align:center;">
@@ -395,6 +402,18 @@
                                         </div>
 
                                     </form>
+
+                                    <script>
+                                        document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+                                            let captcha = grecaptcha.getResponse();
+
+                                            if (captcha.length === 0) {
+                                                e.preventDefault();
+                                                document.getElementById("captchaError").style.display = "block";
+                                            }
+                                        });
+                                    </script>
 
                                 </div>
 
@@ -1179,7 +1198,7 @@
                                 <!-- <li>Platform support</li> -->
                                 <li>Performance optimization</li>
                             </ul>
-                        </br>
+                            </br>
                         </div>
 
                     </div>
@@ -1484,9 +1503,9 @@
     </script>
 
     <!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
-<!-- End of HubSpot Embed Code -->
-
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
+    <!-- End of HubSpot Embed Code -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>
