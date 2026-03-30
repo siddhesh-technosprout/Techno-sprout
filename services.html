@@ -137,17 +137,51 @@
     <header class="main-header">
 
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid px-lg-5 px-3">
+            <div class="container-fluid px-lg-5 px-3 d-flex align-items-center justify-content-between">
 
-                <!-- Logo -->
-                <a class="navbar-brand logo" href="index.html">
-                    <img src="assets/logo-transparent.png" alt="logo">
+                <!-- Left: Logo -->
+                <a class="navbar-brand logo m-0" href="index.html">
+                    <img src="assets/logo-transparent.png" alt="logo" class="logo-img">
                 </a>
 
-                <!-- Mobile Toggle -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- Right Side (Mobile Controls) -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- Mobile Language -->
+                    <div class="mobile-lang d-lg-none">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle d-flex align-items-center" type="button"
+                                data-bs-toggle="dropdown">
+                                🌐 Language
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                                        🇺🇸 USA
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="changeLanguage('hi')">
+                                        🇮🇳 India (Hindi)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="changeLanguage('ar')">
+                                        🇦🇪 UAE
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Toggle -->
+                    <button class="navbar-toggler p-1" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </div>
 
                 <!-- Desktop Menu -->
                 <div class="collapse navbar-collapse">
@@ -162,26 +196,11 @@
                             <a class="nav-link" href="about-us.html">About Us</a>
                         </li>
 
-                        <!-- <li class="nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                Company
-                            </a>
-
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
-                                <li><a class="dropdown-item" href="#">Careers</a></li>
-                            </ul>
-
-                        </li> -->
+                        <!-- KEEP YOUR COMMENTED CODE AS IT IS -->
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
+                            <a class="nav-link" href="services.html">Services</a>
                         </li>
-
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">Blogs</a>
-                        </li> -->
 
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact Us</a>
@@ -189,13 +208,50 @@
 
                     </ul>
 
+                    <!-- Desktop Language -->
+                    <div class="dropdown language-dropdown ms-lg-3 d-none d-lg-block">
+                        <button class="btn dropdown-toggle d-flex align-items-center" type="button"
+                            data-bs-toggle="dropdown">
+                            🌐 Language
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                                    🇺🇸 USA
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="changeLanguage('hi')">
+                                    🇮🇳 India (Hindi)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="changeLanguage('ar')">
+                                    🇦🇪 UAE
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                     <a class="btn btn-consult desktop-btn" href="contact.html">
-                        <i class="fa-solid fa-phone me-1"></i> Get in Touch
+                        Get in Touch <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>
                     </a>
 
                 </div>
             </div>
         </nav>
+
+        <script>
+            function changeLanguage(lang) {
+                const select = document.querySelector(".goog-te-combo");
+
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                }
+            }
+        </script>
 
 
         <!-- MOBILE OFFCANVAS -->
@@ -204,8 +260,8 @@
 
             <div class="offcanvas-header">
 
-                <a class="navbar-brand logo" href="index.html">
-                    <img src="assets/logo-transparent.png" alt="logo">
+                <a class="navbar-brand logo m-0" href="index.html">
+                    <img src="assets/logo-transparent.png" alt="logo" class="logo-img">
                 </a>
 
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -293,6 +349,8 @@
                         </a>
                     </div>
                     </p>
+
+
 
                 </div>
 
@@ -1345,6 +1403,7 @@
 
 
     <!-- FOOTER -->
+    <div id="google_translate_element" style="display:none;"></div>
     <footer class="footer">
         <div class="footer-overlay">
             <div class="container">
@@ -1502,10 +1561,22 @@
         };
     </script>
 
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,ar',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
     <!-- End of HubSpot Embed Code -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

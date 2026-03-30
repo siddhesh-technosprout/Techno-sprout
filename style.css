@@ -51,15 +51,28 @@ body {
 }
 
 /* LOGO */
-
-.logo img {
+/* Default (desktop) */
+.logo-img {
     height: 50px;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        height: 40px;
+    }
 }
 
 /* NAVBAR */
 
 .navbar {
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .navbar-nav {
