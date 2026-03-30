@@ -432,7 +432,7 @@
             height: 18px;
             background: #ccc;
             border-radius: 50%;
-            margin: 8px;
+            margin: 10px;
             position: relative;
             z-index: 3;
             transition: all 0.3s ease;
@@ -483,49 +483,47 @@
         const img = document.getElementById("stepImage");
         const text = document.getElementById("stepText");
         const progressFill = document.querySelector(".progress-fill");
+        const section = document.querySelector(".inception-section");
 
         let currentStep = 0;
         let interval;
+        let hasStarted = false; // 👈 prevent multiple triggers
 
         /* CONTENT */
         const content = [
             {
-                img: "assets/about/inception1.png",
+                img: "assets/about/inception/inception1.png",
                 text: "Early in my career, I noticed a pattern across organizations.<br><br>Technology initiatives were driven by sales not business outcomes.<br>Projects were delivered, deals were closed but one question was often ignored:"
             },
             {
-                img: "assets/about/inception2.png",
+                img: "assets/about/inception/inception2.png",
                 text: "Did the technology actually work for the business?<br><br>More often than not, it didn’t.<br>Organizations were left managing systems that were complex, misaligned, and difficult to operate.<br><br>Over time, it became clear"
             },
             {
-                img: "assets/about/inception3.png",
+                img: "assets/about/inception/inception3.png",
                 text: `
-        The problem wasn’t technology.<br>
-        It was the approach.<br><br>
-        <ul>
-            <li>Decisions weren’t aligned to business context.</li>
-            <li>Execution lacked discipline.</li>
-            <li>Success was measured by deployment, not impact.</li>
-        </ul>`
+            The problem wasn’t technology.<br>
+            It was the approach.<br><br>
+            <ul>
+                <li>Decisions weren’t aligned to business context.</li>
+                <li>Execution lacked discipline.</li>
+                <li>Success was measured by deployment, not impact.</li>
+            </ul>`
             },
             {
-                img: "assets/about/inception4.png",
+                img: "assets/about/inception/inception4.png",
                 text: "That realization led to building this company.<br><br><b>Technology should be implemented with discipline and accountability.</b>"
             }
         ];
 
         /* SET STEP */
         function setStep(index) {
-
-            // Update active circle
             circles.forEach(c => c.classList.remove("active"));
             circles[index].classList.add("active");
 
-            // Update content
             img.src = content[index].img;
             text.innerHTML = content[index].text;
 
-            // 🔥 PERFECT PROGRESS ALIGNMENT
             const activeCircle = circles[index];
             const wrapper = document.querySelector(".progress-wrapper");
 
@@ -533,7 +531,6 @@
                 activeCircle.offsetLeft + activeCircle.offsetWidth / 2;
 
             const wrapperWidth = wrapper.offsetWidth;
-
             const percent = (circleCenter / wrapperWidth) * 100;
 
             progressFill.style.width = percent + "%";
@@ -558,13 +555,26 @@
             });
         });
 
-        /* INIT */
+        /* 👇 INTERSECTION OBSERVER */
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasStarted) {
+                    hasStarted = true;
+                    autoPlay(); // start animation only once
+                }
+            });
+        }, {
+            threshold: 0.5 // 50% visible
+        });
+
+        observer.observe(section);
+
+        /* INIT (ONLY STEP 1 STATIC) */
         window.addEventListener("load", () => {
-            setStep(0);
-            autoPlay();
+            setStep(0); // stay at step 1 initially
         });
     </script>
-    
+
 
 
     <!-- Our Philosophy in Action -->
