@@ -1831,111 +1831,146 @@
 
             <div class="cookie-actions">
                 <a href="#" id="cookieRejectBtn" class="btn-outline">Reject</a>
-                <a href="#" id="cookieAcceptBtn" class="btn btn-consult">Accept All</a>
+                <a href="#" id="cookieAcceptBtn" class="btn-outline">Accept All</a>
             </div>
 
         </div>
     </div>
 
     <style>
-        /* COOKIE BAR */
-        .cookie-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #fff;
-            color: #fff;
-            z-index: 99999;
-            padding: 15px 20px;
-            display: none;
-            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
-        }
+      /* =========================
+   COOKIE BAR
+========================= */
+.cookie-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 99999;
+    padding: 15px 20px;
+    display: none;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+}
 
-        /* INNER */
-        .cookie-inner {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
+/* =========================
+   INNER WRAPPER
+========================= */
+.cookie-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-        /* TEXT */
-        .cookie-text p {
-            font-size: 16px;
-            margin: 0;
-            color: #2b0a4a;
-            line-height: 1.5;
-        }
+/* =========================
+   TEXT
+========================= */
+.cookie-text p {
+    font-size: 16px;
+    margin: 0;
+    color: #2b0a4a;
+    line-height: 1.5;
+}
 
-        /* BUTTONS */
-        .cookie-actions {
-            display: flex;
-            gap: 10px;
-            flex-shrink: 0;
-        }
+/* =========================
+   BUTTON CONTAINER
+========================= */
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
 
-        /* BUTTON SAFE STYLE */
-        .cookie-actions a {
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 14px;
-            white-space: nowrap;
-        }
+/* =========================
+   BUTTON BASE
+========================= */
+.cookie-actions a {
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
 
-        /* OUTLINE */
-        .btn-outline {
-            border: 1px solid #aaa;
-            color: #000;
+/* =========================
+   REJECT BUTTON (FIXED)
+========================= */
+.btn-outline {
+    border: 1px solid #ccc;
+    color: #333;
+    background: #f5f5f5;
+}
 
-        }
+.btn-outline:hover {
+    background: #eaeaea;
+    border-color: #bbb;
+}
 
-        .btn-outline:hover {
-            background: #ffffff;
-        }
+/* =========================
+   ACCEPT BUTTON
+========================= */
+.cookie-actions .btn-consult {
+    padding: 8px 20px;
+}
 
-        /* PRIMARY (uses your existing btn-consult if present) */
-        .cookie-actions .btn-consult {
-            padding: 8px 18px;
-        }
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 900px) {
+    .cookie-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-        /* TABLET */
-        @media (max-width: 900px) {
-            .cookie-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .cookie-actions {
+        width: 100%;
+    }
+}
 
-            .cookie-actions {
-                width: 100%;
-            }
-        }
+/* =========================
+   MOBILE (FIXED DESIGN)
+========================= */
+@media (max-width: 600px) {
+    .cookie-inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
 
-        /* MOBILE */
-        @media (max-width: 600px) {
-            .cookie-inner {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
+    .cookie-text p {
+        font-size: 13px;
+    }
 
-            .cookie-text p {
-                font-size: 13px;
-            }
+    /* OPTION 1: SAME ROW (balanced buttons) */
+    .cookie-actions {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
 
-            .cookie-actions {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
+    .cookie-actions a {
+        flex: 1;
+        padding: 10px 0;
+        font-size: 14px;
+    }
 
-            .cookie-actions a {
-                flex: 1;
-                text-align: center;
-            }
-        }
+    /* OPTION 2 (BETTER UX) → Uncomment if you want stacked buttons */
+    /*
+    .cookie-actions {
+        flex-direction: column;
+    }
+
+    .cookie-actions a {
+        width: 100%;
+    }
+    */
+}
     </style>
 
     <script>
