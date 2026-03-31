@@ -231,143 +231,147 @@
 
     </header>
 
-    <script>
+    <main>
 
-        document.querySelectorAll(".dropdown-btn").forEach(button => {
+        <script>
 
-            button.addEventListener("click", function () {
+            document.querySelectorAll(".dropdown-btn").forEach(button => {
 
-                const dropdown = this.nextElementSibling;
+                button.addEventListener("click", function () {
 
-                dropdown.classList.toggle("show");
+                    const dropdown = this.nextElementSibling;
 
-                this.classList.toggle("active");
+                    dropdown.classList.toggle("show");
+
+                    this.classList.toggle("active");
+
+                });
 
             });
 
-        });
-
-    </script>
+        </script>
 
 
+        <!-- HERO -->
+        <section class="hero-section py-5">
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <!-- LEFT CONTENT -->
+                    <div class="col-lg-6 col-md-12 hero-left">
+
+                        <h1 class="hero-title">
+                            <span><i> Transform Your <br>
+                                    Business</i> </span> Through<br>
+                            Technology Excellence</i>
+                        </h1>
 
 
-    <!-- HERO -->
-    <section class="hero-section py-5">
-        <div class="container">
+                        <p class="hero-desc">
+                            Our business technology consulting services helps
+                            organizations meet their business technology goals
+                        </p>
 
-            <div class="row align-items-center">
+                        <div class="hero-buttons">
 
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-6 col-md-12 hero-left">
+                            <button id="openMeetingBtn" class="btn btn-consult">
+                                <i class="fa-solid fa-calendar-check me-2"></i> Book Appointment
+                            </button>
 
-                    <h1 class="hero-title">
-                        <span><i> Transform Your <br>
-                                Business</i> </span> Through<br>
-                        Technology Excellence</i>
-                    </h1>
+                            <!-- POPUP -->
+                            <div id="meetingPopup" class="popup-overlay">
 
+                                <div class="popup-card">
 
-                    <p class="hero-desc">
-                        Our business technology consulting services helps
-                        organizations meet their business technology goals
-                    </p>
+                                    <!-- CLOSE -->
+                                    <span class="popup-close" id="closeMeetingPopup">&times;</span>
 
-                    <div class="hero-buttons">
+                                    <div class="popup-flex">
 
-                        <button id="openMeetingBtn" class="btn btn-consult">
-                            <i class="fa-solid fa-calendar-check me-2"></i> Book Appointment
-                        </button>
+                                        <!-- LEFT -->
+                                        <div class="popup-left">
+                                            <h2>Let's Connect</h2>
+                                            </br>
+                                            <p style="font-size: 18px;">We help you grow faster with smart solutions.
+                                            </p>
+                                        </div>
 
-                        <!-- POPUP -->
-                        <div id="meetingPopup" class="popup-overlay">
+                                        <!-- RIGHT -->
+                                        <div class="popup-right">
 
-                            <div class="popup-card">
+                                            <form id="popupForm">
 
-                                <!-- CLOSE -->
-                                <span class="popup-close" id="closeMeetingPopup">&times;</span>
+                                                <div class="row">
 
-                                <div class="popup-flex">
-
-                                    <!-- LEFT -->
-                                    <div class="popup-left">
-                                        <h2>Let's Connect</h2>
-                                        </br>
-                                        <p style="font-size: 18px;">We help you grow faster with smart solutions.</p>
-                                    </div>
-
-                                    <!-- RIGHT -->
-                                    <div class="popup-right">
-
-                                        <form id="popupForm">
-
-                                            <div class="row">
-
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="text" name="firstname"
-                                                        placeholder="Enter Your Full Name *" class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="email" name="email" placeholder="Email *"
-                                                        class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="tel" name="phone" placeholder="Phone *"
-                                                        class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-md-6 mb-3">
-                                                    <input type="text" name="company" placeholder="Organisation Name *"
-                                                        class="form-control">
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="form-group col-12">
-                                                    <textarea name="message" placeholder="Message"
-                                                        class="form-control"></textarea>
-                                                    <small class="error-msg"></small>
-                                                </div>
-
-                                                <div class="col-12 d-flex justify-content-center">
-                                                    <div class="g-recaptcha"
-                                                        data-sitekey="6Lfu3J0sAAAAAKiT70YdGDKPXOURJGjA1WDty2-y"></div>
-                                                    <div class="form-error" id="captchaError" style="display:none;">
-                                                        Please verify captcha
+                                                    <div class="form-group col-md-6 mb-3">
+                                                        <input type="text" name="firstname"
+                                                            placeholder="Enter Your Full Name *" class="form-control">
+                                                        <small class="error-msg"></small>
                                                     </div>
+
+                                                    <div class="form-group col-md-6 mb-3">
+                                                        <input type="email" name="email" placeholder="Email *"
+                                                            class="form-control">
+                                                        <small class="error-msg"></small>
+                                                    </div>
+
+                                                    <div class="form-group col-md-6 mb-3">
+                                                        <input type="tel" name="phone" placeholder="Phone *"
+                                                            class="form-control">
+                                                        <small class="error-msg"></small>
+                                                    </div>
+
+                                                    <div class="form-group col-md-6 mb-3">
+                                                        <input type="text" name="company"
+                                                            placeholder="Organisation Name *" class="form-control">
+                                                        <small class="error-msg"></small>
+                                                    </div>
+
+                                                    <div class="form-group col-12">
+                                                        <textarea name="message" placeholder="Message"
+                                                            class="form-control"></textarea>
+                                                        <small class="error-msg"></small>
+                                                    </div>
+
+                                                    <div class="col-12 d-flex justify-content-center">
+                                                        <div class="g-recaptcha"
+                                                            data-sitekey="6Lfu3J0sAAAAAKiT70YdGDKPXOURJGjA1WDty2-y">
+                                                        </div>
+                                                        <div class="form-error" id="captchaError" style="display:none;">
+                                                            Please verify captcha
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mt-3">
+                                                        <button type="submit" class="btn btn-consult w-40"
+                                                            style="display:block; margin:0 auto; text-align:center;">
+
+                                                            Submit
+                                                            <span class="service-icon ms-2">
+                                                                <i class="fa-solid fa-circle-arrow-right"></i>
+                                                            </span>
+
+                                                        </button>
+                                                    </div>
+
                                                 </div>
 
-                                                <div class="col-12 mt-3">
-                                                    <button type="submit" class="btn btn-consult w-40"
-                                                        style="display:block; margin:0 auto; text-align:center;">
+                                            </form>
 
-                                                        Submit
-                                                        <span class="service-icon ms-2">
-                                                            <i class="fa-solid fa-circle-arrow-right"></i>
-                                                        </span>
+                                            <script>
+                                                document.getElementById("contactForm").addEventListener("submit", function (e) {
 
-                                                    </button>
-                                                </div>
+                                                    let captcha = grecaptcha.getResponse();
 
-                                            </div>
+                                                    if (captcha.length === 0) {
+                                                        e.preventDefault();
+                                                        document.getElementById("captchaError").style.display = "block";
+                                                    }
+                                                });
+                                            </script>
 
-                                        </form>
-
-                                        <script>
-                                            document.getElementById("contactForm").addEventListener("submit", function (e) {
-
-                                                let captcha = grecaptcha.getResponse();
-
-                                                if (captcha.length === 0) {
-                                                    e.preventDefault();
-                                                    document.getElementById("captchaError").style.display = "block";
-                                                }
-                                            });
-                                        </script>
+                                        </div>
 
                                     </div>
 
@@ -375,613 +379,615 @@
 
                             </div>
 
-                        </div>
-
-                        <style>
-                            .error-msg {
-                                color: red;
-                                font-size: 12px;
-                                display: block;
-                                margin-top: 5px;
-                            }
-
-                            input.error,
-                            textarea.error {
-                                border-color: red;
-                            }
-
-                            .popup-overlay {
-                                position: fixed;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background: rgba(0, 0, 0, 0.6);
-                                display: none;
-                                align-items: center;
-                                justify-content: center;
-                                z-index: 9999;
-                            }
-
-                            .popup-card {
-                                width: 90%;
-                                max-width: 900px;
-                                background: #fff;
-                                border-radius: 16px;
-                                overflow: hidden;
-                                display: flex;
-                                position: relative;
-                                animation: popupFade 0.3s ease;
-                            }
-
-                            @keyframes popupFade {
-                                from {
-                                    transform: scale(0.9);
-                                    opacity: 0;
+                            <style>
+                                .error-msg {
+                                    color: red;
+                                    font-size: 12px;
+                                    display: block;
+                                    margin-top: 5px;
                                 }
 
-                                to {
-                                    transform: scale(1);
-                                    opacity: 1;
-                                }
-                            }
-
-                            .popup-close {
-                                position: absolute;
-                                top: 10px;
-                                right: 15px;
-                                font-size: 22px;
-                                cursor: pointer;
-                                color: #ddd;
-                                transition: all 0.3s ease;
-                            }
-
-                            .popup-close:hover {
-                                color: #ff4d4d;
-                                /* change to your preferred color */
-                                transform: scale(1.2);
-                                /* optional zoom effect */
-                            }
-
-                            .popup-flex {
-                                display: flex;
-                                width: 100%;
-                            }
-
-                            /* LEFT */
-                            .popup-left {
-                                width: 40%;
-                                background: linear-gradient(135deg, #591486, #200e42);
-                                color: #fff;
-                                padding: 40px;
-                            }
-
-                            .popup-left h2 {
-                                font-size: 60px;
-                                margin-bottom: 10px;
-                                font-weight: 800;
-                            }
-
-                            /* RIGHT */
-                            .popup-right {
-                                width: auto;
-                                padding: 60px;
-                            }
-
-                            .form-group {
-                                margin-bottom: 15px;
-                            }
-
-                            .form-group input,
-                            .form-group textarea {
-                                width: 100%;
-                                padding: 12px !important;
-                                border: 1px solid #ddd;
-                                border-radius: 8px;
-                                outline: none;
-                            }
-
-                            .form-group input:focus,
-                            .form-group textarea:focus {
-                                border-color: #0d6efd;
-                            }
-
-                            .submit-btn {
-                                width: auto;
-                                padding: 12px;
-                                border: none;
-                                background: #0d6efd;
-                                color: #fff;
-                                border-radius: 8px;
-                                font-weight: 600;
-                            }
-
-                            /* MOBILE */
-                            @media(max-width:768px) {
-                                .popup-flex {
-                                    flex-direction: column;
+                                input.error,
+                                textarea.error {
+                                    border-color: red;
                                 }
 
-                                .popup-left,
-                                .popup-right {
-                                    width: 100%;
-                                }
-                            }
-
-                            @media(max-width: 768px) {
                                 .popup-overlay {
-                                    padding: 10px;
-                                    /* Prevents card from touching screen edges */
-                                    align-items: flex-start;
-                                    /* Better for long forms to allow scrolling */
-                                    overflow-y: auto;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(0, 0, 0, 0.6);
+                                    display: none;
+                                    align-items: center;
+                                    justify-content: center;
+                                    z-index: 9999;
                                 }
 
                                 .popup-card {
-                                    flex-direction: column;
-                                    width: 100%;
-                                    max-height: 95vh;
-                                    /* Prevents card from being taller than screen */
-                                    overflow-y: auto;
-                                    /* Allows the form itself to scroll if needed */
+                                    width: 90%;
+                                    max-width: 900px;
+                                    background: #fff;
+                                    border-radius: 16px;
+                                    overflow: hidden;
+                                    display: flex;
+                                    position: relative;
+                                    animation: popupFade 0.3s ease;
+                                }
+
+                                @keyframes popupFade {
+                                    from {
+                                        transform: scale(0.9);
+                                        opacity: 0;
+                                    }
+
+                                    to {
+                                        transform: scale(1);
+                                        opacity: 1;
+                                    }
+                                }
+
+                                .popup-close {
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 15px;
+                                    font-size: 22px;
+                                    cursor: pointer;
+                                    color: #ddd;
+                                    transition: all 0.3s ease;
+                                }
+
+                                .popup-close:hover {
+                                    color: #ff4d4d;
+                                    /* change to your preferred color */
+                                    transform: scale(1.2);
+                                    /* optional zoom effect */
                                 }
 
                                 .popup-flex {
-                                    flex-direction: column;
+                                    display: flex;
+                                    width: 100%;
                                 }
 
+                                /* LEFT */
                                 .popup-left {
-                                    width: 100%;
-                                    padding: 30px 20px;
-                                    text-align: center;
+                                    width: 40%;
+                                    background: linear-gradient(135deg, #591486, #200e42);
+                                    color: #fff;
+                                    padding: 40px;
                                 }
 
                                 .popup-left h2 {
-                                    font-size: 28px;
-                                    /* Smaller font for mobile */
+                                    font-size: 60px;
+                                    margin-bottom: 10px;
+                                    font-weight: 800;
                                 }
 
+                                /* RIGHT */
                                 .popup-right {
+                                    width: auto;
+                                    padding: 60px;
+                                }
+
+                                .form-group {
+                                    margin-bottom: 15px;
+                                }
+
+                                .form-group input,
+                                .form-group textarea {
                                     width: 100%;
-                                    padding: 20px;
+                                    padding: 12px !important;
+                                    border: 1px solid #ddd;
+                                    border-radius: 8px;
+                                    outline: none;
                                 }
 
-                                /* Adjust button width for mobile */
-                                .popup-right .btn-consult {
-                                    width: 100% !important;
+                                .form-group input:focus,
+                                .form-group textarea:focus {
+                                    border-color: #0d6efd;
                                 }
-                            }
-                        </style>
 
-                        <script>
-                            const popup = document.getElementById("meetingPopup");
+                                .submit-btn {
+                                    width: auto;
+                                    padding: 12px;
+                                    border: none;
+                                    background: #0d6efd;
+                                    color: #fff;
+                                    border-radius: 8px;
+                                    font-weight: 600;
+                                }
 
-                            /* OPEN POPUP */
-                            document.getElementById("openMeetingBtn").onclick = () => {
-                                popup.style.display = "flex";
-                                document.body.style.overflow = "hidden"; // ✅ disable scroll
-                            };
+                                /* MOBILE */
+                                @media(max-width:768px) {
+                                    .popup-flex {
+                                        flex-direction: column;
+                                    }
 
-                            /* CLOSE POPUP (X BUTTON) */
-                            document.getElementById("closeMeetingPopup").onclick = () => {
-                                closePopup();
-                            };
+                                    .popup-left,
+                                    .popup-right {
+                                        width: 100%;
+                                    }
+                                }
 
-                            /* CLOSE ON OUTSIDE CLICK */
-                            window.onclick = (e) => {
-                                if (e.target === popup) {
+                                @media(max-width: 768px) {
+                                    .popup-overlay {
+                                        padding: 10px;
+                                        /* Prevents card from touching screen edges */
+                                        align-items: flex-start;
+                                        /* Better for long forms to allow scrolling */
+                                        overflow-y: auto;
+                                    }
+
+                                    .popup-card {
+                                        flex-direction: column;
+                                        width: 100%;
+                                        max-height: 95vh;
+                                        /* Prevents card from being taller than screen */
+                                        overflow-y: auto;
+                                        /* Allows the form itself to scroll if needed */
+                                    }
+
+                                    .popup-flex {
+                                        flex-direction: column;
+                                    }
+
+                                    .popup-left {
+                                        width: 100%;
+                                        padding: 30px 20px;
+                                        text-align: center;
+                                    }
+
+                                    .popup-left h2 {
+                                        font-size: 28px;
+                                        /* Smaller font for mobile */
+                                    }
+
+                                    .popup-right {
+                                        width: 100%;
+                                        padding: 20px;
+                                    }
+
+                                    /* Adjust button width for mobile */
+                                    .popup-right .btn-consult {
+                                        width: 100% !important;
+                                    }
+                                }
+                            </style>
+
+                            <script>
+                                const popup = document.getElementById("meetingPopup");
+
+                                /* OPEN POPUP */
+                                document.getElementById("openMeetingBtn").onclick = () => {
+                                    popup.style.display = "flex";
+                                    document.body.style.overflow = "hidden"; // ✅ disable scroll
+                                };
+
+                                /* CLOSE POPUP (X BUTTON) */
+                                document.getElementById("closeMeetingPopup").onclick = () => {
                                     closePopup();
-                                }
-                            };
+                                };
 
-                            /* COMMON CLOSE FUNCTION */
-                            function closePopup() {
-                                popup.style.display = "none";
-                                document.body.style.overflow = ""; // ✅ restore scroll
-                            }
-
-                            /* VALIDATION FUNCTION */
-                            function validatePopupForm(form) {
-
-                                let isValid = true;
-                                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                                const fields = form.querySelectorAll("input, textarea");
-
-                                fields.forEach(field => {
-                                    const errorEl = field.nextElementSibling;
-                                    field.classList.remove("error");
-                                    errorEl.textContent = "";
-                                });
-
-                                // Name
-                                if (!form.firstname.value.trim()) {
-                                    showError(form.firstname, "Enter your full name");
-                                    isValid = false;
-                                }
-
-                                // Email
-                                if (!emailPattern.test(form.email.value.trim())) {
-                                    showError(form.email, "Enter valid email");
-                                    isValid = false;
-                                }
-
-                                // Phone
-                                if (!form.phone.value.trim()) {
-                                    showError(form.phone, "Enter phone number");
-                                    isValid = false;
-                                }
-
-                                // Company
-                                if (!form.company.value.trim()) {
-                                    showError(form.company, "Enter company name");
-                                    isValid = false;
-                                }
-
-                                return isValid;
-                            }
-
-                            /* SHOW ERROR */
-                            function showError(input, message) {
-                                input.classList.add("error");
-                                input.nextElementSibling.textContent = message;
-                            }
-
-                            /* SUBMIT */
-                            document.getElementById("popupForm").addEventListener("submit", function (e) {
-
-                                e.preventDefault();
-                                const form = this;
-
-                                if (!validatePopupForm(form)) return;
-
-                                const data = {
-                                    submittedAt: Date.now(),
-                                    fields: [
-                                        { name: "firstname", value: form.firstname.value },
-                                        { name: "email", value: form.email.value },
-                                        { name: "phone", value: form.phone.value },
-                                        { name: "company", value: form.company.value },
-                                        { name: "message", value: form.message.value }
-                                    ],
-                                    context: {
-                                        pageUri: window.location.href,
-                                        pageName: document.title
+                                /* CLOSE ON OUTSIDE CLICK */
+                                window.onclick = (e) => {
+                                    if (e.target === popup) {
+                                        closePopup();
                                     }
                                 };
 
-                                fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
-                                    method: "POST",
-                                    headers: { "Content-Type": "application/json" },
-                                    body: JSON.stringify(data)
-                                })
-                                    .then(res => res.json())
-                                    .then(response => {
-                                        if (response.status === "error") {
-                                            alert("Submission failed");
-                                        } else {
-                                            form.reset();
-                                            closePopup(); // ✅ use same function
-                                            window.location.href = "thankyou.html";
+                                /* COMMON CLOSE FUNCTION */
+                                function closePopup() {
+                                    popup.style.display = "none";
+                                    document.body.style.overflow = ""; // ✅ restore scroll
+                                }
+
+                                /* VALIDATION FUNCTION */
+                                function validatePopupForm(form) {
+
+                                    let isValid = true;
+                                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                                    const fields = form.querySelectorAll("input, textarea");
+
+                                    fields.forEach(field => {
+                                        const errorEl = field.nextElementSibling;
+                                        field.classList.remove("error");
+                                        errorEl.textContent = "";
+                                    });
+
+                                    // Name
+                                    if (!form.firstname.value.trim()) {
+                                        showError(form.firstname, "Enter your full name");
+                                        isValid = false;
+                                    }
+
+                                    // Email
+                                    if (!emailPattern.test(form.email.value.trim())) {
+                                        showError(form.email, "Enter valid email");
+                                        isValid = false;
+                                    }
+
+                                    // Phone
+                                    if (!form.phone.value.trim()) {
+                                        showError(form.phone, "Enter phone number");
+                                        isValid = false;
+                                    }
+
+                                    // Company
+                                    if (!form.company.value.trim()) {
+                                        showError(form.company, "Enter company name");
+                                        isValid = false;
+                                    }
+
+                                    return isValid;
+                                }
+
+                                /* SHOW ERROR */
+                                function showError(input, message) {
+                                    input.classList.add("error");
+                                    input.nextElementSibling.textContent = message;
+                                }
+
+                                /* SUBMIT */
+                                document.getElementById("popupForm").addEventListener("submit", function (e) {
+
+                                    e.preventDefault();
+                                    const form = this;
+
+                                    if (!validatePopupForm(form)) return;
+
+                                    const data = {
+                                        submittedAt: Date.now(),
+                                        fields: [
+                                            { name: "firstname", value: form.firstname.value },
+                                            { name: "email", value: form.email.value },
+                                            { name: "phone", value: form.phone.value },
+                                            { name: "company", value: form.company.value },
+                                            { name: "message", value: form.message.value }
+                                        ],
+                                        context: {
+                                            pageUri: window.location.href,
+                                            pageName: document.title
                                         }
+                                    };
+
+                                    fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
+                                        method: "POST",
+                                        headers: { "Content-Type": "application/json" },
+                                        body: JSON.stringify(data)
                                     })
-                                    .catch(() => alert("Submission failed"));
+                                        .then(res => res.json())
+                                        .then(response => {
+                                            if (response.status === "error") {
+                                                alert("Submission failed");
+                                            } else {
+                                                form.reset();
+                                                closePopup(); // ✅ use same function
+                                                window.location.href = "thankyou.html";
+                                            }
+                                        })
+                                        .catch(() => alert("Submission failed"));
 
-                            });
-                        </script>
+                                });
+                            </script>
 
-                        <a href="contact.html" class="btn-consult d-inline-flex align-items-center me-2">
+                            <a href="contact.html" class="btn-consult d-inline-flex align-items-center me-2">
 
-                            <span class="service-icon ms-2"> <i class="fa-solid fa-phone"></i>
-                                Let's Talk
+                                <span class="service-icon ms-2"> <i class="fa-solid fa-phone"></i>
+                                    Let's Talk
+                                </span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
+
+                        <img src="assets/banner.webp" class="img-fluid hero-image">
+
+                    </div>
+
+                </div>
+
+
+                <!-- <hr class="line"> -->
+
+
+                <!-- COMPANY LOGO SLIDER -->
+
+                <div class="logo-slider">
+                    <h2 class="approach-title text-center mb-4 fs-4 mt-4">
+                        Our <span>Clientele</span>
+                    </h2>
+                    <div class="logo-track">
+
+                        <img src="assets/clients/asian-paints.jpg" alt="client">
+                        <img src="assets/clients/au-small-finance.jpg" alt="client">
+                        <img src="assets/clients/frractal-logo.jpg" alt="client">
+                        <img src="assets/clients/abans.jpg" alt="client">
+                        <img src="assets/clients/pharmnxt.png" alt="client">
+                        <img src="assets/clients/zicuro.png" alt="client">
+
+
+                        <!-- duplicate for smooth loop -->
+
+                        <img src="assets/clients/asian-paints.jpg" alt="client">
+                        <img src="assets/clients/au-small-finance.jpg" alt="client">
+                        <img src="assets/clients/frractal-logo.jpg" alt="client">
+                        <img src="assets/clients/abans.jpg" alt="client">
+                        <img src="assets/clients/pharmnxt.png" alt="client">
+                        <img src="assets/clients/zicuro.png" alt="client">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Our Impact -->
+        <section class="impact-section">
+
+            <h2 class="approach-title mb-5">
+                Our <span>Impact</span>
+            </h2>
+
+            <div class="impact-stats">
+
+                <div class="impact-item">
+                    <h3 class="counter animate-counter" data-start="0" data-target="50" data-symbol="+">
+                        0<span>+</span>
+                    </h3>
+                    <p>IT Transformational<br>Projects</p>
+                </div>
+
+                <div class="impact-item">
+                    <h3 class="counter animate-counter" data-start="0" data-target="25" data-symbol="+">
+                        0<span>+</span>
+                    </h3>
+                    <p>Happy<br>Customers</p>
+                </div>
+
+                <div class="impact-item">
+                    <h3 class="counter animate-counter" data-start="0" data-target="100" data-symbol="%">
+                        0<span style="font-size: 10px;">%</span>
+                    </h3>
+                    <p>Compliance<br>Achieved</p>
+                </div>
+
+            </div>
+
+            <div class="impact-text text-center">
+                <p>
+                    Helping growth-stage businesses move from
+                    fragmented systems to scalable operating models.
+                </p>
+            </div>
+
+        </section>
+        <!-- business problems section -->
+        <section class="problems-section py-5">
+            <div class="container">
+
+                <!-- Title -->
+                <div class="text-center mb-5">
+                    <h2 class="approach-title">
+                        Business Problems <span>We Solve</span>
+                    </h2>
+                    <p class="problems-subtitle">
+                        Growing companies rarely struggle because of technology alone.<br>
+                        They struggle because technology begins to affect people, decisions, and control.
+                    </p>
+                </div>
+
+                <!-- Cards -->
+                <div class="row justify-content-center g-4">
+
+                    <div class="col-lg col-md-4 col-6">
+                        <div class="problem-card">
+                            <h3>People & Skill<br>Dependency</h3>
+                            <img src="assets/problem-1.png" class="problem-img img-fluid" alt="problem image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-4 col-6">
+                        <div class="problem-card">
+                           <h3>Founder<br>Bandwidth</h3>
+                            <img src="assets/problem-2.png" class="problem-img img-fluid" alt="problem image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-4 col-6">
+                        <div class="problem-card">
+                            <h3>Lack of<br>Governance</h3>
+                            <img src="assets/problem-3.png" class="problem-img img-fluid" alt="problem image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-4 col-6">
+                        <div class="problem-card">
+                            <h3>Compliance &<br>Regulatory Risk</h3>
+                            <img src="assets/problem-4.png" class="problem-img img-fluid" alt="problem image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-4 col-6 last-card">
+                        <div class="problem-card">
+                           <h3 class="last-card-title">Fragmented Environment</h3>
+                            <img src="assets/problem-5.png" class="problem-img last-card-img img-fluid"
+                                alt="problem image">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="approach-section">
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <!-- LEFT CONTENT -->
+                    <div class="col-lg-6 content-side">
+
+                        <h2 class="approach-title">
+                            Our <span>Technology <br>Excellence</span> Framework
+                        </h2>
+
+                        <p class="approach-desc">
+                            Our framework ensures technology decisions stay aligned with business goals while
+                            maintaining
+                            governance, security, and control.
+                        </p>
+
+                        <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
+                            Know More
+                            <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
                             </span>
                         </a>
 
                     </div>
 
-                </div>
 
+                    <!-- RIGHT ORBIT -->
+                    <div class="col-lg-6 text-center">
+                        <div class="framework-image">
+                            <img src="assets/img.png" class="img-fluid" alt="framework">
+                        </div>
 
-                <!-- RIGHT IMAGE -->
-                <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
-
-                    <img src="assets/banner.webp" class="img-fluid hero-image">
-
-                </div>
-
-            </div>
-
-
-            <!-- <hr class="line"> -->
-
-
-            <!-- COMPANY LOGO SLIDER -->
-
-            <div class="logo-slider">
-                <h4 class="approach-title text-center mb-4 fs-4 mt-4">Our <span>Clientele</span></h4>
-                <div class="logo-track">
-
-                    <img src="assets/clients/asian-paints.jpg">
-                    <img src="assets/clients/au-small-finance.jpg">
-                    <img src="assets/clients/frractal-logo.jpg">
-                    <img src="assets/clients/abans.jpg">
-                    <img src="assets/clients/pharmnxt.png">
-                    <img src="assets/clients/zicuro.png">
-
-
-                    <!-- duplicate for smooth loop -->
-
-                    <img src="assets/clients/asian-paints.jpg">
-                    <img src="assets/clients/au-small-finance.jpg">
-                    <img src="assets/clients/frractal-logo.jpg">
-                    <img src="assets/clients/abans.jpg">
-                    <img src="assets/clients/pharmnxt.png">
-                    <img src="assets/clients/zicuro.png">
-
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Our Impact -->
-    <section class="impact-section">
-
-        <h2 class="approach-title mb-5">
-            Our <span>Impact</span>
-        </h2>
-
-        <div class="impact-stats">
-
-            <div class="impact-item">
-                <h3 class="counter animate-counter" data-start="0" data-target="50" data-symbol="+">
-                    0<span>+</span>
-                </h3>
-                <p>IT Transformational<br>Projects</p>
-            </div>
-
-            <div class="impact-item">
-                <h3 class="counter animate-counter" data-start="0" data-target="25" data-symbol="+">
-                    0<span>+</span>
-                </h3>
-                <p>Happy<br>Customers</p>
-            </div>
-
-            <div class="impact-item">
-                <h3 class="counter animate-counter" data-start="0" data-target="100" data-symbol="%">
-                    0<span style="font-size: 10px;">%</span>
-                </h3>
-                <p>Compliance<br>Achieved</p>
-            </div>
-
-        </div>
-
-        <div class="impact-text text-center">
-            <p>
-                Helping growth-stage businesses move from
-                fragmented systems to scalable operating models.
-            </p>
-        </div>
-
-    </section>
-    <!-- business problems section -->
-    <section class="problems-section py-5">
-        <div class="container">
-
-            <!-- Title -->
-            <div class="text-center mb-5">
-                <h2 class="approach-title">
-                    Business Problems <span>We Solve</span>
-                </h2>
-                <p class="problems-subtitle">
-                    Growing companies rarely struggle because of technology alone.<br>
-                    They struggle because technology begins to affect people, decisions, and control.
-                </p>
-            </div>
-
-            <!-- Cards -->
-            <div class="row justify-content-center g-4">
-
-                <div class="col-lg col-md-4 col-6">
-                    <div class="problem-card">
-                        <h5>People & Skill<br>Dependency</h5>
-                        <img src="assets/problem-1 (1).png" class="problem-img img-fluid" alt="problem image">
                     </div>
-                </div>
 
-                <div class="col-lg col-md-4 col-6">
-                    <div class="problem-card">
-                        <h5>Founder<br>Bandwidth</h5>
-                        <img src="assets/problem-2.png" class="problem-img img-fluid" alt="problem image">
-                    </div>
                 </div>
-
-                <div class="col-lg col-md-4 col-6">
-                    <div class="problem-card">
-                        <h5>Lack of<br>Governance</h5>
-                        <img src="assets/problem-3.png" class="problem-img img-fluid" alt="problem image">
-                    </div>
-                </div>
-
-                <div class="col-lg col-md-4 col-6">
-                    <div class="problem-card">
-                        <h5>Compliance &<br>Regulatory Risk</h5>
-                        <img src="assets/problem-4.png" class="problem-img img-fluid" alt="problem image">
-                    </div>
-                </div>
-
-                <div class="col-lg col-md-4 col-6 last-card">
-                    <div class="problem-card">
-                        <h5 class="last-card-title">Fragmented Environment</h5>
-                        <img src="assets/problem-5.png" class="problem-img last-card-img img-fluid" alt="problem image">
-                    </div>
-                </div>
-
             </div>
-
-        </div>
-    </section>
+        </section>
 
 
-    <section class="approach-section">
-        <div class="container">
 
-            <div class="row align-items-center">
+        <!-- our services section -->
+        <section class="services-section py-5">
+            <div class="container">
 
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-6 content-side">
-
+                <!-- Title -->
+                <div class="text-center mb-5">
                     <h2 class="approach-title">
-                        Our <span>Technology <br>Excellence</span> Framework
+                        Our <span>Services</span>
                     </h2>
-
-                    <p class="approach-desc">
-                        Our framework ensures technology decisions stay aligned with business goals while maintaining
-                        governance, security, and control.
+                    <p class="services-subtitle">
+                        We help businesses across the full lifecycle of technology transformation.
                     </p>
-
-                    <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
-                        Know More
-                        <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
-                        </span>
-                    </a>
-
                 </div>
 
+                <div class="row g-4 justify-content-center">
 
-                <!-- RIGHT ORBIT -->
-                <div class="col-lg-6 text-center">
-                    <div class="framework-image">
-                        <img src="assets/img.png" class="img-fluid" alt="framework">
+                    <!-- Card 1 -->
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="service-card-box">
+
+                            <div class="service-card-default">
+                                <h5>Technology <br> Strategy & Advisory</h5>
+                                <img src="assets/service-1.png" alt="service-1">
+                            </div>
+
+                            <div class="service-card-hover" style="justify-content: center;">
+                                <p>Designing and implementing modern technology platforms.</p>
+                                <!-- <a href="services.html" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="service-card-box">
+
+                            <div class="service-card-default">
+                                <h5>Technology <br> Transformation</h5>
+                                </br>
+                                <img src="assets/service-2.png" alt="service-2">
+                            </div>
+
+                            <div class="service-card-hover" style="justify-content: center;">
+                                <p>Deploy scalable platforms that power modern business.</p>
+                                <!-- <a href="services.html" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="service-card-box">
+
+                            <div class="service-card-default">
+                                <h5>Technology <br> Operations</h5>
+                                </br>
+                                <img src="assets/service-3.png" alt="service-3">
+                            </div>
+
+                            <div class="service-card-hover" style="justify-content: center;">
+                                <p>Operate and optimize systems for reliability and growth.</p>
+                                <!-- <a href="services.html" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="service-card-box">
+
+                            <div class="service-card-default">
+                                <h5>Automation & <br> Optimization</h5>
+                                </br>
+                                <img src="assets/service-4.png" alt="service-4">
+                            </div>
+
+                            <div class="service-card-hover" style="justify-content: center;">
+                                <p>Automate workflows and improve operational efficiency.</p>
+                                <!-- <a href="services.html" class="service-btn">
+                                Know More
+                                <span class="service-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a> -->
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
 
-
-    <!-- our services section -->
-    <section class="services-section py-5">
-        <div class="container">
-
-            <!-- Title -->
-            <div class="text-center mb-5">
-                <h2 class="approach-title">
-                    Our <span>Services</span>
-                </h2>
-                <p class="services-subtitle">
-                    We help businesses across the full lifecycle of technology transformation.
-                </p>
-            </div>
-
-            <div class="row g-4 justify-content-center">
-
-                <!-- Card 1 -->
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service-card-box">
-
-                        <div class="service-card-default">
-                            <h5>Technology <br> Strategy & Advisory</h5>
-                            <img src="assets/service-1.png" alt="service-1">
-                        </div>
-
-                        <div class="service-card-hover" style="justify-content: center;">
-                            <p>Designing and implementing modern technology platforms.</p>
-                            <!-- <a href="services.html" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a> -->
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service-card-box">
-
-                        <div class="service-card-default">
-                            <h5>Technology <br> Transformation</h5>
-                            </br>
-                            <img src="assets/service-2.png" alt="service-2">
-                        </div>
-
-                        <div class="service-card-hover" style="justify-content: center;">
-                            <p>Deploy scalable platforms that power modern business.</p>
-                            <!-- <a href="services.html" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a> -->
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service-card-box">
-
-                        <div class="service-card-default">
-                            <h5>Technology <br> Operations</h5>
-                            </br>
-                            <img src="assets/service-3.png" alt="service-3">
-                        </div>
-
-                        <div class="service-card-hover" style="justify-content: center;">
-                            <p>Operate and optimize systems for reliability and growth.</p>
-                            <!-- <a href="services.html" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a> -->
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service-card-box">
-
-                        <div class="service-card-default">
-                            <h5>Automation & <br> Optimization</h5>
-                            </br>
-                            <img src="assets/service-4.png" alt="service-4">
-                        </div>
-
-                        <div class="service-card-hover" style="justify-content: center;">
-                            <p>Automate workflows and improve operational efficiency.</p>
-                            <!-- <a href="services.html" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a> -->
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- business outcomes section -->
-    <section class="benefits-section py-5">
-        <div class="container">
-            <!-- <div class="col-lg-7">
+        <!-- business outcomes section -->
+        <section class="benefits-section py-5">
+            <div class="container">
+                <!-- <div class="col-lg-7">
 
                 <h2 class="approach-title">
                     Business <span>Outcomes</span> </br>
@@ -995,697 +1001,711 @@
                 </p>
             </div> -->
 
-            <div class="text-center">
-                <h2 class="approach-title">
-                    Business <span>Outcomes</span> </br>
+                <div class="text-center">
+                    <h2 class="approach-title">
+                        Business <span>Outcomes</span> </br>
 
-                </h2>
-                <p class="services-subtitle">
-                    Our focus is not just technology implementation
-                    but measurable business impact. </br>
-                    Organizations working with us achieve:
-                </p>
-            </div>
-
-
-
-            <div class="row benefits-row text-center mt-4 g-4">
-
-                <!-- Item 1 -->
-                <div class="col-lg col-md-4 col-6 benefit-item">
-                    <img src="assets/outcome.png" alt="outcome">
-                    <h6>Faster business </br> operations</h6>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="col-lg col-md-4 col-6 benefit-item">
-                    <img src="assets/outcome-2.png" alt="outcome">
-                    <h6>Reduced manual processes</h6>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="col-lg col-md-4 col-6 benefit-item">
-                    <img src="assets/outcome-3.png" alt="outcome">
-                    <h6>Improved operational efficiency</h6>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="col-lg col-md-6 col-6 benefit-item">
-                    <img src="assets/outcome-4.png" alt="outcome">
-                    <h6>Stronger security and compliance</h6>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="col-lg col-md-6 col-6 benefit-item">
-                    <img src="assets/outcome-5.png" alt="outcome">
-                    <h6>Better decision making through data</h6>
-                </div>
-
-                <!-- Item 6 -->
-                <div class="col-lg col-md-6 col-6 benefit-item">
-                    <img src="assets/outcome_6.png" alt="outcome">
-                    <h6>Scalable Technology Foundations</h6>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <!-- Industries We Serve -->
-
-    <section class="business-section" style="padding-top: 8rem; padding-bottom: 8rem;">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-7">
-
-                    <h2 class="approach-title" style="font-size: 55px;">
-                        <span>Industries</span> </br>
-                        We Serve
                     </h2>
-                    <p class="approach-desc" style="font-size: 16px;">
-                        We empower small and mid-sized businesses to
-                        transform </br>technology from a daily struggle into a
-
-                        strategic </br>engine for growth, control, and scalability.
-                        </br>
-                        </br>
-                        We partner with businesses across a wide range of industries.
+                    <p class="services-subtitle">
+                        Our focus is not just technology implementation
+                        but measurable business impact. </br>
+                        Organizations working with us achieve:
                     </p>
+                </div>
 
+
+
+                <div class="row benefits-row text-center mt-4 g-4">
+
+                    <!-- Item 1 -->
+                    <div class="col-lg col-md-4 col-6 benefit-item">
+                        <img src="assets/outcome.png" alt="outcome">
+                        <h6>Faster business </br> operations</h6>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="col-lg col-md-4 col-6 benefit-item">
+                        <img src="assets/outcome-2.png" alt="outcome">
+                        <h6>Reduced manual processes</h6>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="col-lg col-md-4 col-6 benefit-item">
+                        <img src="assets/outcome-3.png" alt="outcome">
+                        <h6>Improved operational efficiency</h6>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="col-lg col-md-6 col-6 benefit-item">
+                        <img src="assets/outcome-4.png" alt="outcome">
+                        <h6>Stronger security and compliance</h6>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="col-lg col-md-6 col-6 benefit-item">
+                        <img src="assets/outcome-5.png" alt="outcome">
+                        <h6>Better decision making through data</h6>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="col-lg col-md-6 col-6 benefit-item">
+                        <img src="assets/growth-new.png" alt="outcome">
+                        <h6>Scalable Technology Foundations</h6>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Industries We Serve -->
+
+        <section class="business-section" style="padding-top: 8rem; padding-bottom: 8rem;">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- LEFT CONTENT -->
+                    <div class="col-lg-7">
+
+                        <h2 class="approach-title" style="font-size: 55px;">
+                            <span>Industries</span> </br>
+                            We Serve
+                        </h2>
+                        <p class="approach-desc" style="font-size: 16px;">
+                            We empower small and mid-sized businesses to
+                            transform </br>technology from a daily struggle into a
+
+                            strategic </br>engine for growth, control, and scalability.
+                            </br>
+                            </br>
+                            We partner with businesses across a wide range of industries.
+                        </p>
+
+                        <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
+                            Explore
+                            <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+
+
+                    <!-- RIGHT SLIDER -->
+                    <div class="col-lg-4">
+
+                        <div class="slider-wrapper">
+
+                            <div class="card-stack">
+
+                                <div class="industry-card active">
+                                    <img src="assets/industry1.png" alt="industry">
+                                    <!-- <h3>Service Based<br>Businesses</h3> -->
+                                </div>
+
+                                <div class="industry-card next">
+                                    <img src="assets/industry2.png" alt="industry">
+                                    <!-- <h3>Logistics & Supply</h3> -->
+                                </div>
+
+                                <div class="industry-card prev">
+                                    <img src="assets/industry3.png" alt="industry">
+                                    <!-- <h3>Retail</h3> -->
+                                </div>
+
+                                <div class="industry-card prev">
+                                    <img src="assets/industry4.png" alt="industry">
+                                    <!-- <h3>Retail</h3> -->
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- <p class="industry-title">Industries We Serve</p> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- why business choose us section -->
+
+        <section class="choose-section py-5">
+            <div class="container">
+
+                <!-- Title -->
+                <div class="text-center mb-5">
+                    <h2 class="choose-title">
+                        Why Businesses <span>Choose Us?</span>
+                    </h2>
+                </div>
+
+                <!-- Cards -->
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="choose-card">
+
+                            <img src="assets/cooperation.png" class="choose-icon" alt="choose-icon">
+
+                            <h5>Business-First </br> Approach</h5>
+
+                            <p>
+                                We start with </br> business outcomes, </br> not technology tools.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="choose-card">
+
+                            <img src="assets/logical-thinking.png" class="choose-icon" alt="choose-icon">
+
+                            <h5>End-to-End </br>Capabilities</h5>
+
+                            <p>
+                                From strategy to </br> implementation to </br>operations.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="choose-card">
+
+                            <img src="assets/platform.png" class="choose-icon" alt="choose-icon">
+
+                            <h5>Platform</br> Expertise</h5>
+
+                            <p>
+                                Deep expertise across </br>modern technology</br> platforms.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="choose-card">
+
+                            <img src="assets/business-partnership.png" class="choose-icon" alt="choose-icon">
+
+                            <h5>Long-Term</br> Partnership</h5>
+
+                            <p>
+                                We support businesses</br> through their entire</br> technology journey.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+                <div class="text-center mt-5">
                     <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
-                        Explore
+                        Consult Now
                         <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
                         </span>
                     </a>
                 </div>
 
-
-                <!-- RIGHT SLIDER -->
-                <div class="col-lg-4">
-
-                    <div class="slider-wrapper">
-
-                        <div class="card-stack">
-
-                            <div class="industry-card active">
-                                <img src="assets/industry1.png">
-                                <!-- <h3>Service Based<br>Businesses</h3> -->
-                            </div>
-
-                            <div class="industry-card next">
-                                <img src="assets/industry2.png">
-                                <!-- <h3>Logistics & Supply</h3> -->
-                            </div>
-
-                            <div class="industry-card prev">
-                                <img src="assets/industry3.png">
-                                <!-- <h3>Retail</h3> -->
-                            </div>
-
-                            <div class="industry-card prev">
-                                <img src="assets/industry4.png">
-                                <!-- <h3>Retail</h3> -->
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- <p class="industry-title">Industries We Serve</p> -->
-
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
+        <!-- FAQ Section -->
 
-    <!-- why business choose us section -->
+        <section class="faq-section py-5">
+            <div class="container">
 
-    <section class="choose-section py-5">
-        <div class="container">
-
-            <!-- Title -->
-            <div class="text-center mb-5">
-                <h2 class="choose-title">
-                    Why Businesses <span>Choose Us?</span>
-                </h2>
-            </div>
-
-            <!-- Cards -->
-            <div class="row g-4 justify-content-center">
-
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="choose-card">
-
-                        <img src="assets/cooperation.png" class="choose-icon" alt="choose-icon">
-
-                        <h5>Business-First </br> Approach</h5>
-
-                        <p>
-                            We start with </br> business outcomes, </br> not technology tools.
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="choose-card">
-
-                        <img src="assets/logical-thinking.png" class="choose-icon" alt="choose-icon">
-
-                        <h5>End-to-End </br>Capabilities</h5>
-
-                        <p>
-                            From strategy to </br> implementation to </br>operations.
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="choose-card">
-
-                        <img src="assets/platform.png" class="choose-icon" alt="choose-icon">
-
-                        <h5>Platform</br> Expertise</h5>
-
-                        <p>
-                            Deep expertise across </br>modern technology</br> platforms.
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="choose-card">
-
-                        <img src="assets/business-partnership.png" class="choose-icon" alt="choose-icon">
-
-                        <h5>Long-Term</br> Partnership</h5>
-
-                        <p>
-                            We support businesses</br> through their entire</br> technology journey.
-                        </p>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Button -->
-            <div class="text-center mt-5">
-                <a href="services.html" class="btn-consult d-inline-flex align-items-center me-2">
-                    Consult Now
-                    <span class="service-icon ms-2"> <i class="fa-solid fa-circle-arrow-right"></i>
-                    </span>
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <!-- FAQ Section -->
-
-    <section class="faq-section py-5">
-        <div class="container">
-
-            <!-- Title -->
-            <div class="text-center mb-4">
-                <h2 class="approach-title">
-                    Frequently Asked <span>Questions</span>
-                </h2>
-            </div>
-
-            <div class="row">
-
-                <!-- LEFT COLUMN -->
-                <div class="col-lg-6">
-                    <div class="accordion custom-faq" id="faqLeft">
-
-                        <!-- Q1 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    What does Technosprout do?
-                                </button>
-                            </h2>
-
-                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
-                                <div class="accordion-body">
-                                    Technosprout helps organizations design, deploy, and manage strategic technology
-                                    environments. </br>
-                                    We work with businesses to modernize platforms, improve security, establish
-                                    governance, and ensure technology systems support long-term growth.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Q2 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Who do you typically work with?
-                                </button>
-                            </h2>
-
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
-                                <div class="accordion-body">
-                                    <p><b>We work with:</b></p>
-                                    <ul class="faq-points">
-                                        <li>Founders and business owners</li>
-                                        <li>Growing companies scaling their technology environments</li>
-                                        <li>Enterprises modernizing legacy systems</li>
-                                        <li>Organizations looking to strengthen security, governance, and operational
-                                            efficiency</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Q3 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    When should companies work with Technosprout?
-                                </button>
-                            </h2>
-
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
-                                <div class="accordion-body">
-                                    <p><b>Organizations typically engage with us when:</b></p>
-                                    <ul class="faq-points">
-                                        <li>Technology systems are becoming difficult to manage</li>
-                                        <li>Multiple tools and platforms are not working together effectively</li>
-                                        <li>Security and compliance requirements are increasing</li>
-                                        <li>The business is scaling and needs stronger technology foundations</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Q4 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    How can I tell if technology is becoming a problem?
-                                </button>
-                            </h2>
-
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
-                                <div class="accordion-body">
-                                    <p><b>A few early signs include:</b></p>
-                                    <ul class="faq-points">
-                                        <li>Teams using too many disconnected tools without any business justification
-                                        </li>
-                                        <li>Important business data scattered across systems without any visibility</li>
-                                        <li>Increasing operational complexity as the company grows</li>
-                                        <li>Security, access, or compliance concerns</li>
-                                        <li>Technology decisions being made reactively instead of strategically</li>
-                                    </ul>
-                                    <p>If any of these sound familiar, it usually means the technology environment needs
-                                        better structure and governance.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <!-- RIGHT COLUMN -->
-                <div class="col-lg-6">
-                    <div class="accordion custom-faq" id="faqRight">
-
-                        <!-- Q5 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    Why would we need an external partner if we have an IT team?
-                                </button>
-                            </h2>
-
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                                <div class="accordion-body">
-                                    <ul class="faq-points">
-                                        <li>Internal teams are often focused on maintaining systems and supporting
-                                            day-to-day operations</li>
-                                        <li>An external partner brings a broader architectural and governance
-                                            perspective, backed by a large pool of experts across strategic and
-                                            operational technology domains and deep cross-industry experience</li>
-                                        <li>This ensures technology decisions align with long-term business goals,
-                                            scalability, and security</li>
-                                        <li>We work alongside internal teams to strengthen and future-proof the overall
-                                            technology foundation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Q6 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    Will we need to replace our existing technology?
-                                </button>
-                            </h2>
-
-                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                                <div class="accordion-body">
-                                    <ul class="faq-points">
-                                        <p>In most cases, no. </br>
-                                            Most organizations already have the right tools in place. The real challenge
-                                            is usually how those systems are configured, integrated, governed, and
-                                            managed.</br>
-                                            Our approach focuses on optimizing and structuring existing environments
-                                            rather than replacing everything.</p>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Q7 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq7">
-                                    When should founders start Organizing their technology?
-                                </button>
-                            </h2>
-
-                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                                <div class="accordion-body">
-                                    <p><b>The need usually becomes visible when companies begin to scale typically
-                                            when:</b></p>
-                                    <ul class="faq-points">
-                                        <li>Multiple teams start using different systems</li>
-                                        <li>Technology decisions begin to impact operational efficiency or security</li>
-                                        <li>Technology budgets go out of control, with little visibility into the tech
-                                            stack or alignment with business goals</li>
-                                        <li>Internal teams are unable to demonstrate clear value from technology
-                                            investments establishing structure early helps prevent major complexity
-                                            later</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Q8 -->
-                        <div class="accordion-item faq-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed faq-btn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq8">
-                                    What’s the biggest technology mistake growing companies make?
-                                </button>
-                            </h2>
-
-                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                                <div class="accordion-body">
-                                    One of the most common mistakes organizations make is adding more tools to solve
-                                    every problem without a clear governance model.
-                                    </br>
-                                    Teams continue to purchase tools without considering the enterprise-wide impact or
-                                    the outcomes they are meant to achieve. Many SMEs also lack a comprehensive
-                                    enterprise architecture and technology governance framework.
-                                    </br>
-                                    Over time, this leads to fragmented systems, operational inefficiencies, and
-                                    increased security risks.
-                                    </br>
-                                    The most successful organizations treat technology as a integrated system aligned
-                                    with business strategy, rather than a collection of independent tools.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section  -->
-
-    <section class="contact-section">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- Left Content -->
-                <div class="col-lg-5 mb-4 mb-lg-0 mobile-center">
-                    <h2 class="contact-title">
-                        Ready to <br>
-                        Structure Your <br>
-                        Growth?
+                <!-- Title -->
+                <div class="text-center mb-4">
+                    <h2 class="approach-title">
+                        Frequently Asked <span>Questions</span>
                     </h2>
-
-                    <p class="contact-text" style="color: #fff;">
-                        If your business is scaling but your systems feel fragmented,
-                        it's time to move from reactive technology to strategic
-                        technology leadership.
-                    </p>
                 </div>
 
-                <!-- Right Form -->
-                <div class="col-lg-7">
-                    <form id="contactForm" class="contact-form">
+                <div class="row">
 
-                        <div class="row g-3">
+                    <!-- LEFT COLUMN -->
+                    <div class="col-lg-6">
+                        <div class="accordion custom-faq" id="faqLeft">
 
-                            <div class="col-md-6">
-                                <label style="color:#fff;">Name <span style="color:red">*</span></label>
-                                <input type="text" name="firstname" class="form-control custom-input"
-                                    placeholder="Enter Your Full Name">
-                                <span id="nameError" class="form-error">Please enter your name</span>
-                            </div>
+                            <!-- Q1 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What does Technosprout do?
+                                    </button>
+                                </h2>
 
-                            <div class="col-md-6">
-                                <label style="color:#fff;">E-mail <span style="color:red">*</span></label>
-                                <input type="email" name="email" class="form-control custom-input"
-                                    placeholder="Enter Your E-mail">
-                                <span id="emailError" class="form-error">Enter a valid email</span>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label style="color:#fff;">Phone Number <span style="color:red">*</span></label>
-                                <input id="phone" name="phone" type="tel" class="form-control phone-input"
-                                    placeholder="Enter phone number">
-                                <span id="phoneError" class="form-error">Enter phone number</span>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label style="color:#fff;">Organisation Name <span style="color:red">*</span></label>
-                                <input type="text" name="company" class="form-control custom-input"
-                                    placeholder="Enter Your Organisation Name">
-                                <span id="companyError" class="form-error">Enter organisation name</span>
-                            </div>
-
-                            <div class="col-12">
-                                <label style="color:#fff;">Add a Message</label>
-                                <textarea rows="4" name="message" class="form-control custom-input"
-                                    placeholder="Enter Your Message..."></textarea>
-                            </div>
-
-                            <div class="col-12 mt-2">
-                                <div class="g-recaptcha" data-sitekey="6Lfu3J0sAAAAAKiT70YdGDKPXOURJGjA1WDty2-y"></div>
-                                <div class="form-error" id="captchaError" style="display:none;">
-                                    Please verify captcha
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                    <div class="accordion-body">
+                                        Technosprout helps organizations design, deploy, and manage strategic technology
+                                        environments. </br>
+                                        We work with businesses to modernize platforms, improve security, establish
+                                        governance, and ensure technology systems support long-term growth.
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 mt-3">
+                            <!-- Q2 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Who do you typically work with?
+                                    </button>
+                                </h2>
 
-                                <button type="submit" class="btn contact-btn-white">
-                                    Submit
-                                    <span class="service-icon">
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                </button>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                    <div class="accordion-body">
+                                        <p><b>We work with:</b></p>
+                                        <ul class="faq-points">
+                                            <li>Founders and business owners</li>
+                                            <li>Growing companies scaling their technology environments</li>
+                                            <li>Enterprises modernizing legacy systems</li>
+                                            <li>Organizations looking to strengthen security, governance, and
+                                                operational
+                                                efficiency</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- Q3 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        When should companies work with Technosprout?
+                                    </button>
+                                </h2>
+
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                    <div class="accordion-body">
+                                        <p><b>Organizations typically engage with us when:</b></p>
+                                        <ul class="faq-points">
+                                            <li>Technology systems are becoming difficult to manage</li>
+                                            <li>Multiple tools and platforms are not working together effectively</li>
+                                            <li>Security and compliance requirements are increasing</li>
+                                            <li>The business is scaling and needs stronger technology foundations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        How can I tell if technology is becoming a problem?
+                                    </button>
+                                </h2>
+
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                    <div class="accordion-body">
+                                        <p><b>A few early signs include:</b></p>
+                                        <ul class="faq-points">
+                                            <li>Teams using too many disconnected tools without any business
+                                                justification
+                                            </li>
+                                            <li>Important business data scattered across systems without any visibility
+                                            </li>
+                                            <li>Increasing operational complexity as the company grows</li>
+                                            <li>Security, access, or compliance concerns</li>
+                                            <li>Technology decisions being made reactively instead of strategically</li>
+                                        </ul>
+                                        <p>If any of these sound familiar, it usually means the technology environment
+                                            needs
+                                            better structure and governance.</p>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
+                    </div>
 
-                    </form>
 
+                    <!-- RIGHT COLUMN -->
+                    <div class="col-lg-6">
+                        <div class="accordion custom-faq" id="faqRight">
 
+                            <!-- Q5 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq5">
+                                        Why would we need an external partner if we have an IT team?
+                                    </button>
+                                </h2>
+
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                    <div class="accordion-body">
+                                        <ul class="faq-points">
+                                            <li>Internal teams are often focused on maintaining systems and supporting
+                                                day-to-day operations</li>
+                                            <li>An external partner brings a broader architectural and governance
+                                                perspective, backed by a large pool of experts across strategic and
+                                                operational technology domains and deep cross-industry experience</li>
+                                            <li>This ensures technology decisions align with long-term business goals,
+                                                scalability, and security</li>
+                                            <li>We work alongside internal teams to strengthen and future-proof the
+                                                overall
+                                                technology foundation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q6 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq6">
+                                        Will we need to replace our existing technology?
+                                    </button>
+                                </h2>
+
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                    <div class="accordion-body">
+                                        <ul class="faq-points">
+                                            <p>In most cases, no. </br>
+                                                Most organizations already have the right tools in place. The real
+                                                challenge
+                                                is usually how those systems are configured, integrated, governed, and
+                                                managed.</br>
+                                                Our approach focuses on optimizing and structuring existing environments
+                                                rather than replacing everything.</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q7 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq7">
+                                        When should founders start Organizing their technology?
+                                    </button>
+                                </h2>
+
+                                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                    <div class="accordion-body">
+                                        <p><b>The need usually becomes visible when companies begin to scale typically
+                                                when:</b></p>
+                                        <ul class="faq-points">
+                                            <li>Multiple teams start using different systems</li>
+                                            <li>Technology decisions begin to impact operational efficiency or security
+                                            </li>
+                                            <li>Technology budgets go out of control, with little visibility into the
+                                                tech
+                                                stack or alignment with business goals</li>
+                                            <li>Internal teams are unable to demonstrate clear value from technology
+                                                investments establishing structure early helps prevent major complexity
+                                                later</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q8 -->
+                            <div class="accordion-item faq-card">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq8">
+                                        What’s the biggest technology mistake growing companies make?
+                                    </button>
+                                </h2>
+
+                                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                    <div class="accordion-body">
+                                        One of the most common mistakes organizations make is adding more tools to solve
+                                        every problem without a clear governance model.
+                                        </br>
+                                        Teams continue to purchase tools without considering the enterprise-wide impact
+                                        or
+                                        the outcomes they are meant to achieve. Many SMEs also lack a comprehensive
+                                        enterprise architecture and technology governance framework.
+                                        </br>
+                                        Over time, this leads to fragmented systems, operational inefficiencies, and
+                                        increased security risks.
+                                        </br>
+                                        The most successful organizations treat technology as a integrated system
+                                        aligned
+                                        with business strategy, rather than a collection of independent tools.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
             </div>
+        </section>
 
-        </div>
-        </div>
-    </section>
+        <!-- Contact Section  -->
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Left Content -->
+                    <div class="col-lg-5 mb-4 mb-lg-0 mobile-center">
+                        <h2 class="contact-title">
+                            Ready to <br>
+                            Structure Your <br>
+                            Growth?
+                        </h2>
+
+                        <p class="contact-text" style="color: #fff;">
+                            If your business is scaling but your systems feel fragmented,
+                            it's time to move from reactive technology to strategic
+                            technology leadership.
+                        </p>
+                    </div>
+
+                    <!-- Right Form -->
+                    <div class="col-lg-7">
+                        <form id="contactForm" class="contact-form">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label style="color:#fff;">Name <span style="color:red">*</span></label>
+                                    <input type="text" name="firstname" class="form-control custom-input"
+                                        placeholder="Enter Your Full Name">
+                                    <span id="nameError" class="form-error">Please enter your name</span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label style="color:#fff;">E-mail <span style="color:red">*</span></label>
+                                    <input type="email" name="email" class="form-control custom-input"
+                                        placeholder="Enter Your E-mail">
+                                    <span id="emailError" class="form-error">Enter a valid email</span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label style="color:#fff;">Phone Number <span style="color:red">*</span></label>
+                                    <input id="phone" name="phone" type="tel" class="form-control phone-input"
+                                        placeholder="Enter phone number">
+                                    <span id="phoneError" class="form-error">Enter phone number</span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label style="color:#fff;">Organisation Name <span
+                                            style="color:red">*</span></label>
+                                    <input type="text" name="company" class="form-control custom-input"
+                                        placeholder="Enter Your Organisation Name">
+                                    <span id="companyError" class="form-error">Enter organisation name</span>
+                                </div>
+
+                                <div class="col-12">
+                                    <label style="color:#fff;">Add a Message</label>
+                                    <textarea rows="4" name="message" class="form-control custom-input"
+                                        placeholder="Enter Your Message..."></textarea>
+                                </div>
+
+                                <div class="col-12 mt-2">
+                                    <div class="g-recaptcha" data-sitekey="6Lfu3J0sAAAAAKiT70YdGDKPXOURJGjA1WDty2-y">
+                                    </div>
+                                    <div class="form-error" id="captchaError" style="display:none;">
+                                        Please verify captcha
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-3">
+
+                                    <button type="submit" class="btn contact-btn-white">
+                                        Submit
+                                        <span class="service-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
 
 
-    <style>
-        .form-error {
-            color: #ff4d4d;
-            font-size: 13px;
-            display: none;
-        }
 
-        .input-error {
-            border: 1px solid red !important;
-        }
-    </style>
+                    </div>
+                </div>
 
-    <script>
+            </div>
+            </div>
+        </section>
 
-        /* VALIDATION FUNCTION */
 
-        function validateForm() {
-
-            let valid = true;
-
-            const form = document.getElementById("contactForm");
-
-            const name = form.firstname.value.trim();
-            const email = form.email.value.trim();
-            const phone = form.phone.value.trim();
-            const company = form.company.value.trim();
-
-            /* RESET */
-
-            document.querySelectorAll(".form-error").forEach(el => {
-                el.style.display = "none";
-            });
-
-            document.querySelectorAll("input").forEach(el => {
-                el.classList.remove("input-error");
-            });
-
-            /* NAME */
-
-            if (name === "") {
-                document.getElementById("nameError").style.display = "block";
-                form.firstname.classList.add("input-error");
-                valid = false;
+        <style>
+            .form-error {
+                color: #ff4d4d;
+                font-size: 13px;
+                display: none;
             }
 
-            /* EMAIL */
-
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (!emailPattern.test(email)) {
-                document.getElementById("emailError").style.display = "block";
-                form.email.classList.add("input-error");
-                valid = false;
+            .input-error {
+                border: 1px solid red !important;
             }
+        </style>
 
-            /* PHONE */
+        <script>
 
-            if (phone === "") {
-                document.getElementById("phoneError").style.display = "block";
-                form.phone.classList.add("input-error");
-                valid = false;
-            }
+            /* VALIDATION FUNCTION */
 
-            /* COMPANY */
+            function validateForm() {
 
-            if (company === "") {
-                document.getElementById("companyError").style.display = "block";
-                form.company.classList.add("input-error");
-                valid = false;
-            }
+                let valid = true;
 
-            return valid;
+                const form = document.getElementById("contactForm");
 
-        }
+                const name = form.firstname.value.trim();
+                const email = form.email.value.trim();
+                const phone = form.phone.value.trim();
+                const company = form.company.value.trim();
 
+                /* RESET */
 
-        /* FORM SUBMIT */
+                document.querySelectorAll(".form-error").forEach(el => {
+                    el.style.display = "none";
+                });
 
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
+                document.querySelectorAll("input").forEach(el => {
+                    el.classList.remove("input-error");
+                });
 
-            e.preventDefault();
+                /* NAME */
 
-            /* RUN VALIDATION */
-
-            if (!validateForm()) {
-                return;
-            }
-
-            const form = document.getElementById("contactForm");
-
-            const data = {
-                submittedAt: Date.now(),
-                fields: [
-                    { name: "firstname", value: form.firstname.value },
-                    { name: "email", value: form.email.value },
-                    { name: "phone", value: form.phone.value },
-                    { name: "company", value: form.company.value },
-                    { name: "message", value: form.message.value }
-                ],
-                context: {
-                    pageUri: window.location.href,
-                    pageName: document.title
+                if (name === "") {
+                    document.getElementById("nameError").style.display = "block";
+                    form.firstname.classList.add("input-error");
+                    valid = false;
                 }
-            };
 
-            /* HUBSPOT SUBMIT */
+                /* EMAIL */
 
-            fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                method: "POST",
+                if (!emailPattern.test(email)) {
+                    document.getElementById("emailError").style.display = "block";
+                    form.email.classList.add("input-error");
+                    valid = false;
+                }
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                /* PHONE */
 
-                body: JSON.stringify(data)
+                if (phone === "") {
+                    document.getElementById("phoneError").style.display = "block";
+                    form.phone.classList.add("input-error");
+                    valid = false;
+                }
 
-            })
+                /* COMPANY */
 
-                .then(res => res.json())
+                if (company === "") {
+                    document.getElementById("companyError").style.display = "block";
+                    form.company.classList.add("input-error");
+                    valid = false;
+                }
 
-                .then(response => {
+                return valid;
 
-                    console.log(response);
+            }
 
-                    if (response.status === "error") {
 
-                        alert("Submission failed");
+            /* FORM SUBMIT */
 
-                    } else {
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
 
-                        form.reset();
+                e.preventDefault();
 
-                        window.location.href = "thankyou.html";
+                /* RUN VALIDATION */
 
+                if (!validateForm()) {
+                    return;
+                }
+
+                const form = document.getElementById("contactForm");
+
+                const data = {
+                    submittedAt: Date.now(),
+                    fields: [
+                        { name: "firstname", value: form.firstname.value },
+                        { name: "email", value: form.email.value },
+                        { name: "phone", value: form.phone.value },
+                        { name: "company", value: form.company.value },
+                        { name: "message", value: form.message.value }
+                    ],
+                    context: {
+                        pageUri: window.location.href,
+                        pageName: document.title
                     }
+                };
+
+                /* HUBSPOT SUBMIT */
+
+                fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify(data)
 
                 })
 
-                .catch(err => {
+                    .then(res => res.json())
 
-                    console.error(err);
+                    .then(response => {
 
-                    alert("Submission failed");
+                        console.log(response);
 
-                });
+                        if (response.status === "error") {
 
-        });
+                            alert("Submission failed");
 
-    </script>
+                        } else {
 
+                            form.reset();
+
+                            window.location.href = "thankyou.html";
+
+                        }
+
+                    })
+
+                    .catch(err => {
+
+                        console.error(err);
+
+                        alert("Submission failed");
+
+                    });
+
+            });
+
+        </script>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
+        <img src="assets/footer-bg-img.jpeg" alt="Footer background showing [describe image]" class="footer-bg">
         <div class="footer-overlay">
             <div class="container">
 
@@ -1720,7 +1740,7 @@
 
                     <!-- Quick Links -->
                     <div class="col-lg-2 col-md-6">
-                        <h6 class="footer-title">Quick Links</h6>
+                        <h3 class="footer-title">Quick Links</h3>
                         <ul class="footer-links">
                             <li><a href="index.html" style="font-size: 16px;">Home</a></li>
                             <li><a href="about-us.html" style="font-size: 16px;">About Us</a></li>
@@ -1733,7 +1753,7 @@
 
                     <!-- Support -->
                     <div class="col-lg-2 col-md-6">
-                        <h6 class="footer-title">Support</h6>
+                        <h3 class="footer-title">Support</h3>
                         <ul class="footer-links">
                             <li><a href="privacy-policy.html" style="font-size: 16px;">Privacy Policy</a></li>
                             <li><a href="contact.html" style="font-size: 16px;">Contact Us</a></li>
@@ -1742,7 +1762,7 @@
 
                     <!-- Contact -->
                     <div class="col-lg-3 col-md-6">
-                        <h6 class="footer-title">Contact</h6>
+                        <h3 class="footer-title">Contact</h3>
                         <!-- <p><a href="tel:+9594415599" style="color: #fff;">+91 95944 15599</a></p> -->
                         <p> <a href="mailto:tsp@technosprout.in" style="color: #fff; font-size: 16px;"><i
                                     class="fa-solid fa-envelope me-2"></i>tsp@technosprout.in</a>
@@ -2032,47 +2052,47 @@
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
     <!-- End of HubSpot Embed Code -->
-   <script>
-  // --- PART A: LAZY LOADING ---
-  // This prevents the heavy 5MB payload until the user is actually at the form
-  function loadCaptcha() {
-    if (!window.grecaptcha) {
-      console.log("Loading reCAPTCHA assets...");
-      var script = document.createElement('script');
-      script.src = "https://www.google.com/recaptcha/api.js";
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-    }
-  }
-
-  const contactForm = document.getElementById("contactForm");
-
-  if (contactForm) {
-    // Load when user hovers, touches, or clicks an input in the form
-    contactForm.addEventListener("mouseenter", loadCaptcha, { once: true });
-    contactForm.addEventListener("touchstart", loadCaptcha, { once: true });
-    contactForm.addEventListener("focusin", loadCaptcha, { once: true });
-
-    // --- PART B: VALIDATION ---
-    // This is your original code, kept inside to ensure it works once loaded
-    contactForm.addEventListener("submit", function (e) {
-      if (typeof grecaptcha !== 'undefined') {
-        let captcha = grecaptcha.getResponse();
-
-        if (captcha.length === 0) {
-          e.preventDefault();
-          document.getElementById("captchaError").style.display = "block";
+    <script>
+        // --- PART A: LAZY LOADING ---
+        // This prevents the heavy 5MB payload until the user is actually at the form
+        function loadCaptcha() {
+            if (!window.grecaptcha) {
+                console.log("Loading reCAPTCHA assets...");
+                var script = document.createElement('script');
+                script.src = "https://www.google.com/recaptcha/api.js";
+                script.async = true;
+                script.defer = true;
+                document.head.appendChild(script);
+            }
         }
-      } else {
-        // If the script hasn't loaded yet, prevent submit and load it
-        e.preventDefault();
-        loadCaptcha();
-        alert("Please wait a moment for security verification to load.");
-      }
-    });
-  }
-</script>
+
+        const contactForm = document.getElementById("contactForm");
+
+        if (contactForm) {
+            // Load when user hovers, touches, or clicks an input in the form
+            contactForm.addEventListener("mouseenter", loadCaptcha, { once: true });
+            contactForm.addEventListener("touchstart", loadCaptcha, { once: true });
+            contactForm.addEventListener("focusin", loadCaptcha, { once: true });
+
+            // --- PART B: VALIDATION ---
+            // This is your original code, kept inside to ensure it works once loaded
+            contactForm.addEventListener("submit", function (e) {
+                if (typeof grecaptcha !== 'undefined') {
+                    let captcha = grecaptcha.getResponse();
+
+                    if (captcha.length === 0) {
+                        e.preventDefault();
+                        document.getElementById("captchaError").style.display = "block";
+                    }
+                } else {
+                    // If the script hasn't loaded yet, prevent submit and load it
+                    e.preventDefault();
+                    loadCaptcha();
+                    alert("Please wait a moment for security verification to load.");
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
