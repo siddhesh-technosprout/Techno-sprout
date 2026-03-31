@@ -2032,7 +2032,47 @@
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8043110.js"></script>
     <!-- End of HubSpot Embed Code -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   <script>
+  // --- PART A: LAZY LOADING ---
+  // This prevents the heavy 5MB payload until the user is actually at the form
+  function loadCaptcha() {
+    if (!window.grecaptcha) {
+      console.log("Loading reCAPTCHA assets...");
+      var script = document.createElement('script');
+      script.src = "https://www.google.com/recaptcha/api.js";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }
+
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    // Load when user hovers, touches, or clicks an input in the form
+    contactForm.addEventListener("mouseenter", loadCaptcha, { once: true });
+    contactForm.addEventListener("touchstart", loadCaptcha, { once: true });
+    contactForm.addEventListener("focusin", loadCaptcha, { once: true });
+
+    // --- PART B: VALIDATION ---
+    // This is your original code, kept inside to ensure it works once loaded
+    contactForm.addEventListener("submit", function (e) {
+      if (typeof grecaptcha !== 'undefined') {
+        let captcha = grecaptcha.getResponse();
+
+        if (captcha.length === 0) {
+          e.preventDefault();
+          document.getElementById("captchaError").style.display = "block";
+        }
+      } else {
+        // If the script hasn't loaded yet, prevent submit and load it
+        e.preventDefault();
+        loadCaptcha();
+        alert("Please wait a moment for security verification to load.");
+      }
+    });
+  }
+</script>
 </body>
 
 </html>
